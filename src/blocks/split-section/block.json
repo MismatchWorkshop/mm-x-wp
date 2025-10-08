@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wagepoint/split-section",
+  "title": "Split Section",
+  "category": "layout",
+  "icon": "columns",
+  "description": "50/50 section with content and media",
+  "keywords": ["split", "columns", "media", "text"],
+  "attributes": {
+    "backgroundColor": {
+      "type": "string",
+      "default": "white"
+    },
+    "mediaPosition": {
+      "type": "string",
+      "default": "right"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

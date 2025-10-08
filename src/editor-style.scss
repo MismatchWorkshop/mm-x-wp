@@ -1,0 +1,21 @@
+@import "vars";
+@import "base";
+
+.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: none !important;
+    color: #000;
+}
+
+html :where(.wp-block) {
+    max-width: none !important;
+}
+
+.drag-handle {
+    cursor: grab;
+    padding: 4px;
+    color: #666;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}

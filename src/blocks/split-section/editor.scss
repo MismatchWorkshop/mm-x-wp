@@ -1,0 +1,36 @@
+/**
+ * Editor-only Styles for Split Section Block
+ */
+
+.split-section {
+    .split-section__container {
+        > .block-editor-inner-blocks {
+            display: contents;
+        }
+    }
+    
+    // Visual feedback for background in editor
+    &--bg-dark {
+        .split-section__container {
+            background: #1F2937;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+    }
+    
+    &--bg-primary {
+        .split-section__container {
+            background: #FDB022;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+    }
+    
+    &--bg-blue {
+        .split-section__container {
+            background: #3B82F6;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+    }
+}

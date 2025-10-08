@@ -1,0 +1,14 @@
+:root {
+    --container-corner-radius: 20px;
+    --wp--style--global--content-size: none;
+}
+
+body {
+    --wp--style--global--content-size: none;
+    --wp--style--root--padding-right: #{$gutter};
+    --wp--style--root--padding-left: #{$gutter};
+    --vspace--default: 140px;
+    --hspace--default: 40px;
+    --container-padding-y: var(--vspace--default);
+    --container-padding-x: var(--hspace--default);
+}

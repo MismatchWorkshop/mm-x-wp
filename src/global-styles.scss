@@ -1,0 +1,7 @@
+@import "vars";
+@import "base";
+
+.container {
+    border-radius: var(--container-corner-radius);
+    padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
+}

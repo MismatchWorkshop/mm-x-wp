@@ -1,0 +1,21 @@
+:root {
+  --container-corner-radius: 20px;
+  --wp--style--global--content-size: none;
+}
+
+body {
+  --wp--style--global--content-size: none;
+  --wp--style--root--padding-right: 10px;
+  --wp--style--root--padding-left: 10px;
+  --vspace--default: 140px;
+  --hspace--default: 40px;
+  --container-padding-y: var(--vspace--default);
+  --container-padding-x: var(--hspace--default);
+}
+
+.container {
+  border-radius: var(--container-corner-radius);
+  padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
+}
+
+/*# sourceMappingURL=global-styles.css.map */

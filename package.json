@@ -1,0 +1,23 @@
+{
+  "name": "wagepoint",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:blocks && npm run build:sass",
+    "build:blocks": "wp-scripts build",
+    "build:sass": "sass src/global-styles.scss:build/global-styles.css src/editor-style.scss:build/editor-style.css",
+    "start": "npm run start:blocks & npm run watch:sass",
+    "start:blocks": "wp-scripts start",
+    "watch:sass": "sass --watch src/global-styles.scss:build/global-styles.css src/editor-style.scss:build/editor-style.css",
+    "lint:js": "wp-scripts lint-js 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0",
+    "sass": "^1.92.1"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@wordpress/icons": "^10.0.0"
+  }
+}

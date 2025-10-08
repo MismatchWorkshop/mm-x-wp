@@ -1,0 +1,57 @@
+/*
+Theme Name: Wagepoint
+Theme URI: https://example.com
+Author: Your Name
+Author URI: https://example.com
+Description: Custom block theme for Wagepoint
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wagepoint
+Tags: block-theme, custom-background, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, block-patterns
+
+Wagepoint Theme, (C) 2025
+Wagepoint Theme is distributed under the terms of the GNU GPL.
+*/
+
+/*
+ * Core styles are handled by theme.json
+ * This file contains only supplementary styles
+ */
+
+/* Base Resets */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 5rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Add more utility styles as needed */
