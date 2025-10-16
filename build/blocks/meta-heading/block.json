@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wagepoint/meta-heading",
+  "title": "Meta Heading",
+  "category": "text",
+  "icon": "tag",
+  "description": "Small eyebrow heading with fixed visual size and optional background highlight.",
+  "keywords": [
+    "heading",
+    "eyebrow",
+    "meta",
+    "label"
+  ],
+  "supports": {
+    "html": false,
+    "layout": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Meta Heading"
+    },
+    "level": {
+      "type": "number",
+      "default": 6
+    },
+    "textColor": {
+      "type": "string",
+      "default": "inherit"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "primary"
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

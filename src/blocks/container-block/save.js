@@ -1,36 +1,45 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
-import { COLOR_SYSTEM } from '../../color-system';
-
-const SPACING_OPTIONS = [
-    { label: 'Auto', value: "auto" },
-    { label: 'Small', value: 'sm' },
-    { label: 'Medium', value: 'md' },
-    { label: 'Large', value: 'lg' }
-];
 
 export default function save({ attributes }) {
-    const { containerBackground, topSpacing, bottomSpacing } = attributes;
+    const { 
+        outerBackground,
+        spacing,
+        width,
+        containerBackground,
+        padding,
+        contentWidth,
+        textAlignment
+    } = attributes;
 
-    const getBlockClass = () => { 
-        return [
-            "container",
-            topSpacing !=="auto" ? `top-${topSpacing}` : "",
-            bottomSpacing !=="auto" ? `bottom-${bottomSpacing}` : ""
-        ].join(" ");
-    }
-    
+    const outerClassName = [
+        'wp-block-wagepoint-container',
+        `outer-bg-${outerBackground}`,
+        `spacing-${spacing}`
+    ].filter(Boolean).join(' ');
+
     const blockProps = useBlockProps.save({
-        className: getBlockClass()
+        className: outerClassName
     });
 
-    const containerStyles = {
-        backgroundColor: COLOR_SYSTEM.backgrounds[containerBackground]?.value || 'transparent'
-    };
+    const innerClassName = [
+        'container__inner',
+        `width-${width}`,
+        `bg-${containerBackground}`,
+        `padding-${padding}`
+    ].filter(Boolean).join(' ');
+
+    const contentClassName = [
+        'container__content',
+        `content-width-${contentWidth}`,
+        `align-${textAlignment}`
+    ].filter(Boolean).join(' ');
 
     return (
         <div {...blockProps}>
-            <div className="container__content" style={containerStyles}>
-                <InnerBlocks.Content />
+            <div className={innerClassName} data-bg={containerBackground}>
+                <div className={contentClassName}>
+                    <InnerBlocks.Content />
+                </div>
             </div>
         </div>
     );

@@ -1,0 +1,32 @@
+.meta-heading {
+    margin-bottom: var(--spacing-y, 25px);
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    
+    // Always use size 8 from typographic scale
+    font-size: var(--font-size-8, 20px);
+    
+    // Inherit text color from parent by default
+    color: inherit;
+    
+    // Pseudo-element for background highlight
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: -0.25em;
+        right: -0.25em;
+        height: 45%;
+        border-radius: 2px;
+        z-index: -1;
+        
+        // Default to primary yellow
+        background-color: var(--bg-color, var(--color-primary));
+    }
+    
+    // When transparent, hide the background
+    &.bg-transparent::before {
+        display: none;
+    }
+}

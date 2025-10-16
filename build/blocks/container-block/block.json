@@ -7,20 +7,37 @@
   "icon": "admin-page",
   "description": "A flexible container with background and spacing controls.",
   "supports": {
-    "html": false
+    "html": false,
+    "layout": false
   },
   "attributes": {
+    "outerBackground": {
+      "type": "string",
+      "default": "light"
+    },
+    "spacing": {
+      "type": "string",
+      "default": "normal"
+    },
+    "width": {
+      "type": "string",
+      "default": "normal"
+    },
     "containerBackground": {
       "type": "string",
-      "default": "transparent"
+      "default": "white"
     },
-    "topSpacing": {
+    "padding": {
       "type": "string",
-      "default": "auto"
+      "default": "normal"
     },
-    "bottomSpacing": {
+    "contentWidth": {
       "type": "string",
-      "default": "auto"
+      "default": "full"
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "left"
     }
   },
   "textdomain": "wagepoint",

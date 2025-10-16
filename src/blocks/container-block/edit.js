@@ -9,77 +9,145 @@ import {
     SelectControl
 } from '@wordpress/components';
 import CustomColorSelect from '../../components/CustomColorSelect';
-import { COLOR_SYSTEM, getAutoTextColor } from '../../color-system';
+import { COLOR_SYSTEM } from '../../color-system';
+
+const OUTER_BG_OPTIONS = [
+    { label: 'Light', value: 'light' },
+    { label: 'Dark', value: 'dark' }
+];
 
 const SPACING_OPTIONS = [
-    { label: 'Auto', value: "auto" },
-    { label: 'Small', value: 'sm' },
-    { label: 'Medium', value: 'md' },
-    { label: 'Large', value: 'lg' }
+    { label: 'Normal', value: 'normal' },
+    { label: 'Large', value: 'large' }
+];
+
+const WIDTH_OPTIONS = [
+    { label: 'Normal', value: 'normal' },
+    { label: 'Narrow', value: 'narrow' },
+    { label: 'Wide', value: 'wide' }
+];
+
+const CONTENT_WIDTH_OPTIONS = [
+    { label: 'Full', value: 'full' },
+    { label: 'Wide', value: 'wide' },
+    { label: 'Medium', value: 'medium' },
+    { label: 'Narrow', value: 'narrow' }
+];
+
+const PADDING_OPTIONS = [
+    { label: 'Small', value: 'small' },
+    { label: 'Normal', value: 'normal' },
+    { label: 'Medium', value: 'medium' },
+    { label: 'Large', value: 'large' }
+];
+
+const ALIGNMENT_OPTIONS = [
+    { label: 'Left', value: 'left' },
+    { label: 'Center', value: 'center' }
 ];
 
 export default function Edit({ attributes, setAttributes }) {
-    const { containerBackground, verticalSpacing, topSpacing, bottomSpacing } = attributes;
+    const { 
+        outerBackground,
+        spacing,
+        width,
+        containerBackground,
+        padding,
+        contentWidth,
+        textAlignment
+    } = attributes;
 
-    const onBackgroundChange = (newBackground) => {
-        setAttributes({ containerBackground: newBackground });
-    };
-
-    const onTopSpacingChange = (newSpacing) => {
-        setAttributes({ topSpacing: newSpacing });
-    };
-
-    const onBottomSpacingChange = (newSpacing) => {
-        setAttributes({ bottomSpacing: newSpacing });
-    };
-
-    const getBlockClass = () => { 
-        return [
-            "container",
-            topSpacing !=="auto" ? `top-${topSpacing}` : "",
-            bottomSpacing !=="auto" ? `bottom-${bottomSpacing}` : ""
-        ].join(" ");
-    }
-
-    const containerStyles = {
-        backgroundColor: COLOR_SYSTEM.backgrounds[containerBackground]?.value || 'transparent'
-    };
+    const outerClassName = [
+        'wp-block-wagepoint-container',
+        `outer-bg-${outerBackground}`,
+        `spacing-${spacing}`
+    ].filter(Boolean).join(' ');
 
     const blockProps = useBlockProps({
-        className: getBlockClass()
+        className: outerClassName
     });
+
+    const innerClassName = [
+        'container__inner',
+        `width-${width}`,
+        `bg-${containerBackground}`,
+        `padding-${padding}`
+    ].filter(Boolean).join(' ');
+
+    const contentClassName = [
+        'container__content',
+        `content-width-${contentWidth}`,
+        `align-${textAlignment}`
+    ].filter(Boolean).join(' ');
 
     return (
         <>
             <InspectorControls>
-                <PanelBody title={__('Container Settings', 'custom-blocks')}>
+                <PanelBody title={__('Section Settings', 'wagepoint')} initialOpen={true}>
+                    <SelectControl
+                        label={__('Section Background', 'wagepoint')}
+                        value={outerBackground}
+                        onChange={(value) => setAttributes({ outerBackground: value })}
+                        options={OUTER_BG_OPTIONS}
+                        help={__('Full-width background color (Light or Dark)', 'wagepoint')}
+                    />
+                    
+                    <SelectControl
+                        label={__('Section Spacing', 'wagepoint')}
+                        value={spacing}
+                        onChange={(value) => setAttributes({ spacing: value })}
+                        options={SPACING_OPTIONS}
+                        help={__('Vertical margin between sections', 'wagepoint')}
+                    />
+                </PanelBody>
+
+                <PanelBody title={__('Container Settings', 'wagepoint')} initialOpen={true}>
+                    <SelectControl
+                        label={__('Container Width', 'wagepoint')}
+                        value={width}
+                        onChange={(value) => setAttributes({ width: value })}
+                        options={WIDTH_OPTIONS}
+                    />
+
                     <CustomColorSelect
-                        label={__('Background Color', 'custom-blocks')}
+                        label={__('Container Background', 'wagepoint')}
                         value={containerBackground}
-                        onChange={onBackgroundChange}
+                        onChange={(value) => setAttributes({ containerBackground: value })}
                         colors={COLOR_SYSTEM.backgrounds}
                     />
 
-                    <SelectControl 
-                        label={__('Top Spacing', 'custom-blocks')}
-                        value={topSpacing}
-                        onChange={onTopSpacingChange}
-                        options={SPACING_OPTIONS}
+                    <SelectControl
+                        label={__('Container Padding', 'wagepoint')}
+                        value={padding}
+                        onChange={(value) => setAttributes({ padding: value })}
+                        options={PADDING_OPTIONS}
+                        help={__('Vertical padding inside container', 'wagepoint')}
+                    />
+                </PanelBody>
+
+                <PanelBody title={__('Content Settings', 'wagepoint')} initialOpen={true}>
+                    <SelectControl
+                        label={__('Content Width', 'wagepoint')}
+                        value={contentWidth}
+                        onChange={(value) => setAttributes({ contentWidth: value })}
+                        options={CONTENT_WIDTH_OPTIONS}
+                        help={__('Max width of content for readability', 'wagepoint')}
                     />
 
-                    <SelectControl 
-                        label={__('Bottom Spacing', 'custom-blocks')}
-                        value={bottomSpacing}
-                        onChange={onBottomSpacingChange}
-                        options={SPACING_OPTIONS}
+                    <SelectControl
+                        label={__('Text Alignment', 'wagepoint')}
+                        value={textAlignment}
+                        onChange={(value) => setAttributes({ textAlignment: value })}
+                        options={ALIGNMENT_OPTIONS}
                     />
-
                 </PanelBody>
             </InspectorControls>
 
             <div {...blockProps}>
-                <div className="container__content" style={containerStyles}>
-                    <InnerBlocks />
+                <div className={innerClassName}>
+                    <div className={contentClassName}>
+                        <InnerBlocks />
+                    </div>
                 </div>
             </div>
         </>

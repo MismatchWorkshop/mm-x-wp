@@ -4,27 +4,42 @@ export const COLOR_SYSTEM = {
         'transparent': {
             value: 'transparent',
             label: 'Transparent',
-            autoText: '#1a1a1a' // Dark text on transparent
+            autoText: '#1F2937' // Dark text on transparent
         },
         'white': {
-            value: '#ffffff',
+            value: '#FFFFFF',
             label: 'White',
-            autoText: '#1a1a1a'
+            autoText: '#1F2937'
+        },
+        'light': {
+            value: '#F9FAFB',
+            label: 'Light Gray',
+            autoText: '#1F2937'
+        },
+        'primary': {
+            value: '#FDB022',
+            label: 'Primary (Yellow)',
+            autoText: '#1F2937'
+        },
+        'dark': {
+            value: '#1F2937',
+            label: 'Dark',
+            autoText: '#FFFFFF'
         },
         'blue': {
-            value: '#3b82f6',
+            value: '#3B82F6',
             label: 'Blue',
-            autoText: '#ffffff'
+            autoText: '#FFFFFF'
         },
         'dark-blue': {
             value: '#1e3a8a',
             label: 'Dark Blue',
-            autoText: '#ffffff'
+            autoText: '#FFFFFF'
         },
         'gray': {
-            value: '#6b7280',
+            value: '#6B7280',
             label: 'Gray',
-            autoText: '#ffffff'
+            autoText: '#FFFFFF'
         }
     },
     textColors: {
@@ -33,20 +48,32 @@ export const COLOR_SYSTEM = {
             label: 'Auto'
         },
         'white': {
-            value: '#ffffff',
+            value: '#FFFFFF',
             label: 'White'
         },
         'black': {
             value: '#1a1a1a',
             label: 'Black'
         },
+        'dark': {
+            value: '#1F2937',
+            label: 'Dark Gray'
+        },
         'blue': {
-            value: '#3b82f6',
+            value: '#3B82F6',
             label: 'Blue'
+        },
+        'primary': {
+            value: '#FDB022',
+            label: 'Primary (Yellow)'
         },
         'yellow': {
             value: '#fbbf24',
             label: 'Yellow'
+        },
+        'gray': {
+            value: '#6B7280',
+            label: 'Text Gray'
         }
     }
 };
@@ -54,5 +81,5 @@ export const COLOR_SYSTEM = {
 // Helper function to get auto text color for a background
 export function getAutoTextColor(backgroundKey) {
     const bgConfig = COLOR_SYSTEM.backgrounds[backgroundKey];
-    return bgConfig ? bgConfig.autoText : '#1a1a1a';
+    return bgConfig ? bgConfig.autoText : '#1F2937';
 }

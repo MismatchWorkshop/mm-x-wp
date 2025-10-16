@@ -1,6 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 :root {
   --container-corner-radius: 20px;
   --wp--style--global--content-size: none;
+  --color-primary: #FDB022;
+  --color-dark: #1F2937;
+  --color-light: #F9FAFB;
+  --color-white: #FFFFFF;
+  --color-blue: #3B82F6;
+  --color-dark-blue: #1e3a8a;
+  --color-gray: #6B7280;
+  --font-size-1: clamp(40px, 90 / 1512 * 100vw, 90px);
+  --font-size-2: clamp(36px, 75 / 1512 * 100vw, 75px);
+  --font-size-3: clamp(28px, 50 / 1512 * 100vw, 50px);
+  --font-size-4: clamp(25px, 45 / 1512 * 100vw, 45px);
+  --font-size-5: clamp(22px, 35 / 1512 * 100vw, 35px);
+  --font-size-6: clamp(21px, 30 / 1512 * 100vw, 30px);
+  --font-size-7: clamp(20px, 25 / 1512 * 100vw, 25px);
+  --font-size-8: clamp(14px, 20 / 1512 * 100vw, 20px);
+  --font-size-body-lg: clamp(18px, 22 / 1512 * 100vw, 22px);
+  --font-size-body-md: clamp(16px, 18 / 1512 * 100vw, 18px);
+  --font-size-body-sm: clamp(15px, 16 / 1512 * 100vw, 16px);
+  --font-size-body-xs: clamp(14px, 15 / 1512 * 100vw, 15px);
+  --font-size-body-xxs: clamp(10px, 10 / 1512 * 100vw, 10px);
+  --font-body: "Onest", sans-serif;
+}
+:root :where(.is-layout-constrained) > *,
+:root :where(.is-layout-flow) > * + * {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 body {
@@ -11,11 +38,135 @@ body {
   --hspace--default: 40px;
   --container-padding-y: var(--vspace--default);
   --container-padding-x: var(--hspace--default);
+  font-family: var(--font-body);
 }
 
-.container {
+.bg-primary {
+  --bg-color: var(--color-primary);
+  background-color: var(--bg-color);
+}
+
+.bg-dark {
+  --bg-color: var(--color-dark);
+  background-color: var(--bg-color);
+}
+
+.bg-light {
+  --bg-color: var(--color-light);
+  background-color: var(--bg-color);
+}
+
+.bg-white {
+  --bg-color: var(--color-white);
+  background-color: var(--bg-color);
+}
+
+.bg-blue {
+  --bg-color: var(--color-blue);
+  background-color: var(--bg-color);
+}
+
+.bg-dark-blue {
+  --bg-color: var(--color-dark-blue);
+  background-color: var(--bg-color);
+}
+
+.bg-gray {
+  --bg-color: var(--color-gray);
+  background-color: var(--bg-color);
+}
+
+.bg-transparent {
+  --bg-color: transparent;
+  background-color: transparent;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-1 {
+  font-size: var(--font-size-1);
+}
+
+.text-2 {
+  font-size: var(--font-size-2);
+}
+
+.text-3 {
+  font-size: var(--font-size-3);
+}
+
+.text-4 {
+  font-size: var(--font-size-4);
+}
+
+.text-5 {
+  font-size: var(--font-size-5);
+}
+
+.text-6 {
+  font-size: var(--font-size-6);
+}
+
+.text-7 {
+  font-size: var(--font-size-7);
+}
+
+.text-8 {
+  font-size: var(--font-size-8);
+}
+
+.text-body-lg {
+  font-size: 22px;
+}
+
+.has-text-align-left {
+  text-align: left;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+h1.font-strong, h2.font-strong, h3.font-strong, h4.font-strong, h5.font-strong, h6.font-strong {
+  font-weight: 500;
+}
+h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-stronger, h6.font-stronger {
+  font-weight: 600;
+}
+
+.container__inner {
   border-radius: var(--container-corner-radius);
   padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
+}
+
+.meta-heading {
+  font-size: var(--font-size-8, 20px);
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=global-styles.css.map */

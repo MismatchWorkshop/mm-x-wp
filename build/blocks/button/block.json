@@ -1,0 +1,56 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/button",
+  "title": "Button",
+  "category": "design",
+  "icon": "button",
+  "description": "A customizable button with optional icon",
+  "keywords": [
+    "button",
+    "link",
+    "cta"
+  ],
+  "parent": [
+    "wagepoint/buttons"
+  ],
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Click me"
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "buttonStyle": {
+      "type": "string",
+      "default": "solid-white"
+    },
+    "fontSize": {
+      "type": "string",
+      "default": "medium"
+    },
+    "icon": {
+      "type": "string",
+      "default": "arrow-right"
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "after"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "reusable": false,
+    "layout": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

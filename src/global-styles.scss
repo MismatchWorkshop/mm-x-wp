@@ -1,7 +1,14 @@
+@import "mixins";
 @import "vars";
 @import "base";
 
-.container {
+.container__inner {
     border-radius: var(--container-corner-radius);
     padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
+}
+
+%meta-heading,
+.meta-heading {
+    font-size: var(--font-size-8, 20px);
+    font-weight: 500;
 }

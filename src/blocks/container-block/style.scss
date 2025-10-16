@@ -1,18 +1,126 @@
-.wp-block-custom-container {
-    .container__content {
-        border-radius: 8px;
-        transition: all 0.3s ease;
-
-        padding: var(--container-padding-y) var(--container-padding-x);
+.wp-block-wagepoint-container {
+    // Outer layer - section spacing
+    &.spacing-normal {
+        margin-top: 7.5px;
+        margin-bottom: 7.5px;
+    }
+    
+    &.spacing-large {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    
+    // Outer background colors (full width)
+    &.outer-bg-light {
+        background-color: #F9FAFB;
+    }
+    
+    &.outer-bg-dark {
+        background-color: #1F2937;
+    }
+    
+    // Add horizontal gutter
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container__inner {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    // Container widths
+    &.width-normal { 
+        //max-width: 1200px;
+    }
+    &.width-narrow { 
+        //max-width: 800px;
+    }
+    &.width-wide { 
+        //max-width: 1400px;
+    }
+    
+    // Container padding
+    &.padding-small { 
+        padding: 2rem 1.5rem;
+    }
+    &.padding-normal { 
+        padding: 4rem 1.5rem;
+    }
+    &.padding-medium { 
+        padding: 6rem 1.5rem;
+    }
+    &.padding-large { 
+        padding: 8rem 1.5rem;
+    }
+    
+    // Auto text color based on background
+    // Light backgrounds = dark text
+    &.bg-white,
+    &.bg-light,
+    &.bg-transparent,
+    &.bg-primary {
+        color: #1F2937;
         
-        // Editor-specific styles
-        .block-editor-block-list__layout {
-            margin: 0;
+        h1, h2, h3, h4, h5, h6,
+        p, li, a {
+            color: inherit;
         }
     }
     
+    // Dark backgrounds = white text
+    &.bg-dark,
+    &.bg-blue,
+    &.bg-dark-blue,
+    &.bg-gray {
+        color: #FFFFFF;
+        
+        h1, h2, h3, h4, h5, h6,
+        p, li, a {
+            color: inherit;
+        }
+    }
+}
+
+.container__content {
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Inherit color from parent
+    color: inherit;
+    
+    // Content width options
+    &.content-width-full {
+        max-width: 100%;
+    }
+    
+    &.content-width-wide {
+        max-width: 900px;
+    }
+    
+    &.content-width-medium {
+        max-width: 700px;
+    }
+    
+    &.content-width-narrow {
+        max-width: 500px;
+    }
+    
+    // Text alignment
+    &.align-left { 
+        text-align: left;
+    }
+    &.align-center { 
+        text-align: center;
+    }
+    
+    // Editor-specific styles
+    .block-editor-block-list__layout {
+        margin: 0;
+    }
+    
     // Ensure proper spacing for nested blocks
-    .wp-block {
+    > * {
         margin-bottom: 1rem;
         
         &:last-child {

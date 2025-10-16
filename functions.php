@@ -260,45 +260,36 @@ function wagepoint_register_blocks() {
     $blocks_dir = get_template_directory() . '/build/blocks';
     
     if ( file_exists( $blocks_dir ) ) {
-        // Get all block directories
         $block_folders = glob( $blocks_dir . '/*', GLOB_ONLYDIR );
         
         foreach ( $block_folders as $block_folder ) {
-            $block_json = $block_folder . '/block.json';
-            
-            if ( file_exists( $block_json ) ) {
-                $block_name = basename( $block_folder );
-                
-                // Special handling for server-side rendering
-                if ( $block_name === 'logo-carousel' ) {
-                    register_block_type( $block_folder, array(
-                        'render_callback' => 'wagepoint_render_logo_carousel'
-                    ) );
-                } else {
-                    $block = register_block_type( $block_folder );
-                    //print_r($block);
-                }
+            if ( file_exists( $block_folder . '/block.json' ) ) {
+                register_block_type( $block_folder );
             }
         }
     }
 }
 add_action( 'init', 'wagepoint_register_blocks' );
 
-/**
- * Hide custom blocks from inserter (client only sees patterns)
- */
+
 function wagepoint_hide_custom_blocks( $allowed_blocks, $editor_context ) {
     $registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
     $all_blocks = array_keys( $registered_blocks );
     
-    // Hide our custom blocks from direct insertion
-    $blocks_to_hide = array_filter( $all_blocks, function( $block ) {
-        return strpos( $block, 'wagepoint/' ) === 0;
+    // Blocks that can be inserted
+    $allowed_custom_blocks = array(
+        'wagepoint/buttons', // ← The wrapper is insertable
+    );
+    
+    // Hide all other wagepoint blocks
+    $blocks_to_hide = array_filter( $all_blocks, function( $block ) use ( $allowed_custom_blocks ) {
+        return strpos( $block, 'wagepoint/' ) === 0 && !in_array( $block, $allowed_custom_blocks );
     });
     
     return array_diff( $all_blocks, $blocks_to_hide );
 }
-//add_filter( 'allowed_block_types_all', 'wagepoint_hide_custom_blocks', 10, 2 );
+add_filter( 'allowed_block_types_all', 'wagepoint_hide_custom_blocks', 10, 2 );
+
 
 /**
  * Remove default WordPress patterns
@@ -328,3 +319,41 @@ function wagepoint_unregister_default_categories() {
     }
 }
 add_action( 'init', 'wagepoint_unregister_default_categories', 11 );
+
+/**
+ * Debug: List all registered blocks
+ */
+function wagepoint_debug_blocks() {
+    $registry = WP_Block_Type_Registry::get_instance();
+    $registered = $registry->get_all_registered();
+    
+    error_log('=== Registered Blocks ===');
+    foreach ($registered as $block_name => $block_type) {
+        if (strpos($block_name, 'wagepoint/') === 0) {
+            error_log('Found: ' . $block_name);
+        }
+    }
+}
+add_action('init', 'wagepoint_debug_blocks', 999);
+
+
+/**
+ * Start all pages with a Container and guide users to use patterns
+ */
+function mytheme_page_template( $args, $post_type ) {
+    if ( $post_type === 'page' ) {
+        $args['template'] = array(
+            array( 'wagepoint/container', array(), array() ),
+        );
+        // template_lock = false means they can add more blocks (more Containers via patterns)
+        $args['template_lock'] = false;
+    }
+    return $args;
+}
+add_filter( 'register_post_type_args', 'mytheme_page_template', 10, 2 );
+
+function wagepoint_unregister_core_blocks() {
+    // Unregister core heading block
+    unregister_block_type('core/heading');
+}
+add_action('init', 'wagepoint_unregister_core_blocks');

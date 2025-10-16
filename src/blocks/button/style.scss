@@ -1,0 +1,144 @@
+// Base button styles
+.wp-block-wagepoint-button {
+    .wp-block-button__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        
+        &:hover {
+            transform: translateY(-1px);
+        }
+        
+        .button-icon {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .button-text {
+            display: inline;
+        }
+    }
+}
+
+// Font sizes
+.button-size-small .wp-block-button__link {
+    font-size: 0.875rem;
+    padding: 10px 20px;
+}
+
+.button-size-medium .wp-block-button__link {
+    font-size: 1rem;
+    padding: 14px 28px;
+}
+
+.button-size-large .wp-block-button__link {
+    font-size: 1.125rem;
+    padding: 16px 32px;
+}
+
+// Solid White
+.button-solid-white .wp-block-button__link {
+    background-color: #FFFFFF;
+    color: #1F2937;
+    border: none;
+    
+    &:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+// Solid Blue
+.button-solid-blue .wp-block-button__link {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    border: none;
+    
+    &:hover {
+        background-color: #2563EB;
+    }
+}
+
+// Solid Yellow
+.button-solid-yellow .wp-block-button__link {
+    background-color: #FDB022;
+    color: #1F2937;
+    border: none;
+    
+    &:hover {
+        background-color: #E09D1A;
+    }
+}
+
+// Solid Dark
+.button-solid-dark .wp-block-button__link {
+    background-color: #1F2937;
+    color: #FFFFFF;
+    border: none;
+    
+    &:hover {
+        background-color: #374151;
+    }
+}
+
+// Outline White
+.button-outline-white .wp-block-button__link {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 12px 26px; // Adjust for border
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+// Outline Blue
+.button-outline-blue .wp-block-button__link {
+    background-color: transparent;
+    color: #3B82F6;
+    border: 2px solid #3B82F6;
+    padding: 12px 26px;
+    
+    &:hover {
+        background-color: rgba(59, 130, 246, 0.1);
+    }
+}
+
+// Outline Dark
+.button-outline-dark .wp-block-button__link {
+    background-color: transparent;
+    color: #1F2937;
+    border: 2px solid #1F2937;
+    padding: 12px 26px;
+    
+    &:hover {
+        background-color: rgba(31, 41, 55, 0.05);
+    }
+}
+
+// Text Link
+.button-link .wp-block-button__link {
+    background-color: transparent;
+    color: #3B82F6;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    
+    &:hover {
+        color: #2563EB;
+        transform: none;
+        text-decoration: none;
+    }
+}
+
+// Editor-specific styles
+.wp-block-wagepoint-button {
+    .button-text[contenteditable="true"]:focus {
+        outline: none;
+    }
+}

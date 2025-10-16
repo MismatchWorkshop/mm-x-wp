@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wagepoint/copy-block",
+  "title": "Copy Block",
+  "category": "text",
+  "icon": "align-center",
+  "description": "Structured content with optional meta heading, main heading, body text, and call-to-action buttons.",
+  "keywords": [
+    "heading",
+    "text",
+    "content",
+    "hero",
+    "intro"
+  ],
+  "supports": {
+    "html": false,
+    "layout": false
+  },
+  "attributes": {
+    "contentWidth": {
+      "type": "string",
+      "default": "full"
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "inherit"
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

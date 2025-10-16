@@ -1,0 +1,18 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/buttons",
+  "title": "Buttons",
+  "category": "design",
+  "icon": "button",
+  "description": "A row of buttons",
+  "keywords": ["button", "buttons", "cta"],
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "anchor": true,
+    "layout": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

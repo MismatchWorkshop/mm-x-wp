@@ -1,0 +1,1 @@
+.meta-heading{color:inherit;display:inline-block;font-size:var(--font-size-8,20px);line-height:1;margin-bottom:var(--spacing-y,25px);position:relative}.meta-heading:before{background-color:var(--bg-color,var(--color-primary));border-radius:2px;content:"";height:45%;right:-.25em;position:absolute;left:-.25em;top:30%;z-index:-1}.meta-heading.bg-transparent:before{display:none}
