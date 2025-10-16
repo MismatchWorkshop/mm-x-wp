@@ -144,7 +144,7 @@ export default function Edit({ attributes, setAttributes }) {
             </InspectorControls>
 
             <div {...blockProps}>
-                <div className={innerClassName}>
+                <div className={innerClassName} data-bg={containerBackground}>
                     <div className={contentClassName}>
                         <InnerBlocks />
                     </div>

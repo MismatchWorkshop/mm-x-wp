@@ -27,5 +27,6 @@ module.exports = {
         
         // Color system only (no SCSS here!)
         'color-system': './src/color-system.js',
+        'logos-frontend': './src/logos-frontend.js'
     },
 };

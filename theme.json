@@ -10,19 +10,84 @@
       "defaultGradients": false,
       "palette": [
         {
-          "slug": "primary",
-          "color": "#FDB022",
-          "name": "Primary Yellow"
+          "slug": "payday-blue",
+          "color": "#4A90E2",
+          "name": "Payday Blue"
         },
         {
-          "slug": "dark",
-          "color": "#1F2937",
-          "name": "Dark Navy"
+          "slug": "payday-blue-tint-1",
+          "color": "#8AB4E8",
+          "name": "Payday Blue Light"
         },
         {
-          "slug": "light",
-          "color": "#F9FAFB",
-          "name": "Light Gray"
+          "slug": "payday-blue-tint-2",
+          "color": "#E3EEF9",
+          "name": "Payday Blue Subtle"
+        },
+        {
+          "slug": "ledger-blue",
+          "color": "#1E293B",
+          "name": "Ledger Blue"
+        },
+        {
+          "slug": "ledger-blue-tint-1",
+          "color": "#94A3B8",
+          "name": "Ledger Blue Medium"
+        },
+        {
+          "slug": "ledger-blue-tint-2",
+          "color": "#E2E8F0",
+          "name": "Ledger Blue Light"
+        },
+        {
+          "slug": "form-fill-white",
+          "color": "#F8F9FA",
+          "name": "Form Fill White"
+        },
+        {
+          "slug": "growth-green",
+          "color": "#2ECC71",
+          "name": "Growth Green"
+        },
+        {
+          "slug": "growth-green-tint-1",
+          "color": "#7EDDA4",
+          "name": "Growth Green Light"
+        },
+        {
+          "slug": "growth-green-tint-2",
+          "color": "#D4F4E2",
+          "name": "Growth Green Subtle"
+        },
+        {
+          "slug": "pto-yellow",
+          "color": "#F9B234",
+          "name": "PTO Yellow"
+        },
+        {
+          "slug": "pto-yellow-tint-1",
+          "color": "#FCDB9A",
+          "name": "PTO Yellow Light"
+        },
+        {
+          "slug": "pto-yellow-tint-2",
+          "color": "#FEF3DC",
+          "name": "PTO Yellow Subtle"
+        },
+        {
+          "slug": "compliance-green",
+          "color": "#27AE60",
+          "name": "Compliance Green"
+        },
+        {
+          "slug": "compliance-green-tint-1",
+          "color": "#8DD4AC",
+          "name": "Compliance Green Light"
+        },
+        {
+          "slug": "compliance-green-tint-2",
+          "color": "#D9F0E3",
+          "name": "Compliance Green Subtle"
         },
         {
           "slug": "white",
@@ -30,14 +95,9 @@
           "name": "White"
         },
         {
-          "slug": "text-gray",
-          "color": "#6B7280",
-          "name": "Text Gray"
-        },
-        {
-          "slug": "blue",
-          "color": "#3B82F6",
-          "name": "Blue Accent"
+          "slug": "black",
+          "color": "#000000",
+          "name": "Black"
         }
       ]
     },

@@ -47,21 +47,6 @@ body {
     font-family: var(--font-body);
 }
 
-.bg-primary { --bg-color: var(--color-primary); background-color: var(--bg-color); }
-.bg-dark { --bg-color: var(--color-dark); background-color: var(--bg-color); }
-.bg-light { --bg-color: var(--color-light); background-color: var(--bg-color); }
-.bg-white { --bg-color: var(--color-white); background-color: var(--bg-color); }
-.bg-blue { --bg-color: var(--color-blue); background-color: var(--bg-color); }
-.bg-dark-blue { --bg-color: var(--color-dark-blue); background-color: var(--bg-color); }
-.bg-gray { --bg-color: var(--color-gray); background-color: var(--bg-color); }
-.bg-transparent { --bg-color: transparent; background-color: transparent; }
-
-.text-primary { color: var(--color-primary); }
-.text-dark { color: var(--color-dark); }
-.text-white { color: var(--color-white); }
-.text-blue { color: var(--color-blue); }
-.text-gray { color: var(--color-gray); }
-
 .text-1 { font-size: var(--font-size-1); }
 .text-2 { font-size: var(--font-size-2); }
 .text-3 { font-size: var(--font-size-3); }
@@ -78,6 +63,7 @@ body {
 .has-text-align-right { text-align: right; }
 
 h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
     font-weight: 400;
 
     &.font-strong {

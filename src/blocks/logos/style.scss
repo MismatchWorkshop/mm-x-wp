@@ -1,0 +1,154 @@
+// Frontend Styles for Logos Block
+
+.logos-block {
+    padding: 3rem 1.5rem;
+    overflow: hidden;
+
+    // Carousel Mode
+    &.logos-carousel {
+        .logos-carousel-container {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logos-carousel-track {
+            display: flex;
+            gap: 4rem;
+            animation: scroll var(--scroll-speed, 30s) linear infinite;
+            
+            &:hover {
+                animation-play-state: var(--pause-state, running);
+            }
+
+            .logo-item {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 80px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    filter: grayscale(100%);
+                    opacity: 0.7;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        filter: grayscale(0%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    // Grid Mode
+    &.logos-grid {
+        .logos-grid {
+            display: grid;
+            gap: 2rem;
+            column-gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            .logo-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 8px;
+                min-height: 100px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                    transform: translateY(-4px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                }
+
+                img {
+                    max-width: 100%;
+                    max-height: 60px;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    filter: grayscale(100%);
+                    opacity: 0.7;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover img {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        padding: 2rem 1rem;
+
+        &.logos-carousel {
+            .logos-carousel-track .logo-item {
+                width: 120px;
+                height: 60px;
+            }
+        }
+
+        &.logos-grid {
+            .logos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+                gap: 1.5rem;
+
+                .logo-item {
+                    padding: 1rem;
+                    min-height: 80px;
+
+                    img {
+                        max-height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Initialize CSS custom properties from data attributes
+.logos-carousel-container {
+    --scroll-speed: 30s;
+    --pause-state: running;
+
+    &[data-speed] {
+        --scroll-speed: attr(data-speed s);
+    }
+
+    &[data-pause="true"]:hover {
+        --pause-state: paused;
+    }
+}
+
+// JS will set these values
+.logos-carousel-track {
+    animation-duration: var(--scroll-speed);
+    
+    &:hover {
+        animation-play-state: var(--pause-state);
+    }
+}

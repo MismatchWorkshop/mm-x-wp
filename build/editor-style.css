@@ -1,5 +1,255 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 :root {
+  --color-payday-blue: #4A90E2;
+  --color-payday-blue-light: #8AB4E8;
+  --color-payday-blue-subtle: #E3EEF9;
+  --color-ledger-blue: #1E293B;
+  --color-ledger-blue-medium: #94A3B8;
+  --color-ledger-blue-light: #E2E8F0;
+  --color-form-fill-white: #F8F9FA;
+  --color-growth-green: #2ECC71;
+  --color-growth-green-light: #7EDDA4;
+  --color-growth-green-subtle: #D4F4E2;
+  --color-pto-yellow: #F9B234;
+  --color-pto-yellow-light: #FCDB9A;
+  --color-pto-yellow-subtle: #FEF3DC;
+  --color-compliance-green: #27AE60;
+  --color-compliance-green-light: #8DD4AC;
+  --color-compliance-green-subtle: #D9F0E3;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-transparent: transparent;
+}
+
+.bg-payday-blue {
+  background-color: var(--color-payday-blue, #4A90E2);
+}
+
+.text-payday-blue {
+  color: var(--color-payday-blue, #4A90E2);
+}
+
+.border-payday-blue {
+  border-color: var(--color-payday-blue, #4A90E2);
+}
+
+.bg-payday-blue-light {
+  background-color: var(--color-payday-blue-light, #8AB4E8);
+}
+
+.text-payday-blue-light {
+  color: var(--color-payday-blue-light, #8AB4E8);
+}
+
+.border-payday-blue-light {
+  border-color: var(--color-payday-blue-light, #8AB4E8);
+}
+
+.bg-payday-blue-subtle {
+  background-color: var(--color-payday-blue-subtle, #E3EEF9);
+}
+
+.text-payday-blue-subtle {
+  color: var(--color-payday-blue-subtle, #E3EEF9);
+}
+
+.border-payday-blue-subtle {
+  border-color: var(--color-payday-blue-subtle, #E3EEF9);
+}
+
+.bg-ledger-blue {
+  background-color: var(--color-ledger-blue, #1E293B);
+}
+
+.text-ledger-blue {
+  color: var(--color-ledger-blue, #1E293B);
+}
+
+.border-ledger-blue {
+  border-color: var(--color-ledger-blue, #1E293B);
+}
+
+.bg-ledger-blue-medium {
+  background-color: var(--color-ledger-blue-medium, #94A3B8);
+}
+
+.text-ledger-blue-medium {
+  color: var(--color-ledger-blue-medium, #94A3B8);
+}
+
+.border-ledger-blue-medium {
+  border-color: var(--color-ledger-blue-medium, #94A3B8);
+}
+
+.bg-ledger-blue-light {
+  background-color: var(--color-ledger-blue-light, #E2E8F0);
+}
+
+.text-ledger-blue-light {
+  color: var(--color-ledger-blue-light, #E2E8F0);
+}
+
+.border-ledger-blue-light {
+  border-color: var(--color-ledger-blue-light, #E2E8F0);
+}
+
+.bg-form-fill-white {
+  background-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.text-form-fill-white {
+  color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.border-form-fill-white {
+  border-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.bg-growth-green {
+  background-color: var(--color-growth-green, #2ECC71);
+}
+
+.text-growth-green {
+  color: var(--color-growth-green, #2ECC71);
+}
+
+.border-growth-green {
+  border-color: var(--color-growth-green, #2ECC71);
+}
+
+.bg-growth-green-light {
+  background-color: var(--color-growth-green-light, #7EDDA4);
+}
+
+.text-growth-green-light {
+  color: var(--color-growth-green-light, #7EDDA4);
+}
+
+.border-growth-green-light {
+  border-color: var(--color-growth-green-light, #7EDDA4);
+}
+
+.bg-growth-green-subtle {
+  background-color: var(--color-growth-green-subtle, #D4F4E2);
+}
+
+.text-growth-green-subtle {
+  color: var(--color-growth-green-subtle, #D4F4E2);
+}
+
+.border-growth-green-subtle {
+  border-color: var(--color-growth-green-subtle, #D4F4E2);
+}
+
+.bg-pto-yellow {
+  background-color: var(--color-pto-yellow, #F9B234);
+}
+
+.text-pto-yellow {
+  color: var(--color-pto-yellow, #F9B234);
+}
+
+.border-pto-yellow {
+  border-color: var(--color-pto-yellow, #F9B234);
+}
+
+.bg-pto-yellow-light {
+  background-color: var(--color-pto-yellow-light, #FCDB9A);
+}
+
+.text-pto-yellow-light {
+  color: var(--color-pto-yellow-light, #FCDB9A);
+}
+
+.border-pto-yellow-light {
+  border-color: var(--color-pto-yellow-light, #FCDB9A);
+}
+
+.bg-pto-yellow-subtle {
+  background-color: var(--color-pto-yellow-subtle, #FEF3DC);
+}
+
+.text-pto-yellow-subtle {
+  color: var(--color-pto-yellow-subtle, #FEF3DC);
+}
+
+.border-pto-yellow-subtle {
+  border-color: var(--color-pto-yellow-subtle, #FEF3DC);
+}
+
+.bg-compliance-green {
+  background-color: var(--color-compliance-green, #27AE60);
+}
+
+.text-compliance-green {
+  color: var(--color-compliance-green, #27AE60);
+}
+
+.border-compliance-green {
+  border-color: var(--color-compliance-green, #27AE60);
+}
+
+.bg-compliance-green-light {
+  background-color: var(--color-compliance-green-light, #8DD4AC);
+}
+
+.text-compliance-green-light {
+  color: var(--color-compliance-green-light, #8DD4AC);
+}
+
+.border-compliance-green-light {
+  border-color: var(--color-compliance-green-light, #8DD4AC);
+}
+
+.bg-compliance-green-subtle {
+  background-color: var(--color-compliance-green-subtle, #D9F0E3);
+}
+
+.text-compliance-green-subtle {
+  color: var(--color-compliance-green-subtle, #D9F0E3);
+}
+
+.border-compliance-green-subtle {
+  border-color: var(--color-compliance-green-subtle, #D9F0E3);
+}
+
+.bg-white {
+  background-color: var(--color-white, #FFFFFF);
+}
+
+.text-white {
+  color: var(--color-white, #FFFFFF);
+}
+
+.border-white {
+  border-color: var(--color-white, #FFFFFF);
+}
+
+.bg-black {
+  background-color: var(--color-black, #000000);
+}
+
+.text-black {
+  color: var(--color-black, #000000);
+}
+
+.border-black {
+  border-color: var(--color-black, #000000);
+}
+
+.bg-transparent {
+  background-color: var(--color-transparent, transparent);
+}
+
+.text-transparent {
+  color: var(--color-transparent, transparent);
+}
+
+.border-transparent {
+  border-color: var(--color-transparent, transparent);
+}
+
+:root {
   --container-corner-radius: 20px;
   --wp--style--global--content-size: none;
   --color-primary: #FDB022;
@@ -9,19 +259,19 @@
   --color-blue: #3B82F6;
   --color-dark-blue: #1e3a8a;
   --color-gray: #6B7280;
-  --font-size-1: fluid(40, 90);
-  --font-size-2: fluid(36, 75);
-  --font-size-3: fluid(28, 50);
-  --font-size-4: fluid(25, 45);
-  --font-size-5: fluid(22, 35);
-  --font-size-6: fluid(21, 30);
-  --font-size-7: fluid(20, 25);
-  --font-size-8: fluid(14, 20);
-  --font-size-body-lg: fluid(18, 22);
-  --font-size-body-md: fluid(16, 18);
-  --font-size-body-sm: fluid(15, 16);
-  --font-size-body-xs: fluid(14, 15);
-  --font-size-body-xxs: fluid(10, 10);
+  --font-size-1: clamp(40px, 90 / 1512 * 100vw, 90px);
+  --font-size-2: clamp(36px, 75 / 1512 * 100vw, 75px);
+  --font-size-3: clamp(28px, 50 / 1512 * 100vw, 50px);
+  --font-size-4: clamp(25px, 45 / 1512 * 100vw, 45px);
+  --font-size-5: clamp(22px, 35 / 1512 * 100vw, 35px);
+  --font-size-6: clamp(21px, 30 / 1512 * 100vw, 30px);
+  --font-size-7: clamp(20px, 25 / 1512 * 100vw, 25px);
+  --font-size-8: clamp(14px, 20 / 1512 * 100vw, 20px);
+  --font-size-body-lg: clamp(18px, 22 / 1512 * 100vw, 22px);
+  --font-size-body-md: clamp(16px, 18 / 1512 * 100vw, 18px);
+  --font-size-body-sm: clamp(15px, 16 / 1512 * 100vw, 16px);
+  --font-size-body-xs: clamp(14px, 15 / 1512 * 100vw, 15px);
+  --font-size-body-xxs: clamp(10px, 10 / 1512 * 100vw, 10px);
   --font-body: "Onest", sans-serif;
 }
 :root :where(.is-layout-constrained) > *,
@@ -39,66 +289,6 @@ body {
   --container-padding-y: var(--vspace--default);
   --container-padding-x: var(--hspace--default);
   font-family: var(--font-body);
-}
-
-.bg-primary {
-  --bg-color: var(--color-primary);
-  background-color: var(--bg-color);
-}
-
-.bg-dark {
-  --bg-color: var(--color-dark);
-  background-color: var(--bg-color);
-}
-
-.bg-light {
-  --bg-color: var(--color-light);
-  background-color: var(--bg-color);
-}
-
-.bg-white {
-  --bg-color: var(--color-white);
-  background-color: var(--bg-color);
-}
-
-.bg-blue {
-  --bg-color: var(--color-blue);
-  background-color: var(--bg-color);
-}
-
-.bg-dark-blue {
-  --bg-color: var(--color-dark-blue);
-  background-color: var(--bg-color);
-}
-
-.bg-gray {
-  --bg-color: var(--color-gray);
-  background-color: var(--bg-color);
-}
-
-.bg-transparent {
-  --bg-color: transparent;
-  background-color: transparent;
-}
-
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-dark {
-  color: var(--color-dark);
-}
-
-.text-white {
-  color: var(--color-white);
-}
-
-.text-blue {
-  color: var(--color-blue);
-}
-
-.text-gray {
-  color: var(--color-gray);
 }
 
 .text-1 {
@@ -150,6 +340,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
   font-weight: 400;
 }
 h1.font-strong, h2.font-strong, h3.font-strong, h4.font-strong, h5.font-strong, h6.font-strong {

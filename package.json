@@ -2,13 +2,15 @@
   "name": "wagepoint",
   "version": "1.0.0",
   "scripts": {
+    "generate:colors": "node src/generate-colors.js",
+    "prebuild": "npm run generate:colors",
     "build": "npm run build:blocks && npm run build:sass",
     "build:blocks": "wp-scripts build",
     "build:sass": "sass src/global-styles.scss:build/global-styles.css src/editor-style.scss:build/editor-style.css",
+    "prestart": "npm run generate:colors",
     "start": "npm run start:blocks & npm run watch:sass",
     "start:blocks": "wp-scripts start",
-    "watch:sass": "sass --watch src/global-styles.scss:build/global-styles.css src/editor-style.scss:build/editor-style.css",
-    "lint:js": "wp-scripts lint-js 'src/**/*.js'"
+    "watch:sass": "sass --watch src/global-styles.scss:build/global-styles.css src/editor-style.scss:build/editor-style.css"
   },
   "devDependencies": {
     "@wordpress/scripts": "^27.0.0",

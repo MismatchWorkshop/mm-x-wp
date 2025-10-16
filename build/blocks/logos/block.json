@@ -1,0 +1,60 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/logos",
+  "title": "Logos",
+  "category": "layout",
+  "icon": "grid-view",
+  "description": "Display client logos in carousel or grid layout",
+  "keywords": [
+    "logos",
+    "clients",
+    "carousel",
+    "grid",
+    "trust"
+  ],
+  "attributes": {
+    "displayMode": {
+      "type": "string",
+      "default": "carousel",
+      "enum": [
+        "carousel",
+        "grid"
+      ]
+    },
+    "logos": {
+      "type": "array",
+      "default": []
+    },
+    "gridColumns": {
+      "type": "number",
+      "default": 5
+    },
+    "carouselSpeed": {
+      "type": "number",
+      "default": 30
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "default": true
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "form-fill-white"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "3rem"
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -19,7 +19,7 @@
     },
     "level": {
       "type": "number",
-      "default": 2
+      "default": 4
     },
     "size": {
       "type": "string",

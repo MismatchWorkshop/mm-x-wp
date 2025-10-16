@@ -223,6 +223,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 require get_template_directory() . '/inc/patterns.php';
+require get_template_directory() . '/inc/icons.php';
 
 
 
@@ -357,3 +358,30 @@ function wagepoint_unregister_core_blocks() {
     unregister_block_type('core/heading');
 }
 add_action('init', 'wagepoint_unregister_core_blocks');
+
+
+function wagepoint_enqueue_logos_frontend_script() {
+    if ( has_block( 'wagepoint/logos' ) ) {
+        wp_enqueue_script(
+            'wagepoint-logos-frontend',
+            get_template_directory_uri() . '/build/logos-frontend.js',
+            array(),
+            filemtime( get_template_directory() . '/build/logos-frontend.js' ),
+            true
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'wagepoint_enqueue_logos_frontend_script' );
+
+
+function wagepoint_register_pattern_categories() {
+    if ( function_exists( 'register_block_pattern_category' ) ) {
+        register_block_pattern_category(
+            'wagepoint-social-proof',
+            array(
+                'label' => __( 'Social Proof', 'wagepoint' ),
+            )
+        );
+    }
+}
+add_action( 'init', 'wagepoint_register_pattern_categories' );

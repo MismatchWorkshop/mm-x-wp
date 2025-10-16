@@ -1,0 +1,43 @@
+// THIS FILE IS AUTO-GENERATED FROM colors.json
+// DO NOT EDIT MANUALLY - Run 'npm run generate:colors' instead
+
+$colors: (
+    'payday-blue': #4A90E2,
+    'payday-blue-light': #8AB4E8,
+    'payday-blue-subtle': #E3EEF9,
+    'ledger-blue': #1E293B,
+    'ledger-blue-medium': #94A3B8,
+    'ledger-blue-light': #E2E8F0,
+    'form-fill-white': #F8F9FA,
+    'growth-green': #2ECC71,
+    'growth-green-light': #7EDDA4,
+    'growth-green-subtle': #D4F4E2,
+    'pto-yellow': #F9B234,
+    'pto-yellow-light': #FCDB9A,
+    'pto-yellow-subtle': #FEF3DC,
+    'compliance-green': #27AE60,
+    'compliance-green-light': #8DD4AC,
+    'compliance-green-subtle': #D9F0E3,
+    'white': #FFFFFF,
+    'black': #000000,
+    'transparent': transparent,
+);
+
+:root {
+    @each $name, $value in $colors {
+        --color-#{$name}: #{$value};
+    }
+}
+
+// Auto-generate utility classes
+@each $name, $value in $colors {
+    .bg-#{$name} {
+        background-color: var(--color-#{$name}, $value);
+    }
+    .text-#{$name} {
+        color: var(--color-#{$name}, $value);
+    }
+    .border-#{$name} {
+        border-color: var(--color-#{$name}, $value);
+    }
+}

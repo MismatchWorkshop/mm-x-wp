@@ -1,35 +1,9 @@
-import {
-    DndContext,
-    closestCenter,
-    KeyboardSensor,
-    PointerSensor,
-    useSensor,
-    useSensors,
-} from '@dnd-kit/core';
-import {
-    arrayMove,
-    SortableContext,
-    sortableKeyboardCoordinates,
-    verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
-import {
-    useSortable,
-} from '@dnd-kit/sortable';
+import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-
+import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { 
-    MediaUpload,
-    MediaUploadCheck
-} from '@wordpress/block-editor';
 
-import { 
-    Button,
-    __experimentalHStack as HStack
-} from '@wordpress/components';
-
-// Individual sortable logo item component
-function SortableLogoItem({ logo, index, onReplace, onRemove }) {
+export default function SortableLogoItem({ id, logo, onRemove }) {
     const {
         attributes,
         listeners,
@@ -37,7 +11,7 @@ function SortableLogoItem({ logo, index, onReplace, onRemove }) {
         transform,
         transition,
         isDragging,
-    } = useSortable({ id: logo.id });
+    } = useSortable({ id });
 
     const style = {
         transform: CSS.Transform.toString(transform),
@@ -46,44 +20,24 @@ function SortableLogoItem({ logo, index, onReplace, onRemove }) {
     };
 
     return (
-        <div 
-            ref={setNodeRef} 
-            style={style} 
-            className="logo-item sortable-item"
+        <div
+            ref={setNodeRef}
+            style={style}
+            className="sortable-logo-item"
             {...attributes}
+            {...listeners}
         >
-            {/* Drag handle */}
-            <div className="drag-handle" {...listeners}>
-                ⋮⋮
-            </div>
-            
-            <MediaUploadCheck>
-                <MediaUpload
-                    onSelect={(media) => onReplace(index, media)}
-                    allowedTypes={['image']}
-                    value={logo.id}
-                    render={({ open }) => (
-                        <div className="logo-wrapper">
-                            <img 
-                                src={logo.url} 
-                                alt={logo.alt}
-                                onClick={open}
-                                style={{ cursor: 'pointer' }}
-                            />
-                            <div className="logo-controls">
-                                <Button onClick={open} variant="secondary" isSmall>
-                                    Replace
-                                </Button>
-                                <Button onClick={() => onRemove(index)} isDestructive isSmall>
-                                    Remove
-                                </Button>
-                            </div>
-                        </div>
-                    )}
-                />
-            </MediaUploadCheck>
+            <img src={logo.url} alt={logo.alt} />
+            <Button
+                icon="no-alt"
+                label={__('Remove logo', 'wagepoint')}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    onRemove();
+                }}
+                className="remove-logo-button"
+                isDestructive
+            />
         </div>
     );
 }
-
-export default SortableLogoItem;
