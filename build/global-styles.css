@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 :root {
   --color-payday-blue: #4A90E2;
-  --color-payday-blue-light: #8AB4E8;
-  --color-payday-blue-subtle: #E3EEF9;
+  --color-payday-blue-tint-1: #8AB4E8;
+  --color-payday-blue-tint-2: #E3EEF9;
   --color-ledger-blue: #1E293B;
-  --color-ledger-blue-medium: #94A3B8;
-  --color-ledger-blue-light: #E2E8F0;
+  --color-ledger-blue-tint-1: #94A3B8;
+  --color-ledger-blue-tint-2: #E2E8F0;
   --color-form-fill-white: #F8F9FA;
   --color-growth-green: #2ECC71;
-  --color-growth-green-light: #7EDDA4;
-  --color-growth-green-subtle: #D4F4E2;
+  --color-growth-green-tint-1: #7EDDA4;
+  --color-growth-green-tint-2: #D4F4E2;
   --color-pto-yellow: #F9B234;
-  --color-pto-yellow-light: #FCDB9A;
-  --color-pto-yellow-subtle: #FEF3DC;
+  --color-pto-yellow-tint-1: #FCDB9A;
+  --color-pto-yellow-tint-2: #FEF3DC;
   --color-compliance-green: #27AE60;
-  --color-compliance-green-light: #8DD4AC;
-  --color-compliance-green-subtle: #D9F0E3;
+  --color-compliance-green-tint-1: #8DD4AC;
+  --color-compliance-green-tint-2: #D9F0E3;
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-transparent: transparent;
@@ -33,28 +33,28 @@
   border-color: var(--color-payday-blue, #4A90E2);
 }
 
-.bg-payday-blue-light {
-  background-color: var(--color-payday-blue-light, #8AB4E8);
+.bg-payday-blue-tint-1 {
+  background-color: var(--color-payday-blue-tint-1, #8AB4E8);
 }
 
-.text-payday-blue-light {
-  color: var(--color-payday-blue-light, #8AB4E8);
+.text-payday-blue-tint-1 {
+  color: var(--color-payday-blue-tint-1, #8AB4E8);
 }
 
-.border-payday-blue-light {
-  border-color: var(--color-payday-blue-light, #8AB4E8);
+.border-payday-blue-tint-1 {
+  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
 }
 
-.bg-payday-blue-subtle {
-  background-color: var(--color-payday-blue-subtle, #E3EEF9);
+.bg-payday-blue-tint-2 {
+  background-color: var(--color-payday-blue-tint-2, #E3EEF9);
 }
 
-.text-payday-blue-subtle {
-  color: var(--color-payday-blue-subtle, #E3EEF9);
+.text-payday-blue-tint-2 {
+  color: var(--color-payday-blue-tint-2, #E3EEF9);
 }
 
-.border-payday-blue-subtle {
-  border-color: var(--color-payday-blue-subtle, #E3EEF9);
+.border-payday-blue-tint-2 {
+  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
 }
 
 .bg-ledger-blue {
@@ -69,28 +69,28 @@
   border-color: var(--color-ledger-blue, #1E293B);
 }
 
-.bg-ledger-blue-medium {
-  background-color: var(--color-ledger-blue-medium, #94A3B8);
+.bg-ledger-blue-tint-1 {
+  background-color: var(--color-ledger-blue-tint-1, #94A3B8);
 }
 
-.text-ledger-blue-medium {
-  color: var(--color-ledger-blue-medium, #94A3B8);
+.text-ledger-blue-tint-1 {
+  color: var(--color-ledger-blue-tint-1, #94A3B8);
 }
 
-.border-ledger-blue-medium {
-  border-color: var(--color-ledger-blue-medium, #94A3B8);
+.border-ledger-blue-tint-1 {
+  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
 }
 
-.bg-ledger-blue-light {
-  background-color: var(--color-ledger-blue-light, #E2E8F0);
+.bg-ledger-blue-tint-2 {
+  background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
 }
 
-.text-ledger-blue-light {
-  color: var(--color-ledger-blue-light, #E2E8F0);
+.text-ledger-blue-tint-2 {
+  color: var(--color-ledger-blue-tint-2, #E2E8F0);
 }
 
-.border-ledger-blue-light {
-  border-color: var(--color-ledger-blue-light, #E2E8F0);
+.border-ledger-blue-tint-2 {
+  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
 }
 
 .bg-form-fill-white {
@@ -117,28 +117,28 @@
   border-color: var(--color-growth-green, #2ECC71);
 }
 
-.bg-growth-green-light {
-  background-color: var(--color-growth-green-light, #7EDDA4);
+.bg-growth-green-tint-1 {
+  background-color: var(--color-growth-green-tint-1, #7EDDA4);
 }
 
-.text-growth-green-light {
-  color: var(--color-growth-green-light, #7EDDA4);
+.text-growth-green-tint-1 {
+  color: var(--color-growth-green-tint-1, #7EDDA4);
 }
 
-.border-growth-green-light {
-  border-color: var(--color-growth-green-light, #7EDDA4);
+.border-growth-green-tint-1 {
+  border-color: var(--color-growth-green-tint-1, #7EDDA4);
 }
 
-.bg-growth-green-subtle {
-  background-color: var(--color-growth-green-subtle, #D4F4E2);
+.bg-growth-green-tint-2 {
+  background-color: var(--color-growth-green-tint-2, #D4F4E2);
 }
 
-.text-growth-green-subtle {
-  color: var(--color-growth-green-subtle, #D4F4E2);
+.text-growth-green-tint-2 {
+  color: var(--color-growth-green-tint-2, #D4F4E2);
 }
 
-.border-growth-green-subtle {
-  border-color: var(--color-growth-green-subtle, #D4F4E2);
+.border-growth-green-tint-2 {
+  border-color: var(--color-growth-green-tint-2, #D4F4E2);
 }
 
 .bg-pto-yellow {
@@ -153,28 +153,28 @@
   border-color: var(--color-pto-yellow, #F9B234);
 }
 
-.bg-pto-yellow-light {
-  background-color: var(--color-pto-yellow-light, #FCDB9A);
+.bg-pto-yellow-tint-1 {
+  background-color: var(--color-pto-yellow-tint-1, #FCDB9A);
 }
 
-.text-pto-yellow-light {
-  color: var(--color-pto-yellow-light, #FCDB9A);
+.text-pto-yellow-tint-1 {
+  color: var(--color-pto-yellow-tint-1, #FCDB9A);
 }
 
-.border-pto-yellow-light {
-  border-color: var(--color-pto-yellow-light, #FCDB9A);
+.border-pto-yellow-tint-1 {
+  border-color: var(--color-pto-yellow-tint-1, #FCDB9A);
 }
 
-.bg-pto-yellow-subtle {
-  background-color: var(--color-pto-yellow-subtle, #FEF3DC);
+.bg-pto-yellow-tint-2 {
+  background-color: var(--color-pto-yellow-tint-2, #FEF3DC);
 }
 
-.text-pto-yellow-subtle {
-  color: var(--color-pto-yellow-subtle, #FEF3DC);
+.text-pto-yellow-tint-2 {
+  color: var(--color-pto-yellow-tint-2, #FEF3DC);
 }
 
-.border-pto-yellow-subtle {
-  border-color: var(--color-pto-yellow-subtle, #FEF3DC);
+.border-pto-yellow-tint-2 {
+  border-color: var(--color-pto-yellow-tint-2, #FEF3DC);
 }
 
 .bg-compliance-green {
@@ -189,28 +189,28 @@
   border-color: var(--color-compliance-green, #27AE60);
 }
 
-.bg-compliance-green-light {
-  background-color: var(--color-compliance-green-light, #8DD4AC);
+.bg-compliance-green-tint-1 {
+  background-color: var(--color-compliance-green-tint-1, #8DD4AC);
 }
 
-.text-compliance-green-light {
-  color: var(--color-compliance-green-light, #8DD4AC);
+.text-compliance-green-tint-1 {
+  color: var(--color-compliance-green-tint-1, #8DD4AC);
 }
 
-.border-compliance-green-light {
-  border-color: var(--color-compliance-green-light, #8DD4AC);
+.border-compliance-green-tint-1 {
+  border-color: var(--color-compliance-green-tint-1, #8DD4AC);
 }
 
-.bg-compliance-green-subtle {
-  background-color: var(--color-compliance-green-subtle, #D9F0E3);
+.bg-compliance-green-tint-2 {
+  background-color: var(--color-compliance-green-tint-2, #D9F0E3);
 }
 
-.text-compliance-green-subtle {
-  color: var(--color-compliance-green-subtle, #D9F0E3);
+.text-compliance-green-tint-2 {
+  color: var(--color-compliance-green-tint-2, #D9F0E3);
 }
 
-.border-compliance-green-subtle {
-  border-color: var(--color-compliance-green-subtle, #D9F0E3);
+.border-compliance-green-tint-2 {
+  border-color: var(--color-compliance-green-tint-2, #D9F0E3);
 }
 
 .bg-white {
@@ -350,6 +350,234 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   font-weight: 600;
 }
 
+/**
+ * Global Card Styles
+ * Reusable across all blocks that display cards
+ */
+.wagepoint-card,
+.filterable-grid-block__card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wagepoint-card:hover,
+.filterable-grid-block__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+  border-color: #d1d5db;
+}
+.wagepoint-card__image,
+.filterable-grid-block__card__image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #f3f4f6;
+  position: relative;
+}
+.wagepoint-card__image a,
+.filterable-grid-block__card__image a {
+  display: block;
+  height: 100%;
+}
+.wagepoint-card__image img,
+.filterable-grid-block__card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.wagepoint-card__image:hover img,
+.filterable-grid-block__card__image:hover img {
+  transform: scale(1.05);
+}
+.wagepoint-card__badge,
+.filterable-grid-block__card__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.75rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+.wagepoint-card__content,
+.filterable-grid-block__card__content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wagepoint-card__meta, .wagepoint-card__categories,
+.filterable-grid-block__card__meta,
+.filterable-grid-block__card__categories {
+  margin-bottom: 0.75rem;
+}
+.wagepoint-card__category,
+.filterable-grid-block__card__category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6366f1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.wagepoint-card__category:hover,
+.filterable-grid-block__card__category:hover {
+  color: #4f46e5;
+}
+.wagepoint-card__title,
+.filterable-grid-block__card__title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.wagepoint-card__title a,
+.filterable-grid-block__card__title a {
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.wagepoint-card__title a:hover,
+.filterable-grid-block__card__title a:hover {
+  color: #3b82f6;
+}
+.wagepoint-card__excerpt,
+.filterable-grid-block__card__excerpt {
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #6b7280;
+  flex: 1;
+}
+.wagepoint-card__footer,
+.filterable-grid-block__card__footer {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin-top: auto;
+}
+.wagepoint-card__author,
+.filterable-grid-block__card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wagepoint-card__author img,
+.filterable-grid-block__card__author img {
+  border-radius: 50%;
+}
+.wagepoint-card__date,
+.filterable-grid-block__card__date {
+  color: #9ca3af;
+}
+.wagepoint-card__link,
+.filterable-grid-block__card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.wagepoint-card__link:hover,
+.filterable-grid-block__card__link:hover {
+  gap: 0.75rem;
+}
+.wagepoint-card__arrow,
+.filterable-grid-block__card__arrow {
+  transition: transform 0.2s;
+}
+.wagepoint-card:hover .wagepoint-card__arrow,
+.wagepoint-card:hover .filterable-grid-block__card__arrow,
+.filterable-grid-block__card:hover .wagepoint-card__arrow,
+.filterable-grid-block__card:hover .filterable-grid-block__card__arrow {
+  transform: translateX(4px);
+}
+
+.wagepoint-card--post .wagepoint-card__badge,
+.wagepoint-card--post .filterable-grid-block__card-badge,
+.filterable-grid-block__card[data-post-type=post] .wagepoint-card__badge,
+.filterable-grid-block__card[data-post-type=post] .filterable-grid-block__card-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.wagepoint-card--post .wagepoint-card__author img,
+.wagepoint-card--post .filterable-grid-block__card-author img,
+.filterable-grid-block__card[data-post-type=post] .wagepoint-card__author img,
+.filterable-grid-block__card[data-post-type=post] .filterable-grid-block__card-author img {
+  width: 32px;
+  height: 32px;
+}
+
+.wagepoint-card--product .wagepoint-card__price,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0.75rem 0;
+}
+.wagepoint-card--product .wagepoint-card__badge--sale,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__badge--sale {
+  background: #ef4444;
+  top: 1rem;
+  left: 1rem;
+}
+.wagepoint-card--product .wagepoint-card__button,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: auto;
+  transition: all 0.2s;
+}
+.wagepoint-card--product .wagepoint-card__button:hover,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.wagepoint-card--page .wagepoint-card__image,
+.filterable-grid-block__card[data-post-type=page] .wagepoint-card__image {
+  aspect-ratio: 4/3;
+}
+
+.wagepoint-card--compact .wagepoint-card__content {
+  padding: 1rem;
+}
+.wagepoint-card--compact .wagepoint-card__title {
+  font-size: 1rem;
+}
+.wagepoint-card--compact .wagepoint-card__excerpt {
+  font-size: 0.875rem;
+}
+
+.card--post,
+.filterable-grid-block__card--post {
+  border-color: red;
+}
+
 .container__inner {
   border-radius: var(--container-corner-radius);
   padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
@@ -358,6 +586,24 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
 .meta-heading {
   font-size: var(--font-size-8, 20px);
   font-weight: 500;
+}
+
+.wp-block-post-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1em 0 !important;
+}
+.wp-block-post-terms > * {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+.wp-block-post-terms a {
+  border: 1px solid #000;
+  text-decoration: none;
+}
+.wp-block-post-terms__separator {
+  display: none;
 }
 
 /*# sourceMappingURL=global-styles.css.map */

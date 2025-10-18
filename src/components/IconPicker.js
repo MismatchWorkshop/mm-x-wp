@@ -1,6 +1,6 @@
-import { SelectControl, TextControl, RangeControl, Spinner } from '@wordpress/components';
+import { SelectControl, TextControl, Spinner, ColorPalette } from '@wordpress/components';
 import { useState, useEffect } from '@wordpress/element';
-import { COLOR_SYSTEM } from '../color-system';
+import { getColorsByGroup } from '../color-system';
 import Icon from './Icon';
 
 const IconPicker = ({ 
@@ -8,11 +8,12 @@ const IconPicker = ({
         type: 'svg', 
         src: '', 
         svg: '', 
-        backgroundColor: 'payday-blue',
+        backgroundColor: '',
         size: 64
     },
     onChange,
-    label = 'Icon Settings'
+    label = 'Icon Settings',
+    showSize = false
 }) => {
     const [customIcons, setCustomIcons] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +24,7 @@ const IconPicker = ({
             .then(response => response.json())
             .then(icons => {
                 const iconOptions = icons
-                    .filter(icon => icon.svg_code) // Only icons with SVG code
+                    .filter(icon => icon.svg_code)
                     .map(icon => ({
                         label: icon.title.rendered,
                         value: icon.svg_code,
@@ -38,7 +39,7 @@ const IconPicker = ({
             });
     }, []);
 
-    // Built-in preset icons (fallback/starter set)
+    // Built-in preset icons
     const PRESET_ICONS = {
         home: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
         dollar: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>',
@@ -55,7 +56,6 @@ const IconPicker = ({
         value: PRESET_ICONS[key]
     }));
 
-    // Combine preset and custom icons
     const allIconOptions = [
         { label: 'Select an icon...', value: '' },
         ...(customIcons.length > 0 ? [
@@ -65,6 +65,19 @@ const IconPicker = ({
         { label: '── Built-in Icons ──', value: '', disabled: true },
         ...presetOptions,
     ];
+
+    // Get only colors suitable for icons and format for ColorPalette
+    const iconColors = getColorsByGroup('icon');
+    const colorPaletteColors = Object.entries(iconColors).map(([key, data]) => ({
+        name: data.label,
+        color: data.value,
+        slug: key
+    }));
+
+    // Get current background color value (not slug)
+    const currentColorValue = value.backgroundColor && iconColors[value.backgroundColor] 
+        ? iconColors[value.backgroundColor].value 
+        : undefined;
 
     return (
         <div className="icon-picker-control">
@@ -94,7 +107,7 @@ const IconPicker = ({
                         />
                     )}
                     
-                    <p style={{ fontSize: '12px', color: '#6B7280', marginTop: '8px' }}>
+                    <p style={{ fontSize: '12px', color: '#6B7280', margin: '8px 0' }}>
                         Need a new icon? <a href="/wp-admin/post-new.php?post_type=icon" target="_blank">Add one here</a>
                     </p>
                 </>
@@ -109,21 +122,32 @@ const IconPicker = ({
                 />
             )}
 
-            <SelectControl
-                label="Background Color"
-                value={value.backgroundColor}
-                options={COLOR_SYSTEM.iconColorOptions}
-                onChange={(backgroundColor) => onChange({ ...value, backgroundColor })}
-            />
-
-            <RangeControl
-                label="Icon Size"
-                value={value.size}
-                onChange={(size) => onChange({ ...value, size })}
-                min={32}
-                max={128}
-                step={8}
-            />
+            <div style={{ marginTop: '16px' }}>
+                <label style={{ 
+                    display: 'block', 
+                    marginBottom: '8px',
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    color: '#1e1e1e'
+                }}>
+                    Background Color
+                </label>
+                <ColorPalette
+                    colors={colorPaletteColors}
+                    value={currentColorValue}
+                    onChange={(newColorValue) => {
+                        // Find the slug from the color value
+                        const colorSlug = Object.entries(iconColors).find(
+                            ([key, data]) => data.value === newColorValue
+                        )?.[0] || '';
+                        
+                        onChange({ ...value, backgroundColor: colorSlug });
+                    }}
+                    clearable={true}
+                    disableCustomColors={true}
+                />
+            </div>
             
             {(value.svg || value.src) && (
                 <div style={{ marginTop: '16px', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>

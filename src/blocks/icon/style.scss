@@ -1,0 +1,17 @@
+.wp-block-wagepoint-icon {
+    display: flex;
+    margin: 20px 0;
+    
+    // Alignment support
+    &.has-text-align-left {
+        justify-content: flex-start;
+    }
+    
+    &.has-text-align-center {
+        justify-content: center;
+    }
+    
+    &.has-text-align-right {
+        justify-content: flex-end;
+    }
+}

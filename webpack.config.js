@@ -16,7 +16,13 @@ if (fs.existsSync(blocksDir)) {
         if (fs.existsSync(blockIndexPath)) {
             blockEntries[`blocks/${blockName}/index`] = blockIndexPath;
         }
+
+        const blockViewPath = path.join(blocksDir, blockName, 'view.js');
+        if (fs.existsSync(blockViewPath)) {
+            blockEntries[`blocks/${blockName}/view`] = blockViewPath;
+        }
     });
+    
 }
 
 module.exports = {

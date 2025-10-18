@@ -1,8 +1,10 @@
-// Editor-specific styles for Logos Block
+// Editor-only styles for Logos Block
+// Import shared styles first
+@import './style.scss';
 
 .wp-block-wagepoint-logos {
     
-    // Placeholder state
+    // Placeholder state (editor only)
     .logos-placeholder {
         text-align: center;
         padding: 4rem 2rem;
@@ -17,7 +19,7 @@
         }
     }
 
-    // Editor toolbar
+    // Editor toolbar (editor only)
     .logos-editor-toolbar {
         display: flex;
         justify-content: space-between;
@@ -40,7 +42,7 @@
         }
     }
 
-    // Sortable container
+    // Sortable container (editor only)
     .logos-sortable-container {
         display: grid;
         gap: 1rem;
@@ -107,7 +109,7 @@
         }
     }
 
-    // Preview divider
+    // Preview divider (editor only)
     .logos-preview-divider {
         display: flex;
         align-items: center;
@@ -131,7 +133,7 @@
         }
     }
 
-    // Inspector controls
+    // Inspector controls (editor only)
     .components-panel__body {
         .add-logos-button {
             width: 100%;

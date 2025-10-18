@@ -1,0 +1,35 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/metric",
+  "title": "Metric",
+  "category": "layout",
+  "icon": "chart-bar",
+  "description": "Display a metric with icon, title and description",
+  "keywords": ["stat", "number", "metric"],
+  "attributes": {
+    "icon": {
+      "type": "object",
+      "default": {
+        "type": "svg",
+        "src": "",
+        "svg": "",
+        "backgroundColor": "payday-blue",
+        "size": 64
+      }
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

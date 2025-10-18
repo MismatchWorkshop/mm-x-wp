@@ -1,4 +1,4 @@
-import { COLOR_SYSTEM, getAutoTextColor } from '../color-system';
+import { COLOR_SYSTEM, getAutoTextColor, getColorsByGroup } from '../color-system';
 
 /**
  * Icon Component
@@ -12,17 +12,21 @@ const Icon = ({
     svg = '', // SVG markup for type='svg'
     alt = '',
     size = 64,
-    backgroundColor = 'payday-blue', // Use color slug from COLOR_SYSTEM.backgrounds
+    backgroundColor = '', // Empty string means no background
     iconColor = '', // Auto-calculated if not provided
     borderRadius = '16px',
     className = ''
 }) => {
-    // Get actual color value from backgrounds
-    const bgConfig = COLOR_SYSTEM.backgrounds[backgroundColor];
-    const bgColor = bgConfig ? bgConfig.value : COLOR_SYSTEM.backgrounds['payday-blue'].value;
+    // Get icon colors (since IconPicker uses icon colors, not background colors)
+    const iconColors = getColorsByGroup('icon');
     
-    // Auto-calculate icon color if not provided
-    const calculatedIconColor = iconColor || getAutoTextColor(backgroundColor);
+    // Get background color value from the icon color system
+    const bgColor = backgroundColor && iconColors[backgroundColor]
+        ? iconColors[backgroundColor].value 
+        : 'transparent';
+    
+    // Auto-calculate icon color if not provided and background exists
+    const calculatedIconColor = iconColor || (backgroundColor ? getAutoTextColor(backgroundColor) : 'currentColor');
 
     const iconStyle = {
         width: `${size}px`,
@@ -53,15 +57,17 @@ const Icon = ({
             className={`wp-block-icon ${className}`}
             style={iconStyle}
         >
-            <img 
-                src={src} 
-                alt={alt}
-                style={{ 
-                    width: '60%', 
-                    height: '60%',
-                    objectFit: 'contain'
-                }}
-            />
+            {src && (
+                <img 
+                    src={src} 
+                    alt={alt}
+                    style={{ 
+                        width: '60%', 
+                        height: '60%',
+                        objectFit: 'contain'
+                    }}
+                />
+            )}
         </div>
     );
 };

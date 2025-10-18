@@ -1,0 +1,43 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/icon",
+  "title": "Icon",
+  "category": "media",
+  "icon": "star-filled",
+  "description": "Display an icon with customizable appearance",
+  "keywords": ["icon", "svg", "image"],
+  "attributes": {
+    "iconType": {
+      "type": "string",
+      "default": "svg"
+    },
+    "iconSrc": {
+      "type": "string",
+      "default": ""
+    },
+    "iconSvg": {
+      "type": "string",
+      "default": ""
+    },
+    "iconBackgroundColor": {
+      "type": "string",
+      "default": "payday-blue"
+    },
+    "iconSize": {
+      "type": "number",
+      "default": 64
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

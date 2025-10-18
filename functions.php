@@ -224,6 +224,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 require get_template_directory() . '/inc/patterns.php';
 require get_template_directory() . '/inc/icons.php';
+require get_template_directory() . '/inc/index-grid.php';
 
 
 

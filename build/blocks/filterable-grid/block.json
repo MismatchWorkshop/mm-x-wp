@@ -1,0 +1,85 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/filterable-grid",
+  "title": "Filterable Cards",
+  "category": "widgets",
+  "icon": "filter",
+  "description": "Display taxonomy filter controls (dropdown, buttons, checkboxes, or radio)",
+  "keywords": [
+    "filter",
+    "taxonomy",
+    "category",
+    "tag"
+  ],
+  "version": "1.0.0",
+  "textdomain": "mytheme",
+  "attributes": {
+    "taxonomy": {
+      "type": "string",
+      "default": "category"
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "default": true
+    },
+    "placeholder": {
+      "type": "string",
+      "default": ""
+    },
+    "style": {
+      "type": "string",
+      "default": "dropdown"
+    },
+    "showCount": {
+      "type": "boolean",
+      "default": false
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "name"
+    },
+    "order": {
+      "type": "string",
+      "default": "ASC"
+    },
+    "hideEmpty": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAllOption": {
+      "type": "boolean",
+      "default": true
+    },
+    "allOptionText": {
+      "type": "string",
+      "default": ""
+    },
+    "multiSelect": {
+      "type": "boolean",
+      "default": false
+    },
+    "hierarchical": {
+      "type": "boolean",
+      "default": false
+    },
+    "maxDepth": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

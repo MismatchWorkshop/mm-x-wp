@@ -3,6 +3,8 @@
 @import "color-utilities";
 @import "base";
 
+@import 'components/cards';
+
 .container__inner {
     border-radius: var(--container-corner-radius);
     padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
@@ -12,4 +14,28 @@
 .meta-heading {
     font-size: var(--font-size-8, 20px);
     font-weight: 500;
+}
+
+.wp-block-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin: 1em 0 !important;
+
+    > * {
+        display: inline-block;
+        padding: .5em 1em;
+    }
+    a {
+        border: 1px solid #000;
+        text-decoration: none;
+    }
+
+    &__prefix {
+        //padding-right: 0;
+    }
+
+    &__separator {
+        display: none;
+    }
 }

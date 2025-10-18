@@ -19,11 +19,11 @@
     },
     "level": {
       "type": "number",
-      "default": 4
+      "default": 2
     },
     "size": {
       "type": "string",
-      "default": "inherit"
+      "default": "4"
     },
     "textColor": {
       "type": "string",
