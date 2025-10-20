@@ -12,6 +12,14 @@ function wagepoint_register_pattern_categories() {
             'description' => __('Hero sections and landing page headers', 'wagepoint')
         )
     );
+
+     register_block_pattern_category(
+        'wagepoint-header',
+        array(
+            'label' => __('Headers', 'wagepoint'),
+            'description' => __('Site headers and navigation', 'wagepoint')
+        )
+    );
     
     // Social Proof category
     register_block_pattern_category(
