@@ -1,0 +1,26 @@
+.wp-block-wagepoint-metric .metric__wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.wp-block-wagepoint-metric .metric__icon {
+  flex-shrink: 0;
+}
+.wp-block-wagepoint-metric .metric__content {
+  flex: 1;
+}
+.wp-block-wagepoint-metric .metric__title {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.wp-block-wagepoint-metric .metric__description {
+  margin: 0;
+  color: #6B7280;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.wp-block-wagepoint-metric .wp-block-icon.bg-auto {
+  background-color: var(--auto-icon-bg, #F9B234);
+}/*# sourceMappingURL=style.css.map */

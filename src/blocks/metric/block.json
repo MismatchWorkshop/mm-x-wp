@@ -4,7 +4,7 @@
   "title": "Metric",
   "category": "layout",
   "icon": "chart-bar",
-  "description": "Display a metric with icon, title and description",
+  "description": "Display a metric with icon, value and label",
   "keywords": ["stat", "number", "metric"],
   "attributes": {
     "icon": {
@@ -13,19 +13,20 @@
         "type": "svg",
         "src": "",
         "svg": "",
-        "backgroundColor": "payday-blue",
+        "backgroundColor": "auto",
         "size": 64
       }
     },
-    "title": {
+    "value": {
       "type": "string",
       "default": ""
     },
-    "description": {
+    "label": {
       "type": "string",
       "default": ""
     }
   },
+  "usesContext": ["wagepoint/containerBackground"],
   "supports": {
     "html": false
   },

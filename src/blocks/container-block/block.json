@@ -1,15 +1,10 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "wagepoint/container",
   "title": "Container",
   "category": "layout",
-  "icon": "admin-page",
-  "description": "A flexible container with background and spacing controls.",
-  "supports": {
-    "html": false,
-    "layout": false
-  },
+  "icon": "align-center",
+  "description": "A flexible container with background and spacing controls",
   "attributes": {
     "outerBackground": {
       "type": "string",
@@ -25,7 +20,7 @@
     },
     "containerBackground": {
       "type": "string",
-      "default": "white"
+      "default": "transparent"
     },
     "padding": {
       "type": "string",
@@ -39,6 +34,12 @@
       "type": "string",
       "default": "left"
     }
+  },
+  "providesContext": {
+    "wagepoint/containerBackground": "containerBackground"
+  },
+  "supports": {
+    "html": false
   },
   "textdomain": "wagepoint",
   "editorScript": "file:./index.js",

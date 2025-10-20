@@ -1,43 +1,240 @@
-// THIS FILE IS AUTO-GENERATED FROM colors.json
-// DO NOT EDIT MANUALLY - Run 'npm run generate:colors' instead
-
-$colors: (
-    'payday-blue': #4A90E2,
-    'payday-blue-tint-1': #8AB4E8,
-    'payday-blue-tint-2': #E3EEF9,
-    'ledger-blue': #1E293B,
-    'ledger-blue-tint-1': #94A3B8,
-    'ledger-blue-tint-2': #E2E8F0,
-    'form-fill-white': #F8F9FA,
-    'growth-green': #2ECC71,
-    'growth-green-tint-1': #7EDDA4,
-    'growth-green-tint-2': #D4F4E2,
-    'pto-yellow': #F9B234,
-    'pto-yellow-tint-1': #FCDB9A,
-    'pto-yellow-tint-2': #FEF3DC,
-    'compliance-green': #27AE60,
-    'compliance-green-tint-1': #8DD4AC,
-    'compliance-green-tint-2': #D9F0E3,
-    'white': #FFFFFF,
-    'black': #000000,
-    'transparent': transparent,
-);
+// Auto-generated color utilities from colors.json
 
 :root {
-    @each $name, $value in $colors {
-        --color-#{$name}: #{$value};
-    }
+  --color-payday-blue: #4A90E2;
+  --color-payday-blue-tint-1: #8AB4E8;
+  --color-payday-blue-tint-2: #E3EEF9;
+  --color-ledger-blue: #1E293B;
+  --color-ledger-blue-tint-1: #94A3B8;
+  --color-ledger-blue-tint-2: #E2E8F0;
+  --color-form-fill-white: #F8F9FA;
+  --color-white: #FFFFFF;
+  --color-transparent: transparent;
+  --color-growth-green: #2ECC71;
+  --color-pto-yellow: #F9B234;
+  --color-compliance-green: #27AE60;
 }
 
-// Auto-generate utility classes
-@each $name, $value in $colors {
-    .bg-#{$name} {
-        background-color: var(--color-#{$name}, $value);
-    }
-    .text-#{$name} {
-        color: var(--color-#{$name}, $value);
-    }
-    .border-#{$name} {
-        border-color: var(--color-#{$name}, $value);
-    }
+.bg-payday-blue {
+  background-color: var(--color-payday-blue, #4A90E2);
 }
+
+.bg-payday-blue-tint-1 {
+  background-color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.bg-payday-blue-tint-2 {
+  background-color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.bg-ledger-blue {
+  background-color: var(--color-ledger-blue, #1E293B);
+}
+
+.bg-ledger-blue-tint-1 {
+  background-color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.bg-ledger-blue-tint-2 {
+  background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.bg-form-fill-white {
+  background-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.bg-white {
+  background-color: var(--color-white, #FFFFFF);
+}
+
+.bg-transparent {
+  background-color: var(--color-transparent, transparent);
+}
+
+.bg-growth-green {
+  background-color: var(--color-growth-green, #2ECC71);
+}
+
+.bg-pto-yellow {
+  background-color: var(--color-pto-yellow, #F9B234);
+}
+
+.bg-compliance-green {
+  background-color: var(--color-compliance-green, #27AE60);
+}
+
+.text-payday-blue {
+  color: var(--color-payday-blue, #4A90E2);
+}
+
+.text-payday-blue-tint-1 {
+  color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.text-payday-blue-tint-2 {
+  color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.text-ledger-blue {
+  color: var(--color-ledger-blue, #1E293B);
+}
+
+.text-ledger-blue-tint-1 {
+  color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.text-ledger-blue-tint-2 {
+  color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.text-form-fill-white {
+  color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.text-white {
+  color: var(--color-white, #FFFFFF);
+}
+
+.text-growth-green {
+  color: var(--color-growth-green, #2ECC71);
+}
+
+.text-pto-yellow {
+  color: var(--color-pto-yellow, #F9B234);
+}
+
+.text-compliance-green {
+  color: var(--color-compliance-green, #27AE60);
+}
+
+.border-payday-blue {
+  border-color: var(--color-payday-blue, #4A90E2);
+}
+
+.border-payday-blue-tint-1 {
+  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.border-payday-blue-tint-2 {
+  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.border-ledger-blue {
+  border-color: var(--color-ledger-blue, #1E293B);
+}
+
+.border-ledger-blue-tint-1 {
+  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.border-ledger-blue-tint-2 {
+  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.border-form-fill-white {
+  border-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.border-white {
+  border-color: var(--color-white, #FFFFFF);
+}
+
+.border-growth-green {
+  border-color: var(--color-growth-green, #2ECC71);
+}
+
+.border-pto-yellow {
+  border-color: var(--color-pto-yellow, #F9B234);
+}
+
+.border-compliance-green {
+  border-color: var(--color-compliance-green, #27AE60);
+}
+
+// Contextual auto colors for container backgrounds
+// These define what "auto" means for child elements
+
+.container__inner.bg-payday-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-payday-blue-tint-1 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-payday-blue-tint-2 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-ledger-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.container__inner.bg-ledger-blue-tint-1 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-ledger-blue-tint-2 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-form-fill-white {
+  --auto-icon-bg: var(--color-growth-green, #2ECC71);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-white {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-transparent {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-growth-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-pto-yellow {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-compliance-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+

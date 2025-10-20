@@ -1,31 +1,17 @@
-import { COLOR_SYSTEM, getAutoTextColor, getColorsByGroup } from '../color-system';
-
-/**
- * Icon Component
- * Renders an icon with consistent styling across the theme
- * Supports inline SVG or image sources
- */
+import { COLOR_SYSTEM, getAutoTextColor } from '../color-system';
 
 const Icon = ({ 
-    type = 'image', // 'image' or 'svg'
-    src = '', // Image URL for type='image'
-    svg = '', // SVG markup for type='svg'
+    type = 'image',
+    src = '',
+    svg = '',
     alt = '',
     size = 64,
-    backgroundColor = '', // Empty string means no background
-    iconColor = '', // Auto-calculated if not provided
+    backgroundColor,  // This should now be the resolved color key, not 'auto'
+    iconColor = '', 
     borderRadius = '16px',
     className = ''
 }) => {
-    // Get icon colors (since IconPicker uses icon colors, not background colors)
-    const iconColors = getColorsByGroup('icon');
-    
-    // Get background color value from the icon color system
-    const bgColor = backgroundColor && iconColors[backgroundColor]
-        ? iconColors[backgroundColor].value 
-        : 'transparent';
-    
-    // Auto-calculate icon color if not provided and background exists
+    const bgColor = COLOR_SYSTEM.backgrounds[backgroundColor]?.value || 'transparent';
     const calculatedIconColor = iconColor || (backgroundColor ? getAutoTextColor(backgroundColor) : 'currentColor');
 
     const iconStyle = {
@@ -37,11 +23,10 @@ const Icon = ({
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
-        color: calculatedIconColor, // For SVG currentColor
+        color: calculatedIconColor,
     };
 
     if (type === 'svg' && svg) {
-        // For inline SVG (like your lightning bolt icon)
         return (
             <div 
                 className={`wp-block-icon ${className}`}
@@ -51,7 +36,6 @@ const Icon = ({
         );
     }
 
-    // For image-based icons
     return (
         <div 
             className={`wp-block-icon ${className}`}

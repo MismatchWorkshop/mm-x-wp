@@ -1,0 +1,25 @@
+.brand-accent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 311px;
+  pointer-events: none;
+  z-index: 2;
+}
+.brand-accent--right {
+  right: 0;
+}
+.brand-accent--left {
+  left: 0;
+}
+.brand-accent svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .brand-accent {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

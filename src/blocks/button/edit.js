@@ -6,21 +6,12 @@ import {
 } from '@wordpress/block-editor';
 import {
     PanelBody,
-    SelectControl,
     TextControl,
     ToggleControl,
+    SelectControl,
 } from '@wordpress/components';
-
-const BUTTON_STYLES = [
-    { label: 'Solid White', value: 'solid-white' },
-    { label: 'Solid Blue', value: 'solid-blue' },
-    { label: 'Solid Yellow', value: 'solid-yellow' },
-    { label: 'Solid Dark', value: 'solid-dark' },
-    { label: 'Outline White', value: 'outline-white' },
-    { label: 'Outline Blue', value: 'outline-blue' },
-    { label: 'Outline Dark', value: 'outline-dark' },
-    { label: 'Text Link', value: 'link' },
-];
+import ContextualColorPicker from '../../components/ContextualColorPicker';
+import { getContextualColor, COLOR_SYSTEM, getAutoTextColor } from '../../color-system';
 
 const FONT_SIZES = [
     { label: 'Small', value: 'small' },
@@ -48,11 +39,22 @@ const ICON_SYMBOLS = {
     'none': ''
 };
 
-export default function Edit({ attributes, setAttributes }) {
-    const { text, url, linkTarget, buttonStyle, fontSize, icon, iconPosition } = attributes;
+export default function Edit({ attributes, setAttributes, context }) {
+    const { text, url, linkTarget, buttonColor, fontSize, icon, iconPosition } = attributes;
+    
+    // Get container background from context
+    const containerBackground = context['wagepoint/containerBackground'] || 'white';
+    
+    // Resolve the actual button color
+    const resolvedButtonColor = buttonColor === 'auto' 
+        ? getContextualColor(containerBackground, 'buttonPrimary')
+        : buttonColor;
+    
+    const bgColorValue = COLOR_SYSTEM.backgrounds[resolvedButtonColor]?.value;
+    const textColorValue = getAutoTextColor(resolvedButtonColor);
 
     const blockProps = useBlockProps({
-        className: `wp-block-button button-${buttonStyle} button-size-${fontSize}`,
+        className: `wp-block-button button-size-${fontSize}`,
     });
 
     const iconSymbol = ICON_SYMBOLS[icon] || '';
@@ -61,11 +63,12 @@ export default function Edit({ attributes, setAttributes }) {
         <>
             <InspectorControls>
                 <PanelBody title={__('Button Settings', 'wagepoint')} initialOpen={true}>
-                    <SelectControl
-                        label={__('Button Style', 'wagepoint')}
-                        value={buttonStyle}
-                        options={BUTTON_STYLES}
-                        onChange={(value) => setAttributes({ buttonStyle: value })}
+                    <ContextualColorPicker
+                        label={__('Button Color', 'wagepoint')}
+                        value={buttonColor}
+                        onChange={(value) => setAttributes({ buttonColor: value })}
+                        role="buttonPrimary"
+                        containerBackground={containerBackground}
                     />
                     
                     <SelectControl
@@ -88,9 +91,9 @@ export default function Edit({ attributes, setAttributes }) {
                     <ToggleControl
                         label={__('Open in new tab', 'wagepoint')}
                         checked={linkTarget === '_blank'}
-                        onChange={(value) => 
-                            setAttributes({ linkTarget: value ? '_blank' : '_self' })
-                        }
+                        onChange={(value) => setAttributes({ 
+                            linkTarget: value ? '_blank' : '_self' 
+                        })}
                     />
                 </PanelBody>
 
@@ -119,6 +122,11 @@ export default function Edit({ attributes, setAttributes }) {
             <div {...blockProps}>
                 <div 
                     className="wp-block-button__link"
+                    style={{
+                        backgroundColor: bgColorValue,
+                        color: textColorValue,
+                        borderColor: bgColorValue
+                    }}
                     role="textbox"
                     aria-label={__('Button text', 'wagepoint')}
                 >

@@ -1,0 +1,22 @@
+.meta-heading {
+  margin-bottom: var(--spacing-y, 25px);
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  font-size: var(--font-size-8, 20px);
+  color: inherit;
+}
+.meta-heading::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -0.25em;
+  right: -0.25em;
+  height: 45%;
+  border-radius: 2px;
+  z-index: -1;
+  background-color: var(--bg-color, var(--color-primary));
+}
+.meta-heading.bg-transparent::before {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

@@ -27,4 +27,8 @@
         font-size: 1rem;
         line-height: 1.5;
     }
+
+    .wp-block-icon.bg-auto {
+        background-color: var(--auto-icon-bg, #F9B234);
+    }
 }

@@ -1,0 +1,48 @@
+.copy-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-y, 25px);
+}
+.copy-block .wp-block-wagepoint-heading {
+  --default-font-size: var(--font-size-2, 45px);
+}
+.copy-block p, .copy-block li {
+  font-size: var(--font-size-body-lg, 22px);
+}
+.copy-block > * {
+  --spacing-y: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.copy-block.width-full {
+  max-width: 100%;
+}
+.copy-block.width-wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.copy-block.width-medium {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.copy-block.width-narrow {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.copy-block.align-left {
+  text-align: left;
+}
+.copy-block.align-center {
+  text-align: center;
+}
+.copy-block > .block-editor-inner-blocks > .block-editor-block-list__layout > *,
+.copy-block > * > * {
+  margin-bottom: 25px;
+}
+.copy-block > .block-editor-inner-blocks > .block-editor-block-list__layout > *:last-child,
+.copy-block > * > *:last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */

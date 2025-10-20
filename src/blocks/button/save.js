@@ -11,10 +11,10 @@ const ICON_SYMBOLS = {
 };
 
 export default function save({ attributes }) {
-    const { text, url, linkTarget, buttonStyle, fontSize, icon, iconPosition } = attributes;
+    const { text, url, linkTarget, buttonColor, fontSize, icon, iconPosition } = attributes;
 
     const blockProps = useBlockProps.save({
-        className: `wp-block-button button-${buttonStyle} button-size-${fontSize}`,
+        className: `wp-block-button button-size-${fontSize} bg-${buttonColor}`,
     });
 
     const iconSymbol = ICON_SYMBOLS[icon] || '';

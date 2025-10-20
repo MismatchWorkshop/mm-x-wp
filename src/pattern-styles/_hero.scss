@@ -1,0 +1,41 @@
+// Hero Pattern: Full-Bleed Background
+.hero-cover-bg {
+    position: relative;
+    
+    // Ensure content stays on left side and doesn't go behind curve
+    .wp-block-cover__inner-container {
+        position: relative;
+        z-index: 3;
+    }
+    
+    // Override button styles for hero
+    .wp-block-wagepoint-buttons {
+        .wp-block-button__link {
+            border-radius: 50px !important;
+            padding: 0.875rem 2rem !important;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    
+    // Responsive heading size
+    h1 {
+        /*
+        font-size: clamp(2.5rem, 5vw, 4rem) !important;
+        line-height: 1.1 !important;
+        font-weight: 700 !important;
+        */
+        line-height: 0.94;
+    }
+    
+    // Responsive paragraph size
+    p {
+        font-size: clamp(1.125rem, 2vw, 1.25rem) !important;
+        line-height: 1.6 !important;
+    }
+}

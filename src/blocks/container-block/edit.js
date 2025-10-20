@@ -10,6 +10,7 @@ import {
 } from '@wordpress/components';
 import CustomColorSelect from '../../components/CustomColorSelect';
 import { COLOR_SYSTEM } from '../../color-system';
+import { ContainerProvider } from '../../components/ContainerContext'; // ADD THIS
 
 const OUTER_BG_OPTIONS = [
     { label: 'Light', value: 'light' },
@@ -80,6 +81,10 @@ export default function Edit({ attributes, setAttributes }) {
         `align-${textAlignment}`
     ].filter(Boolean).join(' ');
 
+    console.log('=== Container Block ===');
+console.log('Container Background:', containerBackground);
+console.log('======================');
+
     return (
         <>
             <InspectorControls>
@@ -146,7 +151,10 @@ export default function Edit({ attributes, setAttributes }) {
             <div {...blockProps}>
                 <div className={innerClassName} data-bg={containerBackground}>
                     <div className={contentClassName}>
-                        <InnerBlocks />
+                        {/* WRAP InnerBlocks with ContainerProvider */}
+                        <ContainerProvider value={containerBackground}>
+                            <InnerBlocks />
+                        </ContainerProvider>
                     </div>
                 </div>
             </div>

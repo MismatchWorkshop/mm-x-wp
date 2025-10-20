@@ -7,246 +7,231 @@
   --color-ledger-blue-tint-1: #94A3B8;
   --color-ledger-blue-tint-2: #E2E8F0;
   --color-form-fill-white: #F8F9FA;
-  --color-growth-green: #2ECC71;
-  --color-growth-green-tint-1: #7EDDA4;
-  --color-growth-green-tint-2: #D4F4E2;
-  --color-pto-yellow: #F9B234;
-  --color-pto-yellow-tint-1: #FCDB9A;
-  --color-pto-yellow-tint-2: #FEF3DC;
-  --color-compliance-green: #27AE60;
-  --color-compliance-green-tint-1: #8DD4AC;
-  --color-compliance-green-tint-2: #D9F0E3;
   --color-white: #FFFFFF;
-  --color-black: #000000;
   --color-transparent: transparent;
+  --color-growth-green: #2ECC71;
+  --color-pto-yellow: #F9B234;
+  --color-compliance-green: #27AE60;
 }
 
 .bg-payday-blue {
   background-color: var(--color-payday-blue, #4A90E2);
 }
 
-.text-payday-blue {
-  color: var(--color-payday-blue, #4A90E2);
-}
-
-.border-payday-blue {
-  border-color: var(--color-payday-blue, #4A90E2);
-}
-
 .bg-payday-blue-tint-1 {
   background-color: var(--color-payday-blue-tint-1, #8AB4E8);
-}
-
-.text-payday-blue-tint-1 {
-  color: var(--color-payday-blue-tint-1, #8AB4E8);
-}
-
-.border-payday-blue-tint-1 {
-  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
 }
 
 .bg-payday-blue-tint-2 {
   background-color: var(--color-payday-blue-tint-2, #E3EEF9);
 }
 
-.text-payday-blue-tint-2 {
-  color: var(--color-payday-blue-tint-2, #E3EEF9);
-}
-
-.border-payday-blue-tint-2 {
-  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
-}
-
 .bg-ledger-blue {
   background-color: var(--color-ledger-blue, #1E293B);
-}
-
-.text-ledger-blue {
-  color: var(--color-ledger-blue, #1E293B);
-}
-
-.border-ledger-blue {
-  border-color: var(--color-ledger-blue, #1E293B);
 }
 
 .bg-ledger-blue-tint-1 {
   background-color: var(--color-ledger-blue-tint-1, #94A3B8);
 }
 
-.text-ledger-blue-tint-1 {
-  color: var(--color-ledger-blue-tint-1, #94A3B8);
-}
-
-.border-ledger-blue-tint-1 {
-  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
-}
-
 .bg-ledger-blue-tint-2 {
   background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
-}
-
-.text-ledger-blue-tint-2 {
-  color: var(--color-ledger-blue-tint-2, #E2E8F0);
-}
-
-.border-ledger-blue-tint-2 {
-  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
 }
 
 .bg-form-fill-white {
   background-color: var(--color-form-fill-white, #F8F9FA);
 }
 
-.text-form-fill-white {
-  color: var(--color-form-fill-white, #F8F9FA);
-}
-
-.border-form-fill-white {
-  border-color: var(--color-form-fill-white, #F8F9FA);
-}
-
-.bg-growth-green {
-  background-color: var(--color-growth-green, #2ECC71);
-}
-
-.text-growth-green {
-  color: var(--color-growth-green, #2ECC71);
-}
-
-.border-growth-green {
-  border-color: var(--color-growth-green, #2ECC71);
-}
-
-.bg-growth-green-tint-1 {
-  background-color: var(--color-growth-green-tint-1, #7EDDA4);
-}
-
-.text-growth-green-tint-1 {
-  color: var(--color-growth-green-tint-1, #7EDDA4);
-}
-
-.border-growth-green-tint-1 {
-  border-color: var(--color-growth-green-tint-1, #7EDDA4);
-}
-
-.bg-growth-green-tint-2 {
-  background-color: var(--color-growth-green-tint-2, #D4F4E2);
-}
-
-.text-growth-green-tint-2 {
-  color: var(--color-growth-green-tint-2, #D4F4E2);
-}
-
-.border-growth-green-tint-2 {
-  border-color: var(--color-growth-green-tint-2, #D4F4E2);
-}
-
-.bg-pto-yellow {
-  background-color: var(--color-pto-yellow, #F9B234);
-}
-
-.text-pto-yellow {
-  color: var(--color-pto-yellow, #F9B234);
-}
-
-.border-pto-yellow {
-  border-color: var(--color-pto-yellow, #F9B234);
-}
-
-.bg-pto-yellow-tint-1 {
-  background-color: var(--color-pto-yellow-tint-1, #FCDB9A);
-}
-
-.text-pto-yellow-tint-1 {
-  color: var(--color-pto-yellow-tint-1, #FCDB9A);
-}
-
-.border-pto-yellow-tint-1 {
-  border-color: var(--color-pto-yellow-tint-1, #FCDB9A);
-}
-
-.bg-pto-yellow-tint-2 {
-  background-color: var(--color-pto-yellow-tint-2, #FEF3DC);
-}
-
-.text-pto-yellow-tint-2 {
-  color: var(--color-pto-yellow-tint-2, #FEF3DC);
-}
-
-.border-pto-yellow-tint-2 {
-  border-color: var(--color-pto-yellow-tint-2, #FEF3DC);
-}
-
-.bg-compliance-green {
-  background-color: var(--color-compliance-green, #27AE60);
-}
-
-.text-compliance-green {
-  color: var(--color-compliance-green, #27AE60);
-}
-
-.border-compliance-green {
-  border-color: var(--color-compliance-green, #27AE60);
-}
-
-.bg-compliance-green-tint-1 {
-  background-color: var(--color-compliance-green-tint-1, #8DD4AC);
-}
-
-.text-compliance-green-tint-1 {
-  color: var(--color-compliance-green-tint-1, #8DD4AC);
-}
-
-.border-compliance-green-tint-1 {
-  border-color: var(--color-compliance-green-tint-1, #8DD4AC);
-}
-
-.bg-compliance-green-tint-2 {
-  background-color: var(--color-compliance-green-tint-2, #D9F0E3);
-}
-
-.text-compliance-green-tint-2 {
-  color: var(--color-compliance-green-tint-2, #D9F0E3);
-}
-
-.border-compliance-green-tint-2 {
-  border-color: var(--color-compliance-green-tint-2, #D9F0E3);
-}
-
 .bg-white {
   background-color: var(--color-white, #FFFFFF);
-}
-
-.text-white {
-  color: var(--color-white, #FFFFFF);
-}
-
-.border-white {
-  border-color: var(--color-white, #FFFFFF);
-}
-
-.bg-black {
-  background-color: var(--color-black, #000000);
-}
-
-.text-black {
-  color: var(--color-black, #000000);
-}
-
-.border-black {
-  border-color: var(--color-black, #000000);
 }
 
 .bg-transparent {
   background-color: var(--color-transparent, transparent);
 }
 
-.text-transparent {
-  color: var(--color-transparent, transparent);
+.bg-growth-green {
+  background-color: var(--color-growth-green, #2ECC71);
 }
 
-.border-transparent {
-  border-color: var(--color-transparent, transparent);
+.bg-pto-yellow {
+  background-color: var(--color-pto-yellow, #F9B234);
+}
+
+.bg-compliance-green {
+  background-color: var(--color-compliance-green, #27AE60);
+}
+
+.text-payday-blue {
+  color: var(--color-payday-blue, #4A90E2);
+}
+
+.text-payday-blue-tint-1 {
+  color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.text-payday-blue-tint-2 {
+  color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.text-ledger-blue {
+  color: var(--color-ledger-blue, #1E293B);
+}
+
+.text-ledger-blue-tint-1 {
+  color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.text-ledger-blue-tint-2 {
+  color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.text-form-fill-white {
+  color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.text-white {
+  color: var(--color-white, #FFFFFF);
+}
+
+.text-growth-green {
+  color: var(--color-growth-green, #2ECC71);
+}
+
+.text-pto-yellow {
+  color: var(--color-pto-yellow, #F9B234);
+}
+
+.text-compliance-green {
+  color: var(--color-compliance-green, #27AE60);
+}
+
+.border-payday-blue {
+  border-color: var(--color-payday-blue, #4A90E2);
+}
+
+.border-payday-blue-tint-1 {
+  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.border-payday-blue-tint-2 {
+  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.border-ledger-blue {
+  border-color: var(--color-ledger-blue, #1E293B);
+}
+
+.border-ledger-blue-tint-1 {
+  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.border-ledger-blue-tint-2 {
+  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.border-form-fill-white {
+  border-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.border-white {
+  border-color: var(--color-white, #FFFFFF);
+}
+
+.border-growth-green {
+  border-color: var(--color-growth-green, #2ECC71);
+}
+
+.border-pto-yellow {
+  border-color: var(--color-pto-yellow, #F9B234);
+}
+
+.border-compliance-green {
+  border-color: var(--color-compliance-green, #27AE60);
+}
+
+.container__inner.bg-payday-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-payday-blue-tint-1 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-payday-blue-tint-2 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-ledger-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.container__inner.bg-ledger-blue-tint-1 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-ledger-blue-tint-2 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-form-fill-white {
+  --auto-icon-bg: var(--color-growth-green, #2ECC71);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-white {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-transparent {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-growth-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-pto-yellow {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-compliance-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
 }
 
 :root {
@@ -576,6 +561,36 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
 .card--post,
 .filterable-grid-block__card--post {
   border-color: red;
+}
+
+.hero-cover-bg {
+  position: relative;
+}
+.hero-cover-bg .wp-block-cover__inner-container {
+  position: relative;
+  z-index: 3;
+}
+.hero-cover-bg .wp-block-wagepoint-buttons .wp-block-button__link {
+  border-radius: 50px !important;
+  padding: 0.875rem 2rem !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.hero-cover-bg .wp-block-wagepoint-buttons .wp-block-button__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.hero-cover-bg h1 {
+  /*
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  */
+  line-height: 0.94;
+}
+.hero-cover-bg p {
+  font-size: clamp(1.125rem, 2vw, 1.25rem) !important;
+  line-height: 1.6 !important;
 }
 
 .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {

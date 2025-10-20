@@ -21,43 +21,15 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function wagepoint_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on wagepoint, use a find and replace
-		* to change 'wagepoint' to the name of your theme in all the template files.
-		*/
 	load_theme_textdomain( 'wagepoint', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
-	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
 	add_theme_support( 'title-tag' );
-
-	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
 	add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'wagepoint' ),
 		)
 	);
-
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
 	add_theme_support(
 		'html5',
 		array(
@@ -70,8 +42,6 @@ function wagepoint_setup() {
 			'script',
 		)
 	);
-
-	// Set up the WordPress core custom background feature.
 	add_theme_support(
 		'custom-background',
 		apply_filters(
@@ -82,15 +52,7 @@ function wagepoint_setup() {
 			)
 		)
 	);
-
-	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
 	add_theme_support(
 		'custom-logo',
 		array(
@@ -222,6 +184,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
+require get_template_directory() . '/inc/parts.php';
 require get_template_directory() . '/inc/patterns.php';
 require get_template_directory() . '/inc/icons.php';
 require get_template_directory() . '/inc/index-grid.php';
@@ -280,7 +243,8 @@ function wagepoint_hide_custom_blocks( $allowed_blocks, $editor_context ) {
     
     // Blocks that can be inserted
     $allowed_custom_blocks = array(
-        'wagepoint/buttons', // ← The wrapper is insertable
+        'wagepoint/buttons',
+        'wagepoint/metric', // ← The wrapper is insertable
     );
     
     // Hide all other wagepoint blocks
@@ -291,15 +255,6 @@ function wagepoint_hide_custom_blocks( $allowed_blocks, $editor_context ) {
     return array_diff( $all_blocks, $blocks_to_hide );
 }
 add_filter( 'allowed_block_types_all', 'wagepoint_hide_custom_blocks', 10, 2 );
-
-
-/**
- * Remove default WordPress patterns
- */
-function wagepoint_remove_core_patterns() {
-    remove_theme_support( 'core-block-patterns' );
-}
-add_action( 'after_setup_theme', 'wagepoint_remove_core_patterns' );
 
 /**
  * Unregister default pattern categories we don't need
@@ -339,21 +294,6 @@ function wagepoint_debug_blocks() {
 add_action('init', 'wagepoint_debug_blocks', 999);
 
 
-/**
- * Start all pages with a Container and guide users to use patterns
- */
-function mytheme_page_template( $args, $post_type ) {
-    if ( $post_type === 'page' ) {
-        $args['template'] = array(
-            array( 'wagepoint/container', array(), array() ),
-        );
-        // template_lock = false means they can add more blocks (more Containers via patterns)
-        $args['template_lock'] = false;
-    }
-    return $args;
-}
-add_filter( 'register_post_type_args', 'mytheme_page_template', 10, 2 );
-
 function wagepoint_unregister_core_blocks() {
     // Unregister core heading block
     unregister_block_type('core/heading');
@@ -374,7 +314,7 @@ function wagepoint_enqueue_logos_frontend_script() {
 }
 add_action( 'wp_enqueue_scripts', 'wagepoint_enqueue_logos_frontend_script' );
 
-
+/*
 function wagepoint_register_pattern_categories() {
     if ( function_exists( 'register_block_pattern_category' ) ) {
         register_block_pattern_category(
@@ -386,3 +326,4 @@ function wagepoint_register_pattern_categories() {
     }
 }
 add_action( 'init', 'wagepoint_register_pattern_categories' );
+*/

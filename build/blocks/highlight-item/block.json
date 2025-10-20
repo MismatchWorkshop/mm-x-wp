@@ -1,0 +1,44 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/highlight-item",
+  "title": "Highlight Item",
+  "category": "text",
+  "icon": "star-filled",
+  "description": "Display a highligted item with icon, title, and description",
+  "keywords": [
+    "highlight",
+    "icon"
+  ],
+  "attributes": {
+    "icon": {
+      "type": "object",
+      "default": {
+        "type": "svg",
+        "src": "",
+        "svg": "",
+        "backgroundColor": ""
+      }
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "placeholder": "Heading"
+    },
+    "description": {
+      "type": "string",
+      "default": "",
+      "placeholder": "Description of this value or principle."
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": false
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

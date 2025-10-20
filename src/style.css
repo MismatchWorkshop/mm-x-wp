@@ -1,0 +1,89 @@
+/*!
+Theme Name: Wagepoint
+*/
+/**
+ * Theme Styles
+ * Compiled by webpack into build/style-index.css
+ */
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Backgrounds */
+.bg-light {
+  background-color: #F9FAFB;
+}
+
+.bg-dark {
+  background-color: #1F2937;
+  color: #FFFFFF;
+}
+
+.bg-primary {
+  background-color: #FDB022;
+  color: #1F2937;
+}
+
+/* Grids */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Buttons */
+.wp-block-button__link {
+  transition: all 0.2s ease;
+}
+.wp-block-button__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=style.css.map */

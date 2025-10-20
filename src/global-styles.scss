@@ -4,6 +4,8 @@
 @import "base";
 
 @import 'components/cards';
+@import 'pattern-styles/global-header';
+@import 'pattern-styles/hero';
 
 .container__inner {
     border-radius: var(--container-corner-radius);

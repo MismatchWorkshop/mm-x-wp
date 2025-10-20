@@ -1,0 +1,772 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+:root {
+  --color-payday-blue: #4A90E2;
+  --color-payday-blue-tint-1: #8AB4E8;
+  --color-payday-blue-tint-2: #E3EEF9;
+  --color-ledger-blue: #1E293B;
+  --color-ledger-blue-tint-1: #94A3B8;
+  --color-ledger-blue-tint-2: #E2E8F0;
+  --color-form-fill-white: #F8F9FA;
+  --color-white: #FFFFFF;
+  --color-transparent: transparent;
+  --color-growth-green: #2ECC71;
+  --color-pto-yellow: #F9B234;
+  --color-compliance-green: #27AE60;
+}
+
+.bg-payday-blue {
+  background-color: var(--color-payday-blue, #4A90E2);
+}
+
+.bg-payday-blue-tint-1 {
+  background-color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.bg-payday-blue-tint-2 {
+  background-color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.bg-ledger-blue {
+  background-color: var(--color-ledger-blue, #1E293B);
+}
+
+.bg-ledger-blue-tint-1 {
+  background-color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.bg-ledger-blue-tint-2 {
+  background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.bg-form-fill-white {
+  background-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.bg-white {
+  background-color: var(--color-white, #FFFFFF);
+}
+
+.bg-transparent {
+  background-color: var(--color-transparent, transparent);
+}
+
+.bg-growth-green {
+  background-color: var(--color-growth-green, #2ECC71);
+}
+
+.bg-pto-yellow {
+  background-color: var(--color-pto-yellow, #F9B234);
+}
+
+.bg-compliance-green {
+  background-color: var(--color-compliance-green, #27AE60);
+}
+
+.text-payday-blue {
+  color: var(--color-payday-blue, #4A90E2);
+}
+
+.text-payday-blue-tint-1 {
+  color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.text-payday-blue-tint-2 {
+  color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.text-ledger-blue {
+  color: var(--color-ledger-blue, #1E293B);
+}
+
+.text-ledger-blue-tint-1 {
+  color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.text-ledger-blue-tint-2 {
+  color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.text-form-fill-white {
+  color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.text-white {
+  color: var(--color-white, #FFFFFF);
+}
+
+.text-growth-green {
+  color: var(--color-growth-green, #2ECC71);
+}
+
+.text-pto-yellow {
+  color: var(--color-pto-yellow, #F9B234);
+}
+
+.text-compliance-green {
+  color: var(--color-compliance-green, #27AE60);
+}
+
+.border-payday-blue {
+  border-color: var(--color-payday-blue, #4A90E2);
+}
+
+.border-payday-blue-tint-1 {
+  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.border-payday-blue-tint-2 {
+  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.border-ledger-blue {
+  border-color: var(--color-ledger-blue, #1E293B);
+}
+
+.border-ledger-blue-tint-1 {
+  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.border-ledger-blue-tint-2 {
+  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.border-form-fill-white {
+  border-color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.border-white {
+  border-color: var(--color-white, #FFFFFF);
+}
+
+.border-growth-green {
+  border-color: var(--color-growth-green, #2ECC71);
+}
+
+.border-pto-yellow {
+  border-color: var(--color-pto-yellow, #F9B234);
+}
+
+.border-compliance-green {
+  border-color: var(--color-compliance-green, #27AE60);
+}
+
+.container__inner.bg-payday-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-payday-blue-tint-1 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-payday-blue-tint-2 {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-ledger-blue {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
+  --auto-icon-default-bg: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.container__inner.bg-ledger-blue-tint-1 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-ledger-blue-tint-2 {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-form-fill-white {
+  --auto-icon-bg: var(--color-growth-green, #2ECC71);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-white {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-transparent {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
+  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+}
+
+.container__inner.bg-growth-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+.container__inner.bg-pto-yellow {
+  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
+  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+}
+
+.container__inner.bg-compliance-green {
+  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
+  --auto-button-bg: var(--color-ledger-blue, #1E293B);
+  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
+  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+}
+
+:root {
+  --container-corner-radius: 20px;
+  --wp--style--global--content-size: none;
+  --color-primary: #FDB022;
+  --color-dark: #1F2937;
+  --color-light: #F9FAFB;
+  --color-white: #FFFFFF;
+  --color-blue: #3B82F6;
+  --color-dark-blue: #1e3a8a;
+  --color-gray: #6B7280;
+  --font-size-1: clamp(40px, 90 / 1512 * 100vw, 90px);
+  --font-size-2: clamp(36px, 75 / 1512 * 100vw, 75px);
+  --font-size-3: clamp(28px, 50 / 1512 * 100vw, 50px);
+  --font-size-4: clamp(25px, 45 / 1512 * 100vw, 45px);
+  --font-size-5: clamp(22px, 35 / 1512 * 100vw, 35px);
+  --font-size-6: clamp(21px, 30 / 1512 * 100vw, 30px);
+  --font-size-7: clamp(20px, 25 / 1512 * 100vw, 25px);
+  --font-size-8: clamp(14px, 20 / 1512 * 100vw, 20px);
+  --font-size-body-lg: clamp(18px, 22 / 1512 * 100vw, 22px);
+  --font-size-body-md: clamp(16px, 18 / 1512 * 100vw, 18px);
+  --font-size-body-sm: clamp(15px, 16 / 1512 * 100vw, 16px);
+  --font-size-body-xs: clamp(14px, 15 / 1512 * 100vw, 15px);
+  --font-size-body-xxs: clamp(10px, 10 / 1512 * 100vw, 10px);
+  --font-body: "Onest", sans-serif;
+}
+:root :where(.is-layout-constrained) > *,
+:root :where(.is-layout-flow) > * + * {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body {
+  --wp--style--global--content-size: none;
+  --wp--style--root--padding-right: 10px;
+  --wp--style--root--padding-left: 10px;
+  --vspace--default: 140px;
+  --hspace--default: 40px;
+  --container-padding-y: var(--vspace--default);
+  --container-padding-x: var(--hspace--default);
+  font-family: var(--font-body);
+}
+
+.text-1 {
+  font-size: var(--font-size-1);
+}
+
+.text-2 {
+  font-size: var(--font-size-2);
+}
+
+.text-3 {
+  font-size: var(--font-size-3);
+}
+
+.text-4 {
+  font-size: var(--font-size-4);
+}
+
+.text-5 {
+  font-size: var(--font-size-5);
+}
+
+.text-6 {
+  font-size: var(--font-size-6);
+}
+
+.text-7 {
+  font-size: var(--font-size-7);
+}
+
+.text-8 {
+  font-size: var(--font-size-8);
+}
+
+.text-body-lg {
+  font-size: 22px;
+}
+
+.has-text-align-left {
+  text-align: left;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 400;
+}
+h1.font-strong, h2.font-strong, h3.font-strong, h4.font-strong, h5.font-strong, h6.font-strong {
+  font-weight: 500;
+}
+h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-stronger, h6.font-stronger {
+  font-weight: 600;
+}
+
+/**
+ * Global Card Styles
+ * Reusable across all blocks that display cards
+ */
+.wagepoint-card,
+.filterable-grid-block__card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wagepoint-card:hover,
+.filterable-grid-block__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+  border-color: #d1d5db;
+}
+.wagepoint-card__image,
+.filterable-grid-block__card__image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #f3f4f6;
+  position: relative;
+}
+.wagepoint-card__image a,
+.filterable-grid-block__card__image a {
+  display: block;
+  height: 100%;
+}
+.wagepoint-card__image img,
+.filterable-grid-block__card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+}
+.wagepoint-card__image:hover img,
+.filterable-grid-block__card__image:hover img {
+  transform: scale(1.05);
+}
+.wagepoint-card__badge,
+.filterable-grid-block__card__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.375rem 0.75rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.wagepoint-card__content,
+.filterable-grid-block__card__content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wagepoint-card__meta, .wagepoint-card__categories,
+.filterable-grid-block__card__meta,
+.filterable-grid-block__card__categories {
+  margin-bottom: 0.75rem;
+}
+.wagepoint-card__category,
+.filterable-grid-block__card__category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6366f1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.wagepoint-card__category:hover,
+.filterable-grid-block__card__category:hover {
+  color: #4f46e5;
+}
+.wagepoint-card__title,
+.filterable-grid-block__card__title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.wagepoint-card__title a,
+.filterable-grid-block__card__title a {
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.wagepoint-card__title a:hover,
+.filterable-grid-block__card__title a:hover {
+  color: #3b82f6;
+}
+.wagepoint-card__excerpt,
+.filterable-grid-block__card__excerpt {
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #6b7280;
+  flex: 1;
+}
+.wagepoint-card__footer,
+.filterable-grid-block__card__footer {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin-top: auto;
+}
+.wagepoint-card__author,
+.filterable-grid-block__card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wagepoint-card__author img,
+.filterable-grid-block__card__author img {
+  border-radius: 50%;
+}
+.wagepoint-card__date,
+.filterable-grid-block__card__date {
+  color: #9ca3af;
+}
+.wagepoint-card__link,
+.filterable-grid-block__card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.wagepoint-card__link:hover,
+.filterable-grid-block__card__link:hover {
+  gap: 0.75rem;
+}
+.wagepoint-card__arrow,
+.filterable-grid-block__card__arrow {
+  transition: transform 0.2s;
+}
+.wagepoint-card:hover .wagepoint-card__arrow,
+.wagepoint-card:hover .filterable-grid-block__card__arrow,
+.filterable-grid-block__card:hover .wagepoint-card__arrow,
+.filterable-grid-block__card:hover .filterable-grid-block__card__arrow {
+  transform: translateX(4px);
+}
+
+.wagepoint-card--post .wagepoint-card__badge,
+.wagepoint-card--post .filterable-grid-block__card-badge,
+.filterable-grid-block__card[data-post-type=post] .wagepoint-card__badge,
+.filterable-grid-block__card[data-post-type=post] .filterable-grid-block__card-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.wagepoint-card--post .wagepoint-card__author img,
+.wagepoint-card--post .filterable-grid-block__card-author img,
+.filterable-grid-block__card[data-post-type=post] .wagepoint-card__author img,
+.filterable-grid-block__card[data-post-type=post] .filterable-grid-block__card-author img {
+  width: 32px;
+  height: 32px;
+}
+
+.wagepoint-card--product .wagepoint-card__price,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0.75rem 0;
+}
+.wagepoint-card--product .wagepoint-card__badge--sale,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__badge--sale {
+  background: #ef4444;
+  top: 1rem;
+  left: 1rem;
+}
+.wagepoint-card--product .wagepoint-card__button,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: auto;
+  transition: all 0.2s;
+}
+.wagepoint-card--product .wagepoint-card__button:hover,
+.filterable-grid-block__card[data-post-type=product] .wagepoint-card__button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.wagepoint-card--page .wagepoint-card__image,
+.filterable-grid-block__card[data-post-type=page] .wagepoint-card__image {
+  aspect-ratio: 4/3;
+}
+
+.wagepoint-card--compact .wagepoint-card__content {
+  padding: 1rem;
+}
+.wagepoint-card--compact .wagepoint-card__title {
+  font-size: 1rem;
+}
+.wagepoint-card--compact .wagepoint-card__excerpt {
+  font-size: 0.875rem;
+}
+
+.card--post,
+.filterable-grid-block__card--post {
+  border-color: red;
+}
+
+/* ==========================================================================
+   Global Navigation Styles
+   ========================================================================== */
+.wp-block-navigation.is-style-wagepoint-nav {
+  background: transparent;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__container {
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item {
+  margin: 0;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item > .wp-block-navigation-item__content {
+  padding: 1.25rem 1rem;
+  color: #1F2937;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
+  color: #3B82F6;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item.has-child > .wp-block-navigation-item__content {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item.has-child > .wp-block-navigation-item__content::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.2s ease;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation-item.has-child:hover > .wp-block-navigation-item__content::after {
+  transform: rotate(180deg);
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__submenu-container {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  min-width: 280px;
+  top: 100%;
+  left: 0;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__submenu-container .wp-block-navigation-item > .wp-block-navigation-item__content {
+  padding: 0.75rem 1.5rem;
+  color: #1F2937;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__submenu-container .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
+  background: #F9FAFB;
+  color: #3B82F6;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__submenu-container .wp-block-navigation-item.is-style-category-header > .wp-block-navigation-item__content {
+  color: #9CA3AF;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem 0.375rem;
+  pointer-events: none;
+}
+.wp-block-navigation.is-style-wagepoint-nav .wp-block-navigation__submenu-container .wp-block-navigation-item.is-style-category-header > .wp-block-navigation-item__content:hover {
+  background: transparent;
+  color: #9CA3AF;
+}
+
+/* Header container styles */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.site-header .header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .site-header .header-inner {
+    padding: 0 1.5rem;
+  }
+}
+.site-header .site-logo {
+  flex-shrink: 0;
+}
+.site-header .site-logo img {
+  height: 32px;
+  width: auto;
+}
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.site-header .header-actions .wp-block-button {
+  margin: 0;
+}
+.site-header .header-actions .wp-block-button__link {
+  padding: 0.625rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.site-header .header-actions .wp-block-button.is-style-text-link .wp-block-button__link {
+  background: transparent;
+  color: #1F2937;
+  padding: 0.625rem 0.75rem;
+}
+.site-header .header-actions .wp-block-button.is-style-text-link .wp-block-button__link:hover {
+  color: #3B82F6;
+}
+.site-header .header-actions .wp-block-button.is-style-primary .wp-block-button__link {
+  background: #FDB022;
+  color: #1F2937;
+}
+.site-header .header-actions .wp-block-button.is-style-primary .wp-block-button__link:hover {
+  background: #FCA311;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(253, 176, 34, 0.3);
+}
+.site-header .header-actions .wp-block-button.is-style-secondary .wp-block-button__link {
+  background: #3B82F6;
+  color: white;
+}
+.site-header .header-actions .wp-block-button.is-style-secondary .wp-block-button__link:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.hero-cover-bg {
+  position: relative;
+}
+.hero-cover-bg .wp-block-cover__inner-container {
+  position: relative;
+  z-index: 3;
+}
+.hero-cover-bg .wp-block-wagepoint-buttons .wp-block-button__link {
+  border-radius: 50px !important;
+  padding: 0.875rem 2rem !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.hero-cover-bg .wp-block-wagepoint-buttons .wp-block-button__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.hero-cover-bg h1 {
+  /*
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  */
+  line-height: 0.94;
+}
+.hero-cover-bg p {
+  font-size: clamp(1.125rem, 2vw, 1.25rem) !important;
+  line-height: 1.6 !important;
+}
+
+.container__inner {
+  border-radius: var(--container-corner-radius);
+  padding: var(--container-padding-y, 0px) var(--container-padding-x, 0px);
+}
+
+.meta-heading {
+  font-size: var(--font-size-8, 20px);
+  font-weight: 500;
+}
+
+.wp-block-post-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1em 0 !important;
+}
+.wp-block-post-terms > * {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+.wp-block-post-terms a {
+  border: 1px solid #000;
+  text-decoration: none;
+}
+.wp-block-post-terms__separator {
+  display: none;
+}/*# sourceMappingURL=global-styles.css.map */

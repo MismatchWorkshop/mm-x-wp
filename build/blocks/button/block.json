@@ -26,9 +26,9 @@
       "type": "string",
       "default": "_self"
     },
-    "buttonStyle": {
+    "buttonColor": {
       "type": "string",
-      "default": "solid-white"
+      "default": "auto"
     },
     "fontSize": {
       "type": "string",
@@ -43,6 +43,9 @@
       "default": "after"
     }
   },
+  "usesContext": [
+    "wagepoint/containerBackground"
+  ],
   "supports": {
     "html": false,
     "anchor": true,

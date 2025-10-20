@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wagepoint/brand-accent",
+  "title": "Brand Accent",
+  "category": "design",
+  "icon": "art",
+  "description": "Brand signature curved line accent",
+  "keywords": [
+    "brand",
+    "accent",
+    "curve",
+    "signature"
+  ],
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "color": {
+      "type": "string",
+      "default": "#FFBF46"
+    },
+    "position": {
+      "type": "string",
+      "default": "right"
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
