@@ -28,6 +28,7 @@ if (fs.existsSync(blocksDir)) {
 module.exports = {
     ...defaultConfig,
     entry: {
+        'index': './src/index.js',
         // Blocks (auto-discovered)
         ...blockEntries,
         

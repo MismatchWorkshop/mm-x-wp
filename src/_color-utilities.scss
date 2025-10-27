@@ -15,52 +15,124 @@
   --color-compliance-green: #27AE60;
 }
 
+.color-payday-blue {
+  --color: var(--color-payday-blue, #4A90E2);
+}
+
+.color-payday-blue-tint-1 {
+  --color: var(--color-payday-blue-tint-1, #8AB4E8);
+}
+
+.color-payday-blue-tint-2 {
+  --color: var(--color-payday-blue-tint-2, #E3EEF9);
+}
+
+.color-ledger-blue {
+  --color: var(--color-ledger-blue, #1E293B);
+}
+
+.color-ledger-blue-tint-1 {
+  --color: var(--color-ledger-blue-tint-1, #94A3B8);
+}
+
+.color-ledger-blue-tint-2 {
+  --color: var(--color-ledger-blue-tint-2, #E2E8F0);
+}
+
+.color-form-fill-white {
+  --color: var(--color-form-fill-white, #F8F9FA);
+}
+
+.color-white {
+  --color: var(--color-white, #FFFFFF);
+}
+
+.color-transparent {
+  --color: var(--color-transparent, transparent);
+}
+
+.color-growth-green {
+  --color: var(--color-growth-green, #2ECC71);
+}
+
+.color-pto-yellow {
+  --color: var(--color-pto-yellow, #F9B234);
+}
+
+.color-compliance-green {
+  --color: var(--color-compliance-green, #27AE60);
+}
+
 .bg-payday-blue {
   background-color: var(--color-payday-blue, #4A90E2);
+  --text-color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .bg-payday-blue-tint-1 {
   background-color: var(--color-payday-blue-tint-1, #8AB4E8);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-payday-blue-tint-2 {
   background-color: var(--color-payday-blue-tint-2, #E3EEF9);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-ledger-blue {
   background-color: var(--color-ledger-blue, #1E293B);
+  --text-color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .bg-ledger-blue-tint-1 {
   background-color: var(--color-ledger-blue-tint-1, #94A3B8);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-ledger-blue-tint-2 {
   background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-form-fill-white {
   background-color: var(--color-form-fill-white, #F8F9FA);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-white {
   background-color: var(--color-white, #FFFFFF);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-transparent {
   background-color: var(--color-transparent, transparent);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-growth-green {
   background-color: var(--color-growth-green, #2ECC71);
+  --text-color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .bg-pto-yellow {
   background-color: var(--color-pto-yellow, #F9B234);
+  --text-color: #1E293B;
+  color: var(--text-color);
 }
 
 .bg-compliance-green {
   background-color: var(--color-compliance-green, #27AE60);
+  --text-color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .text-payday-blue {

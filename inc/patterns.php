@@ -81,6 +81,7 @@ function wagepoint_debug_patterns() {
 }
 add_action('init', 'wagepoint_debug_patterns', 999);
 
+
 function wagepoint_remove_core_patterns() {
     remove_theme_support( 'core-block-patterns' );
 }
@@ -96,31 +97,3 @@ function wagepoint_remove_remote_patterns() {
     add_filter( 'should_load_remote_block_patterns', '__return_false' );
 }
 add_action( 'after_setup_theme', 'wagepoint_remove_remote_patterns' );
-
-
-function wagepoint_autoswitch_patterns() {
-    ?>
-    <script>
-    // Switch to Patterns tab by default when inserter opens
-    wp.domReady(function() {
-        // Listen for when the inserter opens
-        wp.data.subscribe(function() {
-            var isInserterOpened = wp.data.select('core/edit-post').isInserterOpened() || 
-                                   wp.data.select('core/edit-site')?.isInserterOpened();
-            
-            if (isInserterOpened) {
-                // Small delay to let the inserter render
-                setTimeout(function() {
-                    // Find and click the Patterns tab
-                    var patternsTab = document.querySelector('button[data-type="patterns"], button.components-tab-panel__tabs-item:nth-child(2)');
-                    if (patternsTab && !patternsTab.getAttribute('aria-selected')) {
-                        patternsTab.click();
-                    }
-                }, 100);
-            }
-        });
-    });
-    </script>
-    <?php
-}
-add_action('admin_head', 'wagepoint_autoswitch_patterns');

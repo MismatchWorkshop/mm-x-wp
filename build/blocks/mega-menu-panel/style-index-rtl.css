@@ -1,0 +1,1 @@
+.mega-menu-panel{padding:1.5rem}.mega-menu-panel__header{color:#9ca3af;font-size:.75rem;font-weight:600;letter-spacing:.05em;margin-bottom:1rem;padding:0 1rem;text-transform:uppercase}.mega-menu-panel__items{display:grid;gap:1rem;grid-template-columns:repeat(var(--mega-menu-columns,1),1fr)}.wp-block-navigation-submenu .mega-menu-panel{border-radius:12px}

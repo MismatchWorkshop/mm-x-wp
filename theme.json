@@ -199,7 +199,8 @@
       ]
     },
     "layout": {
-      "wideSize": "1200px"
+      "wideSize": "",
+      "contentSize": ""
     },
     "blocks": {
       "core/button": {

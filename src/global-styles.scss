@@ -41,3 +41,25 @@
         display: none;
     }
 }
+
+.entry-content {
+  >*:first-child {
+    margin-top: 15px;
+    >.container__inner {
+      --extra-padding: var(--global-menu-height, 0px);
+    }
+  }
+
+  >.wp-block-cover {
+    padding: 4rem 1.5rem;
+    padding-top: calc(var(--extra-padding, 0px) + 4rem);
+  }
+}
+
+.hero-cover-bg {
+    .wp-block-cover__inner-container {
+        > * {
+            padding-bottom: 0 !important;
+        }
+    }
+}

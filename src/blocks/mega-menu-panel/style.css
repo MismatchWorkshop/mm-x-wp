@@ -1,0 +1,21 @@
+.mega-menu-panel {
+  padding: 1.5rem;
+}
+.mega-menu-panel__header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9CA3AF;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+.mega-menu-panel__items {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(var(--mega-menu-columns, 1), 1fr);
+}
+
+.wp-block-navigation-submenu .mega-menu-panel {
+  border-radius: 12px;
+}/*# sourceMappingURL=style.css.map */

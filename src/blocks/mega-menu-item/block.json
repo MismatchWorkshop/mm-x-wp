@@ -1,0 +1,41 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/mega-menu-item",
+  "title": "Mega Menu Item",
+  "category": "layout",
+  "parent": ["wagepoint/mega-menu-panel"],
+  "icon": "menu",
+  "description": "A rich menu item with icon, title, and description",
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "iconColor": {
+      "type": "string",
+      "default": "auto"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "auto"
+    },
+    "title": {
+      "type": "string",
+      "default": "Menu Item"
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

@@ -327,3 +327,4 @@ function wagepoint_register_pattern_categories() {
 }
 add_action( 'init', 'wagepoint_register_pattern_categories' );
 */
+

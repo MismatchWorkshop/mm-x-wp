@@ -1,0 +1,36 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/mega-menu-panel",
+  "title": "Mega Menu Panel",
+  "category": "layout",
+  "parent": [
+    "core/navigation-submenu"
+  ],
+  "icon": "table-col-after",
+  "description": "A container for mega menu items with optional category header",
+  "attributes": {
+    "categoryHeader": {
+      "type": "string",
+      "default": ""
+    },
+    "columns": {
+      "type": "number",
+      "default": 1
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "white"
+    }
+  },
+  "supports": {
+    "html": false,
+    "inserter": true,
+    "multiple": true
+  },
+  "providesContext": {
+    "wagepoint/megaMenuColumns": "columns"
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

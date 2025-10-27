@@ -11,7 +11,7 @@
     --color-dark-blue: #1e3a8a;
     --color-gray: #6B7280;
 
-    --font-size-1: #{fluid(40,90)};
+    --font-size-1: #{fluid(40,90,200)};
     --font-size-2: #{fluid(36,75)};
     --font-size-3: #{fluid(28,50)};
     --font-size-4: #{fluid(25,45)};
@@ -28,11 +28,14 @@
 
     --font-body: "Onest", sans-serif;
 
+    :where(.wp-site-blocks) > *,
     :where(.is-layout-constrained) > *,
     :where(.is-layout-flow) > * + * {
         margin-block-start: 0;
         margin-block-end: 0;
     }
+
+    --global-menu-height: 170px;
 
 }
 
@@ -44,6 +47,7 @@ body {
     --hspace--default: 40px;
     --container-padding-y: var(--vspace--default);
     --container-padding-x: var(--hspace--default);
+    --gutter-default: #{$gutter};
     font-family: var(--font-body);
 }
 

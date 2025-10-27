@@ -1,0 +1,65 @@
+.mega-menu-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+    cursor: pointer;
+    color: var(--text-color, inherit); 
+    
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    
+    // Adjust hover for dark backgrounds
+    .mega-menu-panel.bg-ledger-blue &,
+    .mega-menu-panel.bg-payday-blue & {
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+    
+    &__icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        // Default auto color
+        &.color-auto {
+            --color: var(--color-payday-blue);
+        }
+        
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        path {
+            fill: var(--color);
+        }
+    }
+    
+    &__content {
+        flex: 1;
+    }
+    
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: inherit; // Inherit from item or panel
+        margin: 0 0 0.25rem 0;
+    }
+    
+    &__description {
+        font-size: 0.875rem;
+        color: inherit; // Inherit from item or panel
+        opacity: 0.8; // Slightly muted
+        margin: 0;
+        line-height: 1.4;
+    }
+}

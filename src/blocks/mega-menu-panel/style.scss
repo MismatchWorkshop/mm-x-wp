@@ -1,0 +1,29 @@
+.mega-menu-panel {
+    //min-width: 600px;
+    padding: 1.5rem;
+    
+    &__header {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #9CA3AF;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+    
+    &__items {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(var(--mega-menu-columns, 1), 1fr);
+    }
+}
+
+// When inside navigation submenu
+.wp-block-navigation-submenu {
+    .mega-menu-panel {
+        //background: white;
+        border-radius: 12px;
+        //box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    }
+}

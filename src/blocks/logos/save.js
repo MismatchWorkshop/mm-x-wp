@@ -1,8 +1,12 @@
 import { useBlockProps } from '@wordpress/block-editor';
-import { COLOR_SYSTEM } from '../../color-system';
 
 export default function save({ attributes }) {
     const { displayMode, logos, gridColumns, carouselSpeed, pauseOnHover, backgroundColor, rowGap } = attributes;
+
+    // Don't render anything if there are no logos
+    if (!logos || logos.length === 0) {
+        return null;
+    }
 
     const blockProps = useBlockProps.save({
         className: `logos-block logos-${displayMode}`,

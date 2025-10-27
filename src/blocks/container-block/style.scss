@@ -1,8 +1,9 @@
 .wp-block-wagepoint-container {
+    --gutter: clamp(20px, calc(96 / 1512 * 100vw), 200px);
     // Outer layer - section spacing
     &.spacing-normal {
-        margin-top: 7.5px;
-        margin-bottom: 7.5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     
     &.spacing-large {
@@ -42,16 +43,20 @@
     
     // Container padding
     &.padding-small { 
-        padding: 2rem 1.5rem;
+        padding: 2rem var(--gutter, 20px);
+        padding-top: calc(var(--extra-padding, 0px) + 2rem);
     }
     &.padding-normal { 
-        padding: 4rem 1.5rem;
+        padding: 4rem var(--gutter, 20px);
+        padding-top: calc(var(--extra-padding, 0px) + 4rem);
     }
     &.padding-medium { 
-        padding: 6rem 1.5rem;
+        padding: 6rem var(--gutter, 20px);
+        padding-top: calc(var(--extra-padding, 0px) + 6rem);
     }
     &.padding-large { 
-        padding: 8rem 1.5rem;
+        padding: 8rem var(--gutter, 20px);
+        padding-top: calc(var(--extra-padding, 0px) + 8rem);
     }
     
     // Auto text color based on background

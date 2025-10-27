@@ -3,13 +3,65 @@
    ========================================================================== */
 
 .wp-block-navigation {
-  // Override WordPress defaults for clean slate
+
+  .wp-block-navigation {
+    &__submenu-icon {
+      height: .8em;
+      width: .8em;
+      path {
+        stroke-width: 0;
+      }
+    }
+  }
+
+  .has-child {
+    .wp-block-navigation-submenu__toggle[aria-expanded=true]~.wp-block-navigation__submenu-container,
+    &:not(.open-on-click):hover>.wp-block-navigation__submenu-container,
+    &:not(.open-on-click):not(.open-on-hover-click):focus-within>.wp-block-navigation__submenu-container {
+      max-width: none;
+      .wp-block-wagepoint-mega-menu-panel {
+        width: 100vw;
+        max-width: calc(var(--mega-menu-columns, 1) * 320px);
+      }
+    }
+  }
+
   &.is-style-wagepoint-nav {
     background: transparent;
+
+    .wp-block-navigation__submenu-container {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 0;
+      min-width: 280px;
+      top: 100%;
+      left: 0;
+      
+      // Grid layout - adapts to number of panels
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(300px, 1fr);
+      gap: 8px;
+      padding: 8px;
+      
+      .mega-menu-panel {
+        box-shadow: none;
+
+        &.bg-auto {
+          background: var(--color-payday-blue);
+        }
+        
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
     
     // Top-level navigation list
     .wp-block-navigation__container {
-      gap: 0;
+      gap: 0.5em;
       flex-wrap: nowrap;
     }
     
@@ -19,7 +71,7 @@
       
       > .wp-block-navigation-item__content {
         padding: 1.25rem 1rem;
-        color: #1F2937;
+        color: var(--text-color, #1F2937);
         font-weight: 500;
         font-size: 0.9375rem;
         text-decoration: none;
@@ -37,6 +89,7 @@
         display: flex;
         align-items: center;
         gap: 0.375rem;
+        padding-right: 0;
         
         &::after {
           content: '';
@@ -46,6 +99,7 @@
           border-right: 4px solid transparent;
           border-top: 5px solid currentColor;
           transition: transform 0.2s ease;
+          display: none;
         }
       }
       
@@ -64,12 +118,15 @@
       min-width: 280px;
       top: 100%;
       left: 0;
+
+      padding: 0;
+      border: 0;
       
       // Submenu items
       .wp-block-navigation-item {
         > .wp-block-navigation-item__content {
           padding: 0.75rem 1.5rem;
-          color: #1F2937;
+          color: var(--text-color, #1F2937);
           font-weight: 400;
           display: block;
           width: 100%;
@@ -105,15 +162,29 @@
 /* Header container styles */
 .site-header {
   background: white;
-  border-bottom: 1px solid #E5E7EB;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  //margin-top: 15px;
+  width: 100%;
+  top: 0;//var(--global-menu-y, 0px);
   z-index: 1000;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
+
+  &.is-pinned {
+      transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &.nav-background {
+    background-color: #FFF;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    padding: 0;
+  }
   
   .header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    //max-width: 1400px;
+    margin: 15px auto 0;
+    padding: 30px calc(2rem + 42px);
+    padding-top: calc(var(--wp-admin--admin-bar--height, 0px) + 30px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,7 +227,7 @@
       &.is-style-text-link {
         .wp-block-button__link {
           background: transparent;
-          color: #1F2937;
+          color: var(--text-color, #1F2937);
           padding: 0.625rem 0.75rem;
           
           &:hover {
@@ -190,6 +261,19 @@
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
           }
+        }
+      }
+    }
+  }
+}
+
+body.header-light {
+  .site-header {
+    &:not(.nav-background) {
+      --text-color: var(--color-white, #FFF);
+      .header-inner > svg {
+        path {
+          fill: #FFF;
         }
       }
     }

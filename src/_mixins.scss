@@ -1,3 +1,7 @@
-@function fluid($min, $max, $target-width: 1512) {
-    @return clamp(#{$min}px, calc(#{$max} / #{$target-width} * 100vw), #{$max}px);
+@function fluid($min, $preferred, $max: null, $viewport-width: 1512) {
+    @if $max {
+        @return clamp(#{$min}px, calc(#{$preferred} / #{$viewport-width} * 100vw), #{$max}px);
+    } @else {
+        @return clamp(#{$min}px, calc(#{$preferred} / #{$viewport-width} * 100vw), #{$preferred}px);
+    }
 }

@@ -14,10 +14,22 @@ Object.entries(colorsData).forEach(([key, data]) => {
 
 scssContent += '}\n\n';
 
-// Background classes
+// Color variable classes
+Object.entries(colorsData).forEach(([key, data]) => {
+    scssContent += `.color-${key} {\n`;
+    scssContent += `  --color: var(--color-${key}, ${data.value});\n`;
+    scssContent += `}\n\n`;
+});
+
+// Background classes WITH text color variable
 Object.entries(colorsData).forEach(([key, data]) => {
     scssContent += `.bg-${key} {\n`;
     scssContent += `  background-color: var(--color-${key}, ${data.value});\n`;
+    // Set the text color variable based on autoText
+    if (data.autoText) {
+        scssContent += `  --text-color: ${data.autoText};\n`;
+        scssContent += `  color: var(--text-color);\n`;
+    }
     scssContent += `}\n\n`;
 });
 
