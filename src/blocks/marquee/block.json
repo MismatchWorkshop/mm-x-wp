@@ -1,0 +1,25 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/marquee",
+  "title": "Marquee",
+  "category": "layout",
+  "icon": "slides",
+  "description": "Auto-scrolling marquee container that accepts any content",
+  "keywords": ["scroll", "carousel", "infinite", "marquee"],
+  "attributes": {
+    "direction": {
+      "type": "string",
+      "default": "left",
+      "enum": ["left", "right"]
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,40 @@
+.wp-block-wagepoint-marquee {
+    overflow: hidden;
+    min-width: 100%;
+    position: relative;
+
+
+    .container__inner > .container__content > & {
+        margin-left: calc(-1 * var(--container-padding-x));
+        margin-right: calc(-1 * var(--container-padding-x));
+    }
+}
+
+.wagepoint-marquee-track {
+    display: flex;
+    width: fit-content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    
+    // Pause on hover
+    .wp-block-wagepoint-marquee:hover & {
+        animation-play-state: paused !important;
+    }
+}
+
+.wagepoint-marquee-content {
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+    align-items: center;
+    flex-shrink: 0;
+    
+    // Ensure child blocks stay horizontal
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+
+// NO KEYFRAMES - JavaScript handles all animation

@@ -71,7 +71,7 @@ export default function Edit({ attributes, setAttributes, context, clientId }) {
                     src={icon.src}
                     svg={icon.svg}
                     backgroundColor={resolvedIconBg}
-                    size={icon.size || 64}
+                    size={icon.size || 100}
                 />
                 <div className="metric-content">
                     <RichText

@@ -20,15 +20,6 @@ export default function Save({ attributes }) {
             {(icon.src || icon.svg) && (
                 <div 
                     className={`wp-block-icon ${iconBgClass}`.trim()}
-                    style={{
-                        width: `${icon.size || 64}px`,
-                        height: `${icon.size || 64}px`,
-                        borderRadius: '16px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0
-                    }}
                 >
                     {icon.type === 'svg' && icon.svg ? (
                         <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
@@ -36,11 +27,6 @@ export default function Save({ attributes }) {
                         <img 
                             src={icon.src} 
                             alt=""
-                            style={{ 
-                                width: '60%', 
-                                height: '60%',
-                                objectFit: 'contain'
-                            }}
                         />
                     ) : null}
                 </div>

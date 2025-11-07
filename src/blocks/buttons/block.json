@@ -6,6 +6,12 @@
   "icon": "button",
   "description": "A row of buttons",
   "keywords": ["button", "buttons", "cta"],
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
   "supports": {
     "html": false,
     "align": ["wide", "full"],

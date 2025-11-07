@@ -1,0 +1,55 @@
+.wp-block-wagepoint-marquee {
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    position: relative;
+    
+    // Enable horizontal scrolling in editor
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    // Direction indicator
+    &.marquee-direction-left::before {
+        content: '← Scrolling Left';
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 0.75rem;
+        color: #9ca3af;
+        font-weight: 600;
+        z-index: 1;
+    }
+    
+    &.marquee-direction-right::before {
+        content: 'Scrolling Right →';
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 0.75rem;
+        color: #9ca3af;
+        font-weight: 600;
+        z-index: 1;
+    }
+    
+    .wagepoint-marquee-editor-label {
+        font-size: 0.75rem;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+    }
+    
+    .wagepoint-marquee-content {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: nowrap; // Prevent wrapping so blocks stay horizontal
+        
+        .block-editor-block-list__layout {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: nowrap; // Prevent wrapping
+        }
+    }
+}

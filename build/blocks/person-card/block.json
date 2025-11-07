@@ -1,0 +1,55 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/person-card",
+  "title": "Person Card",
+  "category": "layout",
+  "icon": "id",
+  "description": "Display a team member with photo, name, title, and LinkedIn link",
+  "keywords": [
+    "person",
+    "team",
+    "profile",
+    "staff",
+    "employee"
+  ],
+  "attributes": {
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "name": {
+      "type": "string",
+      "default": "Team Member Name"
+    },
+    "title": {
+      "type": "string",
+      "default": "Job Title"
+    },
+    "linkedInUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#FDB022"
+    },
+    "headingLevel": {
+      "type": "number",
+      "default": 3
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

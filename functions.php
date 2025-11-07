@@ -102,12 +102,14 @@ add_action( 'widgets_init', 'wagepoint_widgets_init' );
  */
 function wagepoint_scripts() {
     // Main theme styles (compiled from src/style.scss)
+    /*
     wp_enqueue_style(
         'wagepoint-style',
         get_template_directory_uri() . '/build/style-index.css',
         array(),
         _S_VERSION
     );
+    */
     
 	wp_enqueue_style(
             'custom-blocks-style',

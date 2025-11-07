@@ -27,15 +27,17 @@ const ALIGNMENT_OPTIONS = [
 // Template for InnerBlocks
 const INNER_BLOCKS_TEMPLATE = [
     ['wagepoint/meta-heading', { 
-        content: 'Meta Heading',
+        content: '',
         level: 6,
-        backgroundColor: 'primary'
+        backgroundColor: 'primary',
+        placeholder: 'Meta Heading'
     }],
-    ['wagepoint/heading', {
+    ['core/heading', {
         level: 2,
         size: 'inherit',
         content: '',
-        placeholder: 'Main heading...'  // Custom placeholder!
+        placeholder: 'Main heading...',
+        className: 'copy__heading'
     }],
     ['core/paragraph', { 
         placeholder: 'Body text...'
@@ -48,10 +50,11 @@ const INNER_BLOCKS_TEMPLATE = [
 
 const ALLOWED_BLOCKS = [
     'wagepoint/meta-heading',
-    'wagepoint/heading',  
+    'core/heading',  
     'core/paragraph',
     'wagepoint/buttons'
 ];
+
 
 export default function Edit({ attributes, setAttributes }) {
     const { contentWidth, textAlignment } = attributes;

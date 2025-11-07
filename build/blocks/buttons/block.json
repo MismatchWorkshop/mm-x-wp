@@ -10,6 +10,12 @@
     "buttons",
     "cta"
   ],
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
   "supports": {
     "html": false,
     "align": [
