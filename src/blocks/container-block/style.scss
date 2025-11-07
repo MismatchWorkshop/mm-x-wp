@@ -13,17 +13,30 @@
     
     // Outer background colors (full width)
     &.outer-bg-light {
-        background-color: #F9FAFB;
+        background-color: #F9FAFB !important;
     }
     
     &.outer-bg-dark {
-        background-color: #1F2937;
+        background-color: #1F2937 !important;
     }
     
     // Add horizontal gutter
     padding-left: 15px;
     padding-right: 15px;
+
+
+
+    .container__content,
+    .container__content > .block-editor-inner-blocks > .block-editor-block-list__layout {
+        display: flex;
+        flex-direction: column;
+        gap: var(--content-spacing-y, 2rem);
+    }
+    
 }
+
+
+
 .container__inner {
     margin-left: auto;
     margin-right: auto;
@@ -40,23 +53,25 @@
     &.width-wide { 
         //max-width: 1400px;
     }
+
+    --pt: calc(var(--extra-padding, 0px) + var(--py-initial));
+    --container-padding-y: calc(var(--extra-padding, 0px) + var(--py-initial));
+    padding: var(--py-initial) var(--gutter, 20px);
+    padding-top: var(--pt);
     
     // Container padding
     &.padding-small { 
-        padding: 2rem var(--gutter, 20px);
-        padding-top: calc(var(--extra-padding, 0px) + 2rem);
+        --py-initial: 2rem;
+        
     }
     &.padding-normal { 
-        padding: 4rem var(--gutter, 20px);
-        padding-top: calc(var(--extra-padding, 0px) + 4rem);
+        --py-initial: 4rem;
     }
     &.padding-medium { 
-        padding: 6rem var(--gutter, 20px);
-        padding-top: calc(var(--extra-padding, 0px) + 6rem);
+        --py-initial: 6rem;
     }
     &.padding-large { 
-        padding: 8rem var(--gutter, 20px);
-        padding-top: calc(var(--extra-padding, 0px) + 8rem);
+        --py-initial: 8rem;
     }
     
     // Auto text color based on background

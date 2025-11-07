@@ -1,0 +1,93 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/panel",
+  "title": "Panel",
+  "category": "layout",
+  "icon": "welcome-view-site",
+  "description": "A reusable content panel with an icon and label, designed for use within tabs or other containers.",
+  "keywords": [
+    "panel",
+    "tab",
+    "content"
+  ],
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "New Panel"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "className": {
+      "type": "string",
+      "default": ""
+    },
+    "data-is-active": {
+      "type": "boolean",
+      "default": false
+    },
+    "data-parent-bg-color": {
+      "type": "string",
+      "default": "white"
+    },
+    "template": {
+      "type": "array",
+      "default": [
+        [
+          "core/columns",
+          {
+            "columns": 2,
+            "className": "wagepoint-tabs__content-template"
+          },
+          [
+            [
+              "core/column",
+              {
+                "width": "50%"
+              },
+              [
+                [
+                  "core/heading",
+                  {
+                    "level": 3,
+                    "placeholder": "Feature Heading",
+                    "className": "wagepoint-tabs__panel-heading"
+                  }
+                ],
+                [
+                  "core/paragraph",
+                  {
+                    "placeholder": "Detailed description of the feature..."
+                  }
+                ]
+              ]
+            ],
+            [
+              "core/column",
+              {
+                "width": "50%"
+              },
+              [
+                [
+                  "core/image",
+                  {
+                    "align": "center",
+                    "placeholder": "Image for the tab content"
+                  }
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

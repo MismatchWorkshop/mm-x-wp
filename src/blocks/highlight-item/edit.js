@@ -69,6 +69,15 @@ export default function Edit({ attributes, setAttributes, context }) {
             </InspectorControls>
 
             <div {...blockProps}>
+                {icon && icon.svg && (
+                    <Icon
+                        type={icon.type || 'svg'}
+                        src={icon.src}
+                        svg={icon.svg}
+                        backgroundColor={icon.backgroundColor}
+                        size={icon.size}
+                    />
+                )}
                 <InnerBlocks
                     allowedBlocks={ALLOWED_BLOCKS}
                     template={INNER_BLOCKS_TEMPLATE}

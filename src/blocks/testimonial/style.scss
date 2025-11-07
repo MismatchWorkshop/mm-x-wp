@@ -1,0 +1,92 @@
+// Testimonial Block Styles
+.wp-block-wagepoint-testimonial {
+    // Inside carousel, testimonials should fill height
+    .swiper-slide & {
+        height: 100%;
+        width: 100%;
+        
+        .box {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    // Ensure box has proper height
+    .box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    // Quote icon styling
+    .testimonial__quote-icon {
+        color: var(--wp--preset--color--primary);
+        line-height: 1;
+        margin-bottom: var(--wp--preset--spacing--30);
+        font-weight: 700;
+    }
+    
+    // Quote text styling
+    .testimonial__quote {
+        margin-bottom: var(--wp--preset--spacing--50);
+        flex-grow: 1;
+        color: var(--wp--preset--color--dark);
+        line-height: 1.6;
+    }
+    
+    // Author section
+    .testimonial__author {
+        margin-top: auto;
+        padding-top: var(--wp--preset--spacing--40);
+        border-top: 2px solid var(--wp--preset--color--light);
+        align-items: center;
+        
+        .author-info {
+            gap: var(--wp--preset--spacing--20);
+            
+            .author__name {
+                font-weight: 600;
+                color: var(--wp--preset--color--dark);
+                margin: 0;
+            }
+            
+            .author__title {
+                color: var(--wp--preset--color--text-gray);
+                margin: 0;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .testimonial__company-logo {
+            max-width: 120px;
+            max-height: 40px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            
+            // Target the actual img element
+            img {
+                max-width: 120px;
+                max-height: 40px;
+                width: auto !important;  // Override inline width from WordPress
+                height: auto !important; // Override inline height from WordPress
+                object-fit: contain;
+            }
+            
+            @media (max-width: 768px) {
+                max-width: 100px;
+                max-height: 32px;
+                
+                img {
+                    max-width: 100px;
+                    max-height: 32px;
+                }
+            }
+            
+            &.is-hidden {
+                display: none;
+            }
+        }
+    }
+}

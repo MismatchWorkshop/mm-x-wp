@@ -4,6 +4,16 @@
  * Register pattern categories
  */
 function wagepoint_register_pattern_categories() {
+
+
+    register_block_pattern_category(
+        'wagepoint-content',
+        array(
+            'label' => __('Content!', 'wagepoint'),
+            'description' => __('Common content patterns', 'wagepoint')
+        )
+    );
+
     // Hero category
     register_block_pattern_category(
         'hero',
@@ -29,6 +39,15 @@ function wagepoint_register_pattern_categories() {
             'description' => __('Logos, testimonials, and trust indicators', 'wagepoint')
         )
     );
+
+    register_block_pattern_category(
+        'testimonials',
+        array(
+            'label' => __('Testimonials', 'wagepoint'),
+            'description' => __('Patterns for displaying customer testimonials', 'wagepoint'),
+        )
+    );
+
 }
 add_action('init', 'wagepoint_register_pattern_categories');
 

@@ -1,0 +1,112 @@
+.metrics-bar-block {
+    width: 100%;
+    padding: 3rem 0;
+
+    .metrics-bar-heading {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #1F2937;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .metrics-bar-container {
+        position: relative;
+    }
+
+    .metrics-bar-items {
+        position: relative;
+        z-index: 1;
+        
+        // Target the InnerBlocks wrapper
+        > .block-editor-inner-blocks,
+        > .block-editor-block-list__layout {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        // Frontend: Metric blocks are direct children
+        > .wp-block-wagepoint-metric {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            max-width: 300px;
+        }
+    }
+}
+
+// Frontend specific styles
+.wp-block-wagepoint-metrics-bar {
+    .metrics-bar-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .wp-block-wagepoint-metric {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1;
+        max-width: 300px;
+
+        .wp-block-icon {
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .metrics-bar-block,
+    .wp-block-wagepoint-metrics-bar {
+        .metrics-bar-line-svg {
+            display: none;
+        }
+
+        .metrics-bar-items,
+        .metrics-bar-items > .block-editor-inner-blocks,
+        .metrics-bar-items > .block-editor-block-list__layout {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .wp-block-wagepoint-metric {
+            max-width: 100%;
+
+            .metric-value {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+// Editor specific styles
+.wp-block-wagepoint-metrics-bar {
+    .block-editor-block-list__layout {
+        > .wp-block {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}

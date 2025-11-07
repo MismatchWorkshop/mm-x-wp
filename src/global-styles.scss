@@ -1,11 +1,13 @@
 @import "mixins";
 @import "vars";
 @import "color-utilities";
+@import "theming";
 @import "base";
 
 @import 'components/cards';
 @import 'pattern-styles/global-header';
 @import 'pattern-styles/hero';
+@import 'pattern-styles/metrics-bar';
 
 .container__inner {
     border-radius: var(--container-corner-radius);

@@ -1,0 +1,36 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/metrics-bar",
+  "title": "Metrics Bar",
+  "category": "layout",
+  "icon": "chart-bar",
+  "description": "Container for displaying metrics in a horizontal layout with connecting line",
+  "keywords": [
+    "metrics",
+    "stats",
+    "numbers",
+    "statistics"
+  ],
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "lineColor": {
+      "type": "string",
+      "default": "auto"
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,28 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/testimonial",
+  "title": "Testimonial",
+  "category": "text",
+  "icon": "format-quote",
+  "description": "Customer testimonial with quote, author info, and company logo",
+  "keywords": [
+    "testimonial",
+    "quote",
+    "review",
+    "customer"
+  ],
+  "attributes": {
+    "showCompanyLogo": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

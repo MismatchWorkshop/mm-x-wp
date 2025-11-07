@@ -1,0 +1,41 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/box",
+  "title": "Box",
+  "category": "layout",
+  "icon": "admin-page",
+  "description": "Container with style variations for testimonials and content",
+  "keywords": ["box", "container", "wrapper"],
+  "attributes": {
+    "borderColor": {
+      "type": "string",
+      "default": "primary"
+    },
+    "containerBackground": {
+      "type": "string",
+      "default": "white"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "providesContext": {
+    "wagepoint/containerBackground": "containerBackground"
+  },
+  "styles": [
+    {
+      "name": "border",
+      "label": "Border",
+      "isDefault": true
+    },
+    {
+      "name": "fill",
+      "label": "Fill"
+    }
+  ],
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

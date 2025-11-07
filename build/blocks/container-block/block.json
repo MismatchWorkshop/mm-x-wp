@@ -39,7 +39,11 @@
     "wagepoint/containerBackground": "containerBackground"
   },
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "text": false
+    }
   },
   "textdomain": "wagepoint",
   "editorScript": "file:./index.js",

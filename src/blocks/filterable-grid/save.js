@@ -4,7 +4,7 @@
  * This block uses dynamic rendering (PHP), so we return null here.
  * All the HTML output is generated server-side in the render_callback.
  * 
- * @package MyTheme
+ * @package wagepoint
  */
 
 export default function save() {

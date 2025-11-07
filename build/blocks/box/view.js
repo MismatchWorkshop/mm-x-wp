@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".box.is-style-fill").forEach(t=>{Array.from(t.classList).find(t=>t.startsWith("border-"))})});

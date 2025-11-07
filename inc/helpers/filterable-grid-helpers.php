@@ -2,10 +2,10 @@
 /**
  * Helper functions for Filterable Grid Block
  *
- * @package MyTheme
+ * @package wagepoint
  */
 
-namespace MyTheme\Helpers;
+namespace wagepoint\Helpers;
 
 /**
  * Get post types available for filterable grid

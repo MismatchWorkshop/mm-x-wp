@@ -1,7 +1,7 @@
 /**
  * Frontend JavaScript for Filterable Grid Block
  * 
- * @package MyTheme
+ * @package wagepoint
  */
 
 class FilterableGrid {
@@ -268,7 +268,7 @@ class FilterableGrid {
     getResultsMessage(showing, total) {
         if (window.wp && window.wp.i18n) {
             return wp.i18n.sprintf(
-                wp.i18n.__('Showing %d of %d results', 'mytheme'),
+                wp.i18n.__('Showing %d of %d results', 'wagepoint'),
                 showing,
                 total
             );
@@ -281,7 +281,7 @@ class FilterableGrid {
      */
     getNoResultsMessage() {
         if (window.wp && window.wp.i18n) {
-            return wp.i18n.__('No results found', 'mytheme');
+            return wp.i18n.__('No results found', 'wagepoint');
         }
         return 'No results found';
     }
@@ -344,7 +344,7 @@ class FilterableGrid {
     getRemoveFilterLabel(termName) {
         if (window.wp && window.wp.i18n) {
             return wp.i18n.sprintf(
-                wp.i18n.__('Remove filter: %s', 'mytheme'),
+                wp.i18n.__('Remove filter: %s', 'wagepoint'),
                 termName
             );
         }
@@ -514,7 +514,7 @@ class FilterableGrid {
      */
     getErrorMessage() {
         if (window.wp && window.wp.i18n) {
-            return wp.i18n.__('Something went wrong while loading posts. Please try again.', 'mytheme');
+            return wp.i18n.__('Something went wrong while loading posts. Please try again.', 'wagepoint');
         }
         return 'Something went wrong while loading posts. Please try again.';
     }
@@ -524,7 +524,7 @@ class FilterableGrid {
      */
     getRetryButtonText() {
         if (window.wp && window.wp.i18n) {
-            return wp.i18n.__('Retry', 'mytheme');
+            return wp.i18n.__('Retry', 'wagepoint');
         }
         return 'Retry';
     }

@@ -4,10 +4,10 @@
  * 
  * A standalone filter block that can be used independently or with the Filterable Grid
  *
- * @package MyTheme
+ * @package wagepoint
  */
 
-namespace MyTheme\Blocks;
+namespace wagepoint\Blocks;
 
 class Taxonomy_Filter_Block {
     
@@ -114,14 +114,14 @@ class Taxonomy_Filter_Block {
         // Get taxonomy object
         $tax_obj = get_taxonomy($taxonomy);
         if (!$tax_obj) {
-            return $this->render_error(__('Invalid taxonomy selected.', 'mytheme'));
+            return $this->render_error(__('Invalid taxonomy selected.', 'wagepoint'));
         }
         
         // Check if taxonomy is associated with post type
         if (!in_array($post_type, $tax_obj->object_type)) {
             return $this->render_error(
                 sprintf(
-                    __('Taxonomy "%s" is not associated with post type "%s".', 'mytheme'),
+                    __('Taxonomy "%s" is not associated with post type "%s".', 'wagepoint'),
                     $taxonomy,
                     $post_type
                 )
@@ -149,11 +149,11 @@ class Taxonomy_Filter_Block {
         // Set defaults
         $label = $show_label ? $tax_obj->labels->singular_name : '';
         $placeholder = $placeholder ?: sprintf(
-            __('Select %s', 'mytheme'),
+            __('Select %s', 'wagepoint'),
             $tax_obj->labels->singular_name
         );
         $all_text = $all_text ?: sprintf(
-            __('All %s', 'mytheme'),
+            __('All %s', 'wagepoint'),
             $tax_obj->labels->name
         );
         
@@ -267,7 +267,7 @@ class Taxonomy_Filter_Block {
                 class="taxonomy-filter-block__select" 
                 data-filter-taxonomy="<?php echo esc_attr($taxonomy); ?>"
                 <?php echo $multi_select ? 'multiple' : ''; ?>
-                aria-label="<?php echo esc_attr(sprintf(__('Filter by %s', 'mytheme'), $label)); ?>">
+                aria-label="<?php echo esc_attr(sprintf(__('Filter by %s', 'wagepoint'), $label)); ?>">
                 
                 <?php if ($show_all && !$multi_select): ?>
                     <option value=""><?php echo esc_html($all_text); ?></option>
@@ -552,7 +552,7 @@ class Taxonomy_Filter_Block {
             '<div class="taxonomy-filter-block__error" style="padding: 1rem; background: #fee; border: 1px solid #fcc; border-radius: 4px; color: #c00;">
                 <strong>%s:</strong> %s
             </div>',
-            __('Taxonomy Filter Error', 'mytheme'),
+            __('Taxonomy Filter Error', 'wagepoint'),
             esc_html($message)
         );
     }

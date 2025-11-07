@@ -296,7 +296,7 @@ add_action('init', 'wagepoint_debug_blocks', 999);
 
 function wagepoint_unregister_core_blocks() {
     // Unregister core heading block
-    unregister_block_type('core/heading');
+    // unregister_block_type('core/heading');
 }
 add_action('init', 'wagepoint_unregister_core_blocks');
 
@@ -327,4 +327,3 @@ function wagepoint_register_pattern_categories() {
 }
 add_action( 'init', 'wagepoint_register_pattern_categories' );
 */
-

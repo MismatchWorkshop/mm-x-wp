@@ -56,13 +56,13 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <>
             <InspectorControls>
-                <PanelBody title={__('Filter Settings', 'mytheme')} initialOpen={true}>
+                <PanelBody title={__('Filter Settings', 'wagepoint')} initialOpen={true}>
                     
                     <SelectControl
-                        label={__('Post Type', 'mytheme')}
+                        label={__('Post Type', 'wagepoint')}
                         value={postType}
                         options={[
-                            { label: __('Select Post Type', 'mytheme'), value: '' },
+                            { label: __('Select Post Type', 'wagepoint'), value: '' },
                             ...postTypes.map(type => ({
                                 label: type.labels.singular_name,
                                 value: type.slug
@@ -77,10 +77,10 @@ export default function Edit({ attributes, setAttributes }) {
                     
                     {postType && taxonomies.length > 0 && (
                         <SelectControl
-                            label={__('Taxonomy', 'mytheme')}
+                            label={__('Taxonomy', 'wagepoint')}
                             value={taxonomy}
                             options={[
-                                { label: __('Select Taxonomy', 'mytheme'), value: '' },
+                                { label: __('Select Taxonomy', 'wagepoint'), value: '' },
                                 ...taxonomies.map(tax => ({
                                     label: tax.name,
                                     value: tax.slug
@@ -92,62 +92,62 @@ export default function Edit({ attributes, setAttributes }) {
                     
                     {postType && taxonomies.length === 0 && (
                         <Notice status="warning" isDismissible={false}>
-                            {__('No taxonomies available for this post type.', 'mytheme')}
+                            {__('No taxonomies available for this post type.', 'wagepoint')}
                         </Notice>
                     )}
                     
                 </PanelBody>
                 
-                <PanelBody title={__('Display Settings', 'mytheme')} initialOpen={false}>
+                <PanelBody title={__('Display Settings', 'wagepoint')} initialOpen={false}>
                     
                     <SelectControl
-                        label={__('Style', 'mytheme')}
+                        label={__('Style', 'wagepoint')}
                         value={style}
                         options={[
-                            { label: __('Dropdown', 'mytheme'), value: 'dropdown' },
-                            { label: __('Buttons', 'mytheme'), value: 'buttons' },
-                            { label: __('Checkboxes', 'mytheme'), value: 'checkboxes' },
-                            { label: __('Radio Buttons', 'mytheme'), value: 'radio' }
+                            { label: __('Dropdown', 'wagepoint'), value: 'dropdown' },
+                            { label: __('Buttons', 'wagepoint'), value: 'buttons' },
+                            { label: __('Checkboxes', 'wagepoint'), value: 'checkboxes' },
+                            { label: __('Radio Buttons', 'wagepoint'), value: 'radio' }
                         ]}
                         onChange={(value) => setAttributes({ style: value })}
                     />
                     
                     <ToggleControl
-                        label={__('Show Label', 'mytheme')}
+                        label={__('Show Label', 'wagepoint')}
                         checked={showLabel}
                         onChange={(value) => setAttributes({ showLabel: value })}
                     />
                     
                     {style === 'dropdown' && (
                         <TextControl
-                            label={__('Placeholder Text', 'mytheme')}
+                            label={__('Placeholder Text', 'wagepoint')}
                             value={placeholder}
                             onChange={(value) => setAttributes({ placeholder: value })}
-                            help={__('Leave empty for default text', 'mytheme')}
+                            help={__('Leave empty for default text', 'wagepoint')}
                         />
                     )}
                     
                     <ToggleControl
-                        label={__('Show Count', 'mytheme')}
+                        label={__('Show Count', 'wagepoint')}
                         checked={showCount}
                         onChange={(value) => setAttributes({ showCount: value })}
-                        help={__('Display post count for each term', 'mytheme')}
+                        help={__('Display post count for each term', 'wagepoint')}
                     />
                     
                     {(style === 'buttons' || style === 'radio' || style === 'dropdown') && (
                         <>
                             <ToggleControl
-                                label={__('Show "All" Option', 'mytheme')}
+                                label={__('Show "All" Option', 'wagepoint')}
                                 checked={showAllOption}
                                 onChange={(value) => setAttributes({ showAllOption: value })}
                             />
                             
                             {showAllOption && (
                                 <TextControl
-                                    label={__('"All" Option Text', 'mytheme')}
+                                    label={__('"All" Option Text', 'wagepoint')}
                                     value={allOptionText}
                                     onChange={(value) => setAttributes({ allOptionText: value })}
-                                    help={__('Leave empty for default text', 'mytheme')}
+                                    help={__('Leave empty for default text', 'wagepoint')}
                                 />
                             )}
                         </>
@@ -155,30 +155,30 @@ export default function Edit({ attributes, setAttributes }) {
                     
                     {style === 'dropdown' && (
                         <ToggleControl
-                            label={__('Multi-Select', 'mytheme')}
+                            label={__('Multi-Select', 'wagepoint')}
                             checked={multiSelect}
                             onChange={(value) => setAttributes({ multiSelect: value })}
-                            help={__('Allow selecting multiple terms', 'mytheme')}
+                            help={__('Allow selecting multiple terms', 'wagepoint')}
                         />
                     )}
                     
                     {isHierarchical && (
                         <>
                             <ToggleControl
-                                label={__('Show Hierarchy', 'mytheme')}
+                                label={__('Show Hierarchy', 'wagepoint')}
                                 checked={hierarchical}
                                 onChange={(value) => setAttributes({ hierarchical: value })}
-                                help={__('Display terms in hierarchical structure', 'mytheme')}
+                                help={__('Display terms in hierarchical structure', 'wagepoint')}
                             />
                             
                             {hierarchical && (
                                 <RangeControl
-                                    label={__('Max Depth', 'mytheme')}
+                                    label={__('Max Depth', 'wagepoint')}
                                     value={maxDepth}
                                     onChange={(value) => setAttributes({ maxDepth: value })}
                                     min={0}
                                     max={5}
-                                    help={__('Maximum depth to display (0 = unlimited)', 'mytheme')}
+                                    help={__('Maximum depth to display (0 = unlimited)', 'wagepoint')}
                                 />
                             )}
                         </>
@@ -186,35 +186,35 @@ export default function Edit({ attributes, setAttributes }) {
                     
                 </PanelBody>
                 
-                <PanelBody title={__('Sorting Settings', 'mytheme')} initialOpen={false}>
+                <PanelBody title={__('Sorting Settings', 'wagepoint')} initialOpen={false}>
                     
                     <SelectControl
-                        label={__('Order By', 'mytheme')}
+                        label={__('Order By', 'wagepoint')}
                         value={orderBy}
                         options={[
-                            { label: __('Name', 'mytheme'), value: 'name' },
-                            { label: __('Count', 'mytheme'), value: 'count' },
-                            { label: __('Slug', 'mytheme'), value: 'slug' },
-                            { label: __('Term ID', 'mytheme'), value: 'term_id' }
+                            { label: __('Name', 'wagepoint'), value: 'name' },
+                            { label: __('Count', 'wagepoint'), value: 'count' },
+                            { label: __('Slug', 'wagepoint'), value: 'slug' },
+                            { label: __('Term ID', 'wagepoint'), value: 'term_id' }
                         ]}
                         onChange={(value) => setAttributes({ orderBy: value })}
                     />
                     
                     <SelectControl
-                        label={__('Order', 'mytheme')}
+                        label={__('Order', 'wagepoint')}
                         value={order}
                         options={[
-                            { label: __('Ascending', 'mytheme'), value: 'ASC' },
-                            { label: __('Descending', 'mytheme'), value: 'DESC' }
+                            { label: __('Ascending', 'wagepoint'), value: 'ASC' },
+                            { label: __('Descending', 'wagepoint'), value: 'DESC' }
                         ]}
                         onChange={(value) => setAttributes({ order: value })}
                     />
                     
                     <ToggleControl
-                        label={__('Hide Empty', 'mytheme')}
+                        label={__('Hide Empty', 'wagepoint')}
                         checked={hideEmpty}
                         onChange={(value) => setAttributes({ hideEmpty: value })}
-                        help={__('Hide terms with no posts', 'mytheme')}
+                        help={__('Hide terms with no posts', 'wagepoint')}
                     />
                     
                 </PanelBody>
@@ -228,17 +228,17 @@ export default function Edit({ attributes, setAttributes }) {
                         </svg>
                     </div>
                     <div className="taxonomy-filter-block-editor__info">
-                        <h4>{__('Taxonomy Filter', 'mytheme')}</h4>
+                        <h4>{__('Taxonomy Filter', 'wagepoint')}</h4>
                         <p>
                             {taxonomy ? (
                                 <>
                                     <strong>{selectedTaxonomy?.name || taxonomy}</strong>
                                     {' • '}
                                     {style}
-                                    {showCount && ` • ${__('with count', 'mytheme')}`}
+                                    {showCount && ` • ${__('with count', 'wagepoint')}`}
                                 </>
                             ) : (
-                                __('Configure filter settings in the sidebar', 'mytheme')
+                                __('Configure filter settings in the sidebar', 'wagepoint')
                             )}
                         </p>
                     </div>
@@ -247,17 +247,17 @@ export default function Edit({ attributes, setAttributes }) {
                 {taxonomy && (
                     <div className="taxonomy-filter-block-editor__settings">
                         <span className={`taxonomy-filter-block-editor__badge ${showLabel ? 'is-active' : ''}`}>
-                            {showLabel ? '✓' : '✗'} {__('Label', 'mytheme')}
+                            {showLabel ? '✓' : '✗'} {__('Label', 'wagepoint')}
                         </span>
                         <span className={`taxonomy-filter-block-editor__badge ${showCount ? 'is-active' : ''}`}>
-                            {showCount ? '✓' : '✗'} {__('Count', 'mytheme')}
+                            {showCount ? '✓' : '✗'} {__('Count', 'wagepoint')}
                         </span>
                         <span className={`taxonomy-filter-block-editor__badge ${hideEmpty ? 'is-active' : ''}`}>
-                            {hideEmpty ? '✓' : '✗'} {__('Hide Empty', 'mytheme')}
+                            {hideEmpty ? '✓' : '✗'} {__('Hide Empty', 'wagepoint')}
                         </span>
                         {isHierarchical && (
                             <span className={`taxonomy-filter-block-editor__badge ${hierarchical ? 'is-active' : ''}`}>
-                                {hierarchical ? '✓' : '✗'} {__('Hierarchical', 'mytheme')}
+                                {hierarchical ? '✓' : '✗'} {__('Hierarchical', 'wagepoint')}
                             </span>
                         )}
                     </div>
@@ -265,7 +265,7 @@ export default function Edit({ attributes, setAttributes }) {
                 
                 {!taxonomy && (
                     <div className="taxonomy-filter-block-editor__notice">
-                        <p>{__('Select a post type and taxonomy to configure this filter.', 'mytheme')}</p>
+                        <p>{__('Select a post type and taxonomy to configure this filter.', 'wagepoint')}</p>
                     </div>
                 )}
             </div>

@@ -2,10 +2,10 @@
 /**
  * Filterable Grid Block
  *
- * @package MyTheme
+ * @package wagepoint
  */
 
-namespace MyTheme\Blocks;
+namespace wagepoint\Blocks;
 
 class Filterable_Grid_Block {
     
@@ -96,11 +96,11 @@ class Filterable_Grid_Block {
                     <div class="filterable-grid-block__search">
                         <input type="search" 
                                class="filterable-grid-block__search-input"
-                               placeholder="<?php esc_attr_e('Search...', 'mytheme'); ?>"
-                               aria-label="<?php esc_attr_e('Search', 'mytheme'); ?>">
+                               placeholder="<?php esc_attr_e('Search...', 'wagepoint'); ?>"
+                               aria-label="<?php esc_attr_e('Search', 'wagepoint'); ?>">
                         <button type="button" 
                                 class="filterable-grid-block__search-button"
-                                aria-label="<?php esc_attr_e('Submit search', 'mytheme'); ?>">
+                                aria-label="<?php esc_attr_e('Submit search', 'wagepoint'); ?>">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -122,11 +122,11 @@ class Filterable_Grid_Block {
                 <!-- Active Filters Display -->
                 <div class="filterable-grid-block__active-filters" style="display: none;">
                     <span class="filterable-grid-block__active-filters-label">
-                        <?php esc_html_e('Active Filters:', 'mytheme'); ?>
+                        <?php esc_html_e('Active Filters:', 'wagepoint'); ?>
                     </span>
                     <div class="filterable-grid-block__active-filters-list"></div>
                     <button type="button" class="filterable-grid-block__clear-filters">
-                        <?php esc_html_e('Clear All', 'mytheme'); ?>
+                        <?php esc_html_e('Clear All', 'wagepoint'); ?>
                     </button>
                 </div>
                 
@@ -137,7 +137,7 @@ class Filterable_Grid_Block {
                 <span class="filterable-grid-block__results-count">
                     <?php
                     printf(
-                        esc_html__('Showing %d of %d results', 'mytheme'),
+                        esc_html__('Showing %d of %d results', 'wagepoint'),
                         $query->post_count,
                         $query->found_posts
                     );
@@ -147,16 +147,16 @@ class Filterable_Grid_Block {
                 <!-- Sort Options -->
                 <div class="filterable-grid-block__sort">
                     <label for="<?php echo esc_attr($block_id); ?>-sort">
-                        <?php esc_html_e('Sort by:', 'mytheme'); ?>
+                        <?php esc_html_e('Sort by:', 'wagepoint'); ?>
                     </label>
                     <select id="<?php echo esc_attr($block_id); ?>-sort" 
                             class="filterable-grid-block__sort-select">
-                        <option value="date-DESC"><?php esc_html_e('Newest First', 'mytheme'); ?></option>
-                        <option value="date-ASC"><?php esc_html_e('Oldest First', 'mytheme'); ?></option>
-                        <option value="title-ASC"><?php esc_html_e('Title (A-Z)', 'mytheme'); ?></option>
-                        <option value="title-DESC"><?php esc_html_e('Title (Z-A)', 'mytheme'); ?></option>
+                        <option value="date-DESC"><?php esc_html_e('Newest First', 'wagepoint'); ?></option>
+                        <option value="date-ASC"><?php esc_html_e('Oldest First', 'wagepoint'); ?></option>
+                        <option value="title-ASC"><?php esc_html_e('Title (A-Z)', 'wagepoint'); ?></option>
+                        <option value="title-DESC"><?php esc_html_e('Title (Z-A)', 'wagepoint'); ?></option>
                         <?php if ($post_type === 'post'): ?>
-                        <option value="modified-DESC"><?php esc_html_e('Recently Updated', 'mytheme'); ?></option>
+                        <option value="modified-DESC"><?php esc_html_e('Recently Updated', 'wagepoint'); ?></option>
                         <?php endif; ?>
                     </select>
                 </div>
@@ -189,17 +189,17 @@ class Filterable_Grid_Block {
             <!-- Pagination -->
             <?php if ($query->max_num_pages > 1): ?>
             <nav class="filterable-grid-block__pagination" 
-                 aria-label="<?php esc_attr_e('Pagination', 'mytheme'); ?>"
+                 aria-label="<?php esc_attr_e('Pagination', 'wagepoint'); ?>"
                  data-max-pages="<?php echo esc_attr($query->max_num_pages); ?>"
                  data-current-page="1">
                 <?php
                 echo paginate_links([
                     'total' => $query->max_num_pages,
                     'current' => 1,
-                    'prev_text' => '<span aria-label="' . esc_attr__('Previous page', 'mytheme') . '">←</span>',
-                    'next_text' => '<span aria-label="' . esc_attr__('Next page', 'mytheme') . '">→</span>',
+                    'prev_text' => '<span aria-label="' . esc_attr__('Previous page', 'wagepoint') . '">←</span>',
+                    'next_text' => '<span aria-label="' . esc_attr__('Next page', 'wagepoint') . '">→</span>',
                     'type' => 'list',
-                    'before_page_number' => '<span class="screen-reader-text">' . __('Page', 'mytheme') . ' </span>',
+                    'before_page_number' => '<span class="screen-reader-text">' . __('Page', 'wagepoint') . ' </span>',
                     'add_fragment' => '#' . $block_id
                 ]);
                 ?>
@@ -212,7 +212,7 @@ class Filterable_Grid_Block {
                     <svg class="filterable-grid-block__spinner" viewBox="0 0 50 50">
                         <circle class="filterable-grid-block__spinner-path" cx="25" cy="25" r="20" fill="none" stroke-width="4"></circle>
                     </svg>
-                    <span><?php esc_html_e('Loading...', 'mytheme'); ?></span>
+                    <span><?php esc_html_e('Loading...', 'wagepoint'); ?></span>
                 </div>
             </div>
             
@@ -369,7 +369,7 @@ private function render_card_inline(string $post_type, array $options = []): voi
         <div class="filterable-grid-block__filter">
             <select class="filterable-grid-block__filter-select" 
                     data-taxonomy="<?php echo esc_attr($taxonomy->name); ?>"
-                    aria-label="<?php echo esc_attr(sprintf(__('Filter by %s', 'mytheme'), $taxonomy->label)); ?>">
+                    aria-label="<?php echo esc_attr(sprintf(__('Filter by %s', 'wagepoint'), $taxonomy->label)); ?>">
                 <option value=""><?php echo esc_html($taxonomy->label); ?></option>
                 <?php foreach ($terms as $term): ?>
                     <option value="<?php echo esc_attr($term->term_id); ?>">
@@ -392,7 +392,7 @@ private function render_card_inline(string $post_type, array $options = []): voi
                 <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
                 <path d="M32 20V32L40 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <p><?php esc_html_e('No results found. Try adjusting your filters or search query.', 'mytheme'); ?></p>
+            <p><?php esc_html_e('No results found. Try adjusting your filters or search query.', 'wagepoint'); ?></p>
         </div>
         <?php
     }
@@ -491,10 +491,10 @@ private function render_card_inline(string $post_type, array $options = []): voi
             echo paginate_links([
                 'total' => $query->max_num_pages,
                 'current' => $paged,
-                'prev_text' => '<span aria-label="' . esc_attr__('Previous page', 'mytheme') . '">←</span>',
-                'next_text' => '<span aria-label="' . esc_attr__('Next page', 'mytheme') . '">→</span>',
+                'prev_text' => '<span aria-label="' . esc_attr__('Previous page', 'wagepoint') . '">←</span>',
+                'next_text' => '<span aria-label="' . esc_attr__('Next page', 'wagepoint') . '">→</span>',
                 'type' => 'list',
-                'before_page_number' => '<span class="screen-reader-text">' . __('Page', 'mytheme') . ' </span>'
+                'before_page_number' => '<span class="screen-reader-text">' . __('Page', 'wagepoint') . ' </span>'
             ]);
         }
         $pagination_html = ob_get_clean();

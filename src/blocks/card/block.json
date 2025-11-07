@@ -1,0 +1,41 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/card",
+  "title": "Card",
+  "category": "layout",
+  "icon": "id-alt",
+  "description": "A card with image, title, description, and button",
+  "keywords": ["card", "feature", "audience"],
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "imageBorderRadius": {
+      "type": "number",
+      "default": 20
+    },
+    "title": {
+      "type": "string",
+      "default": "Card Title"
+    },
+    "description": {
+      "type": "string",
+      "default": "Card description text goes here."
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,25 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/tabs",
+  "title": "Tabs",
+  "category": "layout",
+  "icon": "table-col-after",
+  "description": "Tabbed content section with customizable tabs and content areas",
+  "keywords": ["tabs", "tabbed", "features", "navigation"],
+  "attributes": {
+    "contentBackgroundColor": {
+      "type": "string",
+      "default": "auto"
+    }
+  },
+  "usesContext": ["wagepoint/containerBackground"],
+  "supports": {
+    "html": false,
+    "anchor": true
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

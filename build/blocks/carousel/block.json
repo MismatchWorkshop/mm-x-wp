@@ -1,0 +1,51 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/carousel",
+  "title": "Carousel",
+  "category": "layout",
+  "icon": "slides",
+  "description": "A flexible carousel container using Swiper.js",
+  "keywords": [
+    "carousel",
+    "slider",
+    "swiper",
+    "testimonials"
+  ],
+  "attributes": {
+    "showNavigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "centered": {
+      "type": "boolean",
+      "default": false
+    },
+    "slidesPerView": {
+      "type": "number",
+      "default": 1
+    },
+    "slidesPerViewTablet": {
+      "type": "number",
+      "default": 2
+    },
+    "slidesPerViewDesktop": {
+      "type": "number",
+      "default": 3
+    },
+    "spaceBetween": {
+      "type": "number",
+      "default": 32
+    },
+    "loop": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

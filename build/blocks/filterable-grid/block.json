@@ -12,7 +12,7 @@
     "tag"
   ],
   "version": "1.0.0",
-  "textdomain": "mytheme",
+  "textdomain": "wagepoint",
   "attributes": {
     "taxonomy": {
       "type": "string",

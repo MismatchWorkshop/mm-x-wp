@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wagepoint/banner",
+  "title": "Banner",
+  "category": "layout",
+  "icon": "cover-image",
+  "description": "Full-width banner with curved image edge",
+  "keywords": [
+    "banner",
+    "hero",
+    "cta"
+  ],
+  "attributes": {
+    "backgroundColor": {
+      "type": "string",
+      "default": "dark"
+    },
+    "imageId": {
+      "type": "number"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "focalPoint": {
+      "type": "object",
+      "default": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "full"
+    ],
+    "inserter": true
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

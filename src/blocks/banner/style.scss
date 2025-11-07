@@ -1,0 +1,124 @@
+// Banner Block Styles
+.wp-block-wagepoint-banner {
+    position: relative;
+    min-height: 500px;
+    margin: 15px;
+    border-radius: 80px;
+    overflow: hidden; /* Critical for border-radius to work */
+    
+    // Background colors
+    &.bg-ledger-blue {
+        background: #2d4a6b;
+        color: white;
+    }
+    
+    &.bg-payday-blue {
+        background: #1e3a5f;
+        color: white;
+    }
+    
+    &.bg-pto-yellow {
+        background: #FDB022;
+        color: #1F2937;
+    }
+    
+    &.bg-ledger-blue-tint-2 {
+        background: #4a6b8b;
+        color: white;
+    }
+    
+    &.bg-payday-blue-tint-2 {
+        background: #3e5a7f;
+        color: white;
+    }
+    
+    &.bg-white {
+        background: white;
+        color: #1F2937;
+    }
+    
+    // Columns wrapper
+    .wp-block-wagepoint-banner__columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin: 0 !important;
+    }
+    
+    // Content column
+    .wp-block-wagepoint-banner__content {
+        padding: 4rem 3rem !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        
+        h1, h2, h3 {
+            margin-top: 0 !important;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        p {
+            margin-bottom: 2rem !important;
+        }
+        
+        .wp-block-buttons {
+            margin-top: 0 !important;
+        }
+    }
+    
+    // Image column with SVG mask
+    .wp-block-wagepoint-banner__image {
+        position: relative !important;
+        padding: 0 !important;
+        overflow: hidden;
+        
+        // Apply the SVG mask
+        -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="3662" height="3614" viewBox="0 0 3662 3614" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4141 1441.4C-14.2001 1393.57 2.18747 1332.41 50.0167 1304.79L2286.75 13.4142C2334.58 -14.2001 2395.74 2.18742 2423.35 50.0167L3648.41 2171.88C3676.03 2219.71 3659.64 2280.87 3611.81 2308.49L1375.08 3599.87C1327.25 3627.48 1266.09 3611.09 1238.47 3563.26L13.4141 1441.4Z" fill="black"/></svg>');
+        mask-image: url('data:image/svg+xml;utf8,<svg width="3662" height="3614" viewBox="0 0 3662 3614" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.4141 1441.4C-14.2001 1393.57 2.18747 1332.41 50.0167 1304.79L2286.75 13.4142C2334.58 -14.2001 2395.74 2.18742 2423.35 50.0167L3648.41 2171.88C3676.03 2219.71 3659.64 2280.87 3611.81 2308.49L1375.08 3599.87C1327.25 3627.48 1266.09 3611.09 1238.47 3563.26L13.4141 1441.4Z" fill="black"/></svg>');
+        -webkit-mask-size: unset;
+        mask-size: unset;
+        -webkit-mask-position: 0 37%;
+        mask-position: 0 37%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        
+        // Target WordPress core image block
+        .wp-block-image,
+        figure {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 !important;
+            
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+    
+    // Mobile responsive
+    @media (max-width: 768px) {
+        border-radius: 40px;
+        min-height: auto;
+        
+        .wp-block-wagepoint-banner__columns {
+            grid-template-columns: 1fr;
+        }
+        
+        .wp-block-wagepoint-banner__content {
+            padding: 2.5rem 2rem !important;
+        }
+        
+        .wp-block-wagepoint-banner__image {
+            min-height: 300px;
+            -webkit-mask-image: none;
+            mask-image: none;
+        }
+    }
+}

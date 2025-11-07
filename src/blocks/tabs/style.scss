@@ -1,0 +1,63 @@
+/**
+ * Tabs Block - Frontend Styles
+ */
+
+.wagepoint-tabs {
+    // Container styles
+    &__container {
+        width: 100%;
+    }
+
+    // Tab Navigation
+    &__nav {
+        display: flex;
+        gap: 2rem;
+        border-bottom: 2px solid #e5e7eb;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    &__tab {
+        background: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        color: #6b7280;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 0;
+        margin-bottom: -2px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: #1f2937;
+        }
+
+        &.is-active {
+            color: #1f2937;
+            border-bottom-color: #4A90E2; // Payday Blue
+            font-weight: 600;
+        }
+    }
+
+    // Panels Container
+    &__panels-container {
+        position: relative;
+        border-radius: 8px;
+        padding: 3rem;
+        
+        // Support for bg-auto - inherits from parent Container's custom properties
+        &.bg-auto {
+            background-color: var(--auto-panel-bg, #fff);
+        }
+    }
+
+    // CRITICAL: Panel visibility on frontend
+    .wagepoint-panel {
+        display: none; // Hide all panels by default
+
+        &.is-active {
+            display: block; // Show only active panel
+        }
+    }
+}

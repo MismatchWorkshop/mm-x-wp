@@ -8,7 +8,8 @@
       "iconDefault": "white",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "ledger-blue",
-      "buttonSecondary": "pto-yellow"
+      "buttonSecondary": "pto-yellow",
+      "panelBackground": "white"
     }
   },
   "payday-blue-tint-1": {
@@ -20,7 +21,8 @@
       "iconDefault": "payday-blue",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "ledger-blue",
-      "buttonSecondary": "payday-blue"
+      "buttonSecondary": "payday-blue",
+      "panelBackground": "white"
     }
   },
   "payday-blue-tint-2": {
@@ -32,7 +34,8 @@
       "iconDefault": "payday-blue",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "white"
     }
   },
   "ledger-blue": {
@@ -44,7 +47,8 @@
       "iconDefault": "payday-blue-tint-1",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "pto-yellow"
+      "buttonSecondary": "pto-yellow",
+      "panelBackground": "white"
     }
   },
   "ledger-blue-tint-1": {
@@ -56,7 +60,8 @@
       "iconDefault": "ledger-blue",
       "iconHighlight": "payday-blue",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "white"
     }
   },
   "ledger-blue-tint-2": {
@@ -68,7 +73,8 @@
       "iconDefault": "ledger-blue",
       "iconHighlight": "payday-blue",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "white"
     }
   },
   "form-fill-white": {
@@ -80,7 +86,8 @@
       "iconDefault": "payday-blue",
       "iconHighlight": "growth-green",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "white"
     }
   },
   "white": {
@@ -92,7 +99,8 @@
       "iconDefault": "payday-blue",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "ledger-blue-tint-2"
     }
   },
   "transparent": {
@@ -104,7 +112,8 @@
       "iconDefault": "payday-blue",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "payday-blue",
-      "buttonSecondary": "ledger-blue"
+      "buttonSecondary": "ledger-blue",
+      "panelBackground": "white"
     }
   },
   "growth-green": {
@@ -116,7 +125,8 @@
       "iconDefault": "white",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "ledger-blue",
-      "buttonSecondary": "white"
+      "buttonSecondary": "white",
+      "panelBackground": "white"
     }
   },
   "pto-yellow": {
@@ -128,7 +138,8 @@
       "iconDefault": "ledger-blue",
       "iconHighlight": "payday-blue",
       "buttonPrimary": "ledger-blue",
-      "buttonSecondary": "payday-blue"
+      "buttonSecondary": "payday-blue",
+      "panelBackground": "white"
     }
   },
   "compliance-green": {
@@ -140,7 +151,8 @@
       "iconDefault": "white",
       "iconHighlight": "pto-yellow",
       "buttonPrimary": "ledger-blue",
-      "buttonSecondary": "white"
+      "buttonSecondary": "white",
+      "panelBackground": "white"
     }
   }
 }

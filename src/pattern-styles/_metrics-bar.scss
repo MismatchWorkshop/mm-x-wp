@@ -1,0 +1,18 @@
+
+.metrics-bar-block {
+    .metrics-bar-line-svg {
+        &[data-line-color=payday-blue],
+        &[data-line-color=auto] {
+            --line-color: var(--color-payday-blue, #4A90E2);
+        }
+        &[data-line-color=pto-yellow] {
+            --line-color: var(--color-pto-yellow, #4A90E2);
+        }
+        &[data-line-color=growth-green] {
+            --line-color: var(--color-growth-green, #4A90E2);
+        }
+        path {
+            stroke: var(--line-color, currentColor);
+        }
+    }
+}

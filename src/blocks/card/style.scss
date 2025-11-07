@@ -1,0 +1,85 @@
+.wp-block-wagepoint-card {
+    // No background, padding, or hover effects
+}
+
+.wagepoint-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    gap: 32px;
+    max-width: 580px;
+
+    &__image {
+        width: 100%;
+        position: relative;
+    }
+
+    &__image-wrapper {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        // Border radius applied inline via attribute
+    }
+
+    &__upload-button {
+        width: 100%;
+        padding: 48px 24px !important;
+        border: 2px dashed #ddd !important;
+        border-radius: 24px !important;
+        background: #f9fafb !important;
+    }
+
+    &__remove-image {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        z-index: 10;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        max-width: 580px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    // Center the buttons block
+    .wp-block-buttons {
+        margin-top: 8px;
+    }
+}
+
+// Editor-specific styles
+.editor-styles-wrapper {
+    .wagepoint-card__upload-button {
+        width: 100%;
+    }
+}

@@ -37,6 +37,9 @@
 
     --global-menu-height: 170px;
 
+    --width-narrow: #{fluid(420, 680, 1440)};
+    --content-spacing-y: 4rem;
+
 }
 
 body {
@@ -69,6 +72,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
     font-weight: 400;
+    line-height: 1.1;
 
     &.font-strong {
         font-weight: 500;

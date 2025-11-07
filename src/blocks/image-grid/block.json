@@ -1,0 +1,35 @@
+{
+  "apiVersion": 3,
+  "name": "wagepoint/image-grid",
+  "title": "Image Grid",
+  "category": "media",
+  "icon": "grid-view",
+  "description": "Asymmetric image grid with 1 large and 3 small images",
+  "keywords": ["image", "grid", "gallery", "hero"],
+  "attributes": {
+    "image1": {
+      "type": "object",
+      "default": null
+    },
+    "image2": {
+      "type": "object",
+      "default": null
+    },
+    "image3": {
+      "type": "object",
+      "default": null
+    },
+    "image4": {
+      "type": "object",
+      "default": null
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "textdomain": "wagepoint",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

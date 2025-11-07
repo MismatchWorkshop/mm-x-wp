@@ -86,6 +86,12 @@ Object.entries(colorsData).forEach(([bgKey, bgData]) => {
             const defaultValue = colorsData[defaultColor]?.value || '#4A90E2';
             scssContent += `  --auto-icon-default-bg: var(--color-${defaultColor}, ${defaultValue});\n`;
         }
+
+        if (bgData.contextPalette.panelBackground) {
+            const panelColor = bgData.contextPalette.panelBackground;
+            const panelValue = colorsData[panelColor]?.value || '#F9B234';
+            scssContent += `  --auto-panel-bg: var(--color-${panelColor}, ${panelValue});\n`;
+        }
         
         scssContent += `}\n\n`;
     }

@@ -1,0 +1,42 @@
+/**
+ * Panel Block Styles
+ * Generic styles that work in any context (Tabs, Accordion, standalone)
+ */
+
+.wagepoint-panel {
+    // Base panel styling - minimal, context-agnostic
+    
+    &__icon-wrapper {
+        margin-bottom: 20px;
+    }
+    
+    &__icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--wp--preset--color--blue, #3B82F6);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+    }
+    
+    // When used in Tabs context, hide inactive panels
+    &:not(.is-active) {
+        // Only hide when .is-active class is controlled by parent
+        // This allows standalone panels to always be visible
+    }
+    
+    &.is-active {
+        // Active state when in a container
+    }
+}
+
+// Context-specific overrides can be added by parent blocks
+// For example, Tabs block can add its own styling via:
+// .wagepoint-tabs .wagepoint-panel { ... }

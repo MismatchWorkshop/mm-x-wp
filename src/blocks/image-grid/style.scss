@@ -1,0 +1,121 @@
+.wagepoint-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+
+    // Large image on left
+    &__item-1 {
+        grid-row: 1 / -1;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    // Container for small images on right
+    &__small-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    // Top right image spans 2 columns
+    &__item-2 {
+        grid-column: 1 / -1;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    // Bottom left small image
+    &__item-3 {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    // Bottom right small image
+    &__item-4 {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    // Editor-specific styles
+    &__preview {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    &__actions {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    &__preview:hover &__actions {
+        opacity: 1;
+    }
+
+    // Placeholder styles
+    .components-placeholder {
+        min-height: 200px;
+        border-radius: 1rem;
+    }
+
+    // Tablet breakpoint
+    @media (max-width: 1024px) {
+        gap: 1rem;
+
+        &__small-images {
+            gap: 1rem;
+        }
+    }
+
+    // Mobile breakpoint
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        &__item-1 {
+            grid-row: auto;
+        }
+
+        &__small-images {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        &__item-2 {
+            grid-column: auto;
+        }
+    }
+}

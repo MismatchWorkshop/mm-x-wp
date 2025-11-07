@@ -24,7 +24,6 @@ export default function save({ attributes }) {
     const innerClassName = [
         'container__inner',
         `width-${width}`,
-        `bg-${containerBackground}`,
         `padding-${padding}`
     ].filter(Boolean).join(' ');
 
@@ -36,7 +35,7 @@ export default function save({ attributes }) {
 
     return (
         <div {...blockProps}>
-            <div className={innerClassName} data-bg={containerBackground}>
+            <div className={innerClassName}>
                 <div className={contentClassName}>
                     <InnerBlocks.Content />
                 </div>

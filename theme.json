@@ -152,7 +152,7 @@
           "name": "5XL"
         },
         {
-          "slug": "hero",
+          "slug": "1",
           "size": "clamp(2.5rem, 5vw, 4.5rem)",
           "name": "Hero"
         }
@@ -203,6 +203,12 @@
       "contentSize": ""
     },
     "blocks": {
+      "core/heading": {
+        "color": {
+          "text": true,
+          "background": false
+        }
+      },
       "core/button": {
         "border": {
           "radius": false,

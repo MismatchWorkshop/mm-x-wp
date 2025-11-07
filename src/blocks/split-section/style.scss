@@ -45,6 +45,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+
+    >.block-editor-inner-blocks {
+        &,
+        >.block-editor-block-list__layout {
+            display: contents;
+        }
+    }
 }
 
 // Media position control

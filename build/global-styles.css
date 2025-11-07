@@ -7,303 +7,461 @@
   --color-ledger-blue-tint-1: #94A3B8;
   --color-ledger-blue-tint-2: #E2E8F0;
   --color-form-fill-white: #F8F9FA;
-  --color-white: #FFFFFF;
-  --color-transparent: transparent;
   --color-growth-green: #2ECC71;
+  --color-growth-green-tint-1: #7EDDA4;
+  --color-growth-green-tint-2: #D4F4E2;
   --color-pto-yellow: #F9B234;
+  --color-pto-yellow-tint-1: #FCDB9A;
+  --color-pto-yellow-tint-2: #FEF3DC;
   --color-compliance-green: #27AE60;
-}
-
-.color-payday-blue {
-  --color: var(--color-payday-blue, #4A90E2);
-}
-
-.color-payday-blue-tint-1 {
-  --color: var(--color-payday-blue-tint-1, #8AB4E8);
-}
-
-.color-payday-blue-tint-2 {
-  --color: var(--color-payday-blue-tint-2, #E3EEF9);
-}
-
-.color-ledger-blue {
-  --color: var(--color-ledger-blue, #1E293B);
-}
-
-.color-ledger-blue-tint-1 {
-  --color: var(--color-ledger-blue-tint-1, #94A3B8);
-}
-
-.color-ledger-blue-tint-2 {
-  --color: var(--color-ledger-blue-tint-2, #E2E8F0);
-}
-
-.color-form-fill-white {
-  --color: var(--color-form-fill-white, #F8F9FA);
-}
-
-.color-white {
-  --color: var(--color-white, #FFFFFF);
-}
-
-.color-transparent {
-  --color: var(--color-transparent, transparent);
-}
-
-.color-growth-green {
-  --color: var(--color-growth-green, #2ECC71);
-}
-
-.color-pto-yellow {
-  --color: var(--color-pto-yellow, #F9B234);
-}
-
-.color-compliance-green {
-  --color: var(--color-compliance-green, #27AE60);
+  --color-compliance-green-tint-1: #8DD4AC;
+  --color-compliance-green-tint-2: #D9F0E3;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 }
 
 .bg-payday-blue {
-  background-color: var(--color-payday-blue, #4A90E2);
-  --text-color: #FFFFFF;
-  color: var(--text-color);
+  --bg-color: var(--color-payday-blue);
+  background-color: var(--bg-color);
 }
 
 .bg-payday-blue-tint-1 {
-  background-color: var(--color-payday-blue-tint-1, #8AB4E8);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-payday-blue-tint-1);
+  background-color: var(--bg-color);
 }
 
 .bg-payday-blue-tint-2 {
-  background-color: var(--color-payday-blue-tint-2, #E3EEF9);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-payday-blue-tint-2);
+  background-color: var(--bg-color);
 }
 
 .bg-ledger-blue {
-  background-color: var(--color-ledger-blue, #1E293B);
-  --text-color: #FFFFFF;
-  color: var(--text-color);
+  --bg-color: var(--color-ledger-blue);
+  background-color: var(--bg-color);
 }
 
 .bg-ledger-blue-tint-1 {
-  background-color: var(--color-ledger-blue-tint-1, #94A3B8);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-ledger-blue-tint-1);
+  background-color: var(--bg-color);
 }
 
 .bg-ledger-blue-tint-2 {
-  background-color: var(--color-ledger-blue-tint-2, #E2E8F0);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-ledger-blue-tint-2);
+  background-color: var(--bg-color);
 }
 
 .bg-form-fill-white {
-  background-color: var(--color-form-fill-white, #F8F9FA);
-  --text-color: #1E293B;
-  color: var(--text-color);
-}
-
-.bg-white {
-  background-color: var(--color-white, #FFFFFF);
-  --text-color: #1E293B;
-  color: var(--text-color);
-}
-
-.bg-transparent {
-  background-color: var(--color-transparent, transparent);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-form-fill-white);
+  background-color: var(--bg-color);
 }
 
 .bg-growth-green {
-  background-color: var(--color-growth-green, #2ECC71);
-  --text-color: #FFFFFF;
-  color: var(--text-color);
+  --bg-color: var(--color-growth-green);
+  background-color: var(--bg-color);
+}
+
+.bg-growth-green-tint-1 {
+  --bg-color: var(--color-growth-green-tint-1);
+  background-color: var(--bg-color);
+}
+
+.bg-growth-green-tint-2 {
+  --bg-color: var(--color-growth-green-tint-2);
+  background-color: var(--bg-color);
 }
 
 .bg-pto-yellow {
-  background-color: var(--color-pto-yellow, #F9B234);
-  --text-color: #1E293B;
-  color: var(--text-color);
+  --bg-color: var(--color-pto-yellow);
+  background-color: var(--bg-color);
+}
+
+.bg-pto-yellow-tint-1 {
+  --bg-color: var(--color-pto-yellow-tint-1);
+  background-color: var(--bg-color);
+}
+
+.bg-pto-yellow-tint-2 {
+  --bg-color: var(--color-pto-yellow-tint-2);
+  background-color: var(--bg-color);
 }
 
 .bg-compliance-green {
-  background-color: var(--color-compliance-green, #27AE60);
-  --text-color: #FFFFFF;
-  color: var(--text-color);
+  --bg-color: var(--color-compliance-green);
+  background-color: var(--bg-color);
+}
+
+.bg-compliance-green-tint-1 {
+  --bg-color: var(--color-compliance-green-tint-1);
+  background-color: var(--bg-color);
+}
+
+.bg-compliance-green-tint-2 {
+  --bg-color: var(--color-compliance-green-tint-2);
+  background-color: var(--bg-color);
+}
+
+.bg-white {
+  --bg-color: var(--color-white);
+  background-color: var(--bg-color);
+}
+
+.bg-black {
+  --bg-color: var(--color-black);
+  background-color: var(--bg-color);
 }
 
 .text-payday-blue {
-  color: var(--color-payday-blue, #4A90E2);
+  --text-color: var(--color-payday-blue);
+  color: var(--text-color);
 }
 
 .text-payday-blue-tint-1 {
-  color: var(--color-payday-blue-tint-1, #8AB4E8);
+  --text-color: var(--color-payday-blue-tint-1);
+  color: var(--text-color);
 }
 
 .text-payday-blue-tint-2 {
-  color: var(--color-payday-blue-tint-2, #E3EEF9);
+  --text-color: var(--color-payday-blue-tint-2);
+  color: var(--text-color);
 }
 
 .text-ledger-blue {
-  color: var(--color-ledger-blue, #1E293B);
+  --text-color: var(--color-ledger-blue);
+  color: var(--text-color);
 }
 
 .text-ledger-blue-tint-1 {
-  color: var(--color-ledger-blue-tint-1, #94A3B8);
+  --text-color: var(--color-ledger-blue-tint-1);
+  color: var(--text-color);
 }
 
 .text-ledger-blue-tint-2 {
-  color: var(--color-ledger-blue-tint-2, #E2E8F0);
+  --text-color: var(--color-ledger-blue-tint-2);
+  color: var(--text-color);
 }
 
 .text-form-fill-white {
-  color: var(--color-form-fill-white, #F8F9FA);
-}
-
-.text-white {
-  color: var(--color-white, #FFFFFF);
+  --text-color: var(--color-form-fill-white);
+  color: var(--text-color);
 }
 
 .text-growth-green {
-  color: var(--color-growth-green, #2ECC71);
+  --text-color: var(--color-growth-green);
+  color: var(--text-color);
+}
+
+.text-growth-green-tint-1 {
+  --text-color: var(--color-growth-green-tint-1);
+  color: var(--text-color);
+}
+
+.text-growth-green-tint-2 {
+  --text-color: var(--color-growth-green-tint-2);
+  color: var(--text-color);
 }
 
 .text-pto-yellow {
-  color: var(--color-pto-yellow, #F9B234);
+  --text-color: var(--color-pto-yellow);
+  color: var(--text-color);
+}
+
+.text-pto-yellow-tint-1 {
+  --text-color: var(--color-pto-yellow-tint-1);
+  color: var(--text-color);
+}
+
+.text-pto-yellow-tint-2 {
+  --text-color: var(--color-pto-yellow-tint-2);
+  color: var(--text-color);
 }
 
 .text-compliance-green {
-  color: var(--color-compliance-green, #27AE60);
+  --text-color: var(--color-compliance-green);
+  color: var(--text-color);
+}
+
+.text-compliance-green-tint-1 {
+  --text-color: var(--color-compliance-green-tint-1);
+  color: var(--text-color);
+}
+
+.text-compliance-green-tint-2 {
+  --text-color: var(--color-compliance-green-tint-2);
+  color: var(--text-color);
+}
+
+.text-white {
+  --text-color: var(--color-white);
+  color: var(--text-color);
+}
+
+.text-black {
+  --text-color: var(--color-black);
+  color: var(--text-color);
 }
 
 .border-payday-blue {
-  border-color: var(--color-payday-blue, #4A90E2);
+  border-color: var(--color-payday-blue);
 }
 
 .border-payday-blue-tint-1 {
-  border-color: var(--color-payday-blue-tint-1, #8AB4E8);
+  border-color: var(--color-payday-blue-tint-1);
 }
 
 .border-payday-blue-tint-2 {
-  border-color: var(--color-payday-blue-tint-2, #E3EEF9);
+  border-color: var(--color-payday-blue-tint-2);
 }
 
 .border-ledger-blue {
-  border-color: var(--color-ledger-blue, #1E293B);
+  border-color: var(--color-ledger-blue);
 }
 
 .border-ledger-blue-tint-1 {
-  border-color: var(--color-ledger-blue-tint-1, #94A3B8);
+  border-color: var(--color-ledger-blue-tint-1);
 }
 
 .border-ledger-blue-tint-2 {
-  border-color: var(--color-ledger-blue-tint-2, #E2E8F0);
+  border-color: var(--color-ledger-blue-tint-2);
 }
 
 .border-form-fill-white {
-  border-color: var(--color-form-fill-white, #F8F9FA);
-}
-
-.border-white {
-  border-color: var(--color-white, #FFFFFF);
+  border-color: var(--color-form-fill-white);
 }
 
 .border-growth-green {
-  border-color: var(--color-growth-green, #2ECC71);
+  border-color: var(--color-growth-green);
+}
+
+.border-growth-green-tint-1 {
+  border-color: var(--color-growth-green-tint-1);
+}
+
+.border-growth-green-tint-2 {
+  border-color: var(--color-growth-green-tint-2);
 }
 
 .border-pto-yellow {
-  border-color: var(--color-pto-yellow, #F9B234);
+  border-color: var(--color-pto-yellow);
+}
+
+.border-pto-yellow-tint-1 {
+  border-color: var(--color-pto-yellow-tint-1);
+}
+
+.border-pto-yellow-tint-2 {
+  border-color: var(--color-pto-yellow-tint-2);
 }
 
 .border-compliance-green {
-  border-color: var(--color-compliance-green, #27AE60);
+  border-color: var(--color-compliance-green);
 }
 
-.container__inner.bg-payday-blue {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-ledger-blue, #1E293B);
-  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
-  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+.border-compliance-green-tint-1 {
+  border-color: var(--color-compliance-green-tint-1);
 }
 
-.container__inner.bg-payday-blue-tint-1 {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-ledger-blue, #1E293B);
-  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
-  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+.border-compliance-green-tint-2 {
+  border-color: var(--color-compliance-green-tint-2);
 }
 
-.container__inner.bg-payday-blue-tint-2 {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+.border-white {
+  border-color: var(--color-white);
 }
 
-.container__inner.bg-ledger-blue {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-pto-yellow, #F9B234);
-  --auto-icon-default-bg: var(--color-payday-blue-tint-1, #8AB4E8);
+.border-black {
+  border-color: var(--color-black);
 }
 
-.container__inner.bg-ledger-blue-tint-1 {
-  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+.has-payday-blue-color {
+  --text-color: var(--color-payday-blue);
+  color: var(--text-color);
 }
 
-.container__inner.bg-ledger-blue-tint-2 {
-  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+.has-payday-blue-background-color {
+  --bg-color: var(--color-payday-blue, inherit);
+  background-color: var(--bg-color);
 }
 
-.container__inner.bg-form-fill-white {
-  --auto-icon-bg: var(--color-growth-green, #2ECC71);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+.has-payday-blue-tint-1-color {
+  --text-color: var(--color-payday-blue-tint-1);
+  color: var(--text-color);
 }
 
-.container__inner.bg-white {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+.has-payday-blue-tint-1-background-color {
+  --bg-color: var(--color-payday-blue-tint-1, inherit);
+  background-color: var(--bg-color);
 }
 
-.container__inner.bg-transparent {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-secondary-bg: var(--color-ledger-blue, #1E293B);
-  --auto-icon-default-bg: var(--color-payday-blue, #4A90E2);
+.has-payday-blue-tint-2-color {
+  --text-color: var(--color-payday-blue-tint-2);
+  color: var(--text-color);
 }
 
-.container__inner.bg-growth-green {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-ledger-blue, #1E293B);
-  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
-  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+.has-payday-blue-tint-2-background-color {
+  --bg-color: var(--color-payday-blue-tint-2, inherit);
+  background-color: var(--bg-color);
 }
 
-.container__inner.bg-pto-yellow {
-  --auto-icon-bg: var(--color-payday-blue, #4A90E2);
-  --auto-button-bg: var(--color-ledger-blue, #1E293B);
-  --auto-button-secondary-bg: var(--color-payday-blue, #4A90E2);
-  --auto-icon-default-bg: var(--color-ledger-blue, #1E293B);
+.has-ledger-blue-color {
+  --text-color: var(--color-ledger-blue);
+  color: var(--text-color);
 }
 
-.container__inner.bg-compliance-green {
-  --auto-icon-bg: var(--color-pto-yellow, #F9B234);
-  --auto-button-bg: var(--color-ledger-blue, #1E293B);
-  --auto-button-secondary-bg: var(--color-white, #FFFFFF);
-  --auto-icon-default-bg: var(--color-white, #FFFFFF);
+.has-ledger-blue-background-color {
+  --bg-color: var(--color-ledger-blue, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-ledger-blue-tint-1-color {
+  --text-color: var(--color-ledger-blue-tint-1);
+  color: var(--text-color);
+}
+
+.has-ledger-blue-tint-1-background-color {
+  --bg-color: var(--color-ledger-blue-tint-1, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-ledger-blue-tint-2-color {
+  --text-color: var(--color-ledger-blue-tint-2);
+  color: var(--text-color);
+}
+
+.has-ledger-blue-tint-2-background-color {
+  --bg-color: var(--color-ledger-blue-tint-2, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-form-fill-white-color {
+  --text-color: var(--color-form-fill-white);
+  color: var(--text-color);
+}
+
+.has-form-fill-white-background-color {
+  --bg-color: var(--color-form-fill-white, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-growth-green-color {
+  --text-color: var(--color-growth-green);
+  color: var(--text-color);
+}
+
+.has-growth-green-background-color {
+  --bg-color: var(--color-growth-green, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-growth-green-tint-1-color {
+  --text-color: var(--color-growth-green-tint-1);
+  color: var(--text-color);
+}
+
+.has-growth-green-tint-1-background-color {
+  --bg-color: var(--color-growth-green-tint-1, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-growth-green-tint-2-color {
+  --text-color: var(--color-growth-green-tint-2);
+  color: var(--text-color);
+}
+
+.has-growth-green-tint-2-background-color {
+  --bg-color: var(--color-growth-green-tint-2, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-pto-yellow-color {
+  --text-color: var(--color-pto-yellow);
+  color: var(--text-color);
+}
+
+.has-pto-yellow-background-color {
+  --bg-color: var(--color-pto-yellow, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-pto-yellow-tint-1-color {
+  --text-color: var(--color-pto-yellow-tint-1);
+  color: var(--text-color);
+}
+
+.has-pto-yellow-tint-1-background-color {
+  --bg-color: var(--color-pto-yellow-tint-1, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-pto-yellow-tint-2-color {
+  --text-color: var(--color-pto-yellow-tint-2);
+  color: var(--text-color);
+}
+
+.has-pto-yellow-tint-2-background-color {
+  --bg-color: var(--color-pto-yellow-tint-2, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-compliance-green-color {
+  --text-color: var(--color-compliance-green);
+  color: var(--text-color);
+}
+
+.has-compliance-green-background-color {
+  --bg-color: var(--color-compliance-green, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-compliance-green-tint-1-color {
+  --text-color: var(--color-compliance-green-tint-1);
+  color: var(--text-color);
+}
+
+.has-compliance-green-tint-1-background-color {
+  --bg-color: var(--color-compliance-green-tint-1, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-compliance-green-tint-2-color {
+  --text-color: var(--color-compliance-green-tint-2);
+  color: var(--text-color);
+}
+
+.has-compliance-green-tint-2-background-color {
+  --bg-color: var(--color-compliance-green-tint-2, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-white-color {
+  --text-color: var(--color-white);
+  color: var(--text-color);
+}
+
+.has-white-background-color {
+  --bg-color: var(--color-white, inherit);
+  background-color: var(--bg-color);
+}
+
+.has-black-color {
+  --text-color: var(--color-black);
+  color: var(--text-color);
+}
+
+.has-black-background-color {
+  --bg-color: var(--color-black, inherit);
+  background-color: var(--bg-color);
+}
+
+.container.has-background {
+  background-color: transparent !important;
+}
+.container__inner {
+  background: var(--bg-color, transparent);
+}
+
+.has-ledger-blue-background-color {
+  --text-color: var(--color-white, inherit);
+  color: var(--text-color);
 }
 
 :root {
@@ -339,6 +497,8 @@
 }
 :root {
   --global-menu-height: 170px;
+  --width-narrow: clamp(420px, 680 / 1512 * 100vw, 1440px);
+  --content-spacing-y: 4rem;
 }
 
 body {
@@ -404,6 +564,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-weight: 400;
+  line-height: 1.1;
 }
 h1.font-strong, h2.font-strong, h3.font-strong, h4.font-strong, h5.font-strong, h6.font-strong {
   font-weight: 500;
@@ -416,8 +577,8 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
  * Global Card Styles
  * Reusable across all blocks that display cards
  */
-.wagepoint-card,
-.filterable-grid-block__card {
+.wagepoint-card-x,
+.filterable-grid-block__card-x {
   display: flex;
   flex-direction: column;
   background: white;
@@ -426,37 +587,37 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.wagepoint-card:hover,
-.filterable-grid-block__card:hover {
+.wagepoint-card-x:hover,
+.filterable-grid-block__card-x:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
   border-color: #d1d5db;
 }
-.wagepoint-card__image,
-.filterable-grid-block__card__image {
+.wagepoint-card-x__image,
+.filterable-grid-block__card-x__image {
   aspect-ratio: 16/9;
   overflow: hidden;
   background: #f3f4f6;
   position: relative;
 }
-.wagepoint-card__image a,
-.filterable-grid-block__card__image a {
+.wagepoint-card-x__image a,
+.filterable-grid-block__card-x__image a {
   display: block;
   height: 100%;
 }
-.wagepoint-card__image img,
-.filterable-grid-block__card__image img {
+.wagepoint-card-x__image img,
+.filterable-grid-block__card-x__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
 }
-.wagepoint-card__image:hover img,
-.filterable-grid-block__card__image:hover img {
+.wagepoint-card-x__image:hover img,
+.filterable-grid-block__card-x__image:hover img {
   transform: scale(1.05);
 }
-.wagepoint-card__badge,
-.filterable-grid-block__card__badge {
+.wagepoint-card-x__badge,
+.filterable-grid-block__card-x__badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -468,20 +629,20 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   font-weight: 600;
   backdrop-filter: blur(4px);
 }
-.wagepoint-card__content,
-.filterable-grid-block__card__content {
+.wagepoint-card-x__content,
+.filterable-grid-block__card-x__content {
   padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.wagepoint-card__meta, .wagepoint-card__categories,
-.filterable-grid-block__card__meta,
-.filterable-grid-block__card__categories {
+.wagepoint-card-x__meta, .wagepoint-card-x__categories,
+.filterable-grid-block__card-x__meta,
+.filterable-grid-block__card-x__categories {
   margin-bottom: 0.75rem;
 }
-.wagepoint-card__category,
-.filterable-grid-block__card__category {
+.wagepoint-card-x__category,
+.filterable-grid-block__card-x__category {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
@@ -491,37 +652,37 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   text-decoration: none;
   transition: color 0.2s;
 }
-.wagepoint-card__category:hover,
-.filterable-grid-block__card__category:hover {
+.wagepoint-card-x__category:hover,
+.filterable-grid-block__card-x__category:hover {
   color: #4f46e5;
 }
-.wagepoint-card__title,
-.filterable-grid-block__card__title {
+.wagepoint-card-x__title,
+.filterable-grid-block__card-x__title {
   margin: 0 0 0.75rem 0;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.4;
 }
-.wagepoint-card__title a,
-.filterable-grid-block__card__title a {
+.wagepoint-card-x__title a,
+.filterable-grid-block__card-x__title a {
   color: #111827;
   text-decoration: none;
   transition: color 0.2s;
 }
-.wagepoint-card__title a:hover,
-.filterable-grid-block__card__title a:hover {
+.wagepoint-card-x__title a:hover,
+.filterable-grid-block__card-x__title a:hover {
   color: #3b82f6;
 }
-.wagepoint-card__excerpt,
-.filterable-grid-block__card__excerpt {
+.wagepoint-card-x__excerpt,
+.filterable-grid-block__card-x__excerpt {
   margin: 0 0 1rem 0;
   font-size: 0.9375rem;
   line-height: 1.6;
   color: #6b7280;
   flex: 1;
 }
-.wagepoint-card__footer,
-.filterable-grid-block__card__footer {
+.wagepoint-card-x__footer,
+.filterable-grid-block__card-x__footer {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -532,22 +693,22 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   color: #9ca3af;
   margin-top: auto;
 }
-.wagepoint-card__author,
-.filterable-grid-block__card__author {
+.wagepoint-card-x__author,
+.filterable-grid-block__card-x__author {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.wagepoint-card__author img,
-.filterable-grid-block__card__author img {
+.wagepoint-card-x__author img,
+.filterable-grid-block__card-x__author img {
   border-radius: 50%;
 }
-.wagepoint-card__date,
-.filterable-grid-block__card__date {
+.wagepoint-card-x__date,
+.filterable-grid-block__card-x__date {
   color: #9ca3af;
 }
-.wagepoint-card__link,
-.filterable-grid-block__card__link {
+.wagepoint-card-x__link,
+.filterable-grid-block__card-x__link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -558,18 +719,18 @@ h1.font-stronger, h2.font-stronger, h3.font-stronger, h4.font-stronger, h5.font-
   text-decoration: none;
   transition: all 0.2s;
 }
-.wagepoint-card__link:hover,
-.filterable-grid-block__card__link:hover {
+.wagepoint-card-x__link:hover,
+.filterable-grid-block__card-x__link:hover {
   gap: 0.75rem;
 }
-.wagepoint-card__arrow,
-.filterable-grid-block__card__arrow {
+.wagepoint-card-x__arrow,
+.filterable-grid-block__card-x__arrow {
   transition: transform 0.2s;
 }
-.wagepoint-card:hover .wagepoint-card__arrow,
-.wagepoint-card:hover .filterable-grid-block__card__arrow,
-.filterable-grid-block__card:hover .wagepoint-card__arrow,
-.filterable-grid-block__card:hover .filterable-grid-block__card__arrow {
+.wagepoint-card-x:hover .wagepoint-card-x__arrow,
+.wagepoint-card-x:hover .filterable-grid-block__card-x__arrow,
+.filterable-grid-block__card-x:hover .wagepoint-card-x__arrow,
+.filterable-grid-block__card-x:hover .filterable-grid-block__card-x__arrow {
   transform: translateX(4px);
 }
 
@@ -891,6 +1052,19 @@ body.header-light .site-header:not(.nav-background) .header-inner > svg path {
 .hero-cover-bg p {
   font-size: clamp(1.125rem, 2vw, 1.25rem) !important;
   line-height: 1.6 !important;
+}
+
+.metrics-bar-block .metrics-bar-line-svg[data-line-color=payday-blue], .metrics-bar-block .metrics-bar-line-svg[data-line-color=auto] {
+  --line-color: var(--color-payday-blue, #4A90E2);
+}
+.metrics-bar-block .metrics-bar-line-svg[data-line-color=pto-yellow] {
+  --line-color: var(--color-pto-yellow, #4A90E2);
+}
+.metrics-bar-block .metrics-bar-line-svg[data-line-color=growth-green] {
+  --line-color: var(--color-growth-green, #4A90E2);
+}
+.metrics-bar-block .metrics-bar-line-svg path {
+  stroke: var(--line-color, currentColor);
 }
 
 .container__inner {

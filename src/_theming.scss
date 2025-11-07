@@ -1,0 +1,16 @@
+.container {
+
+    &.has-background {
+        background-color: transparent !important;
+    }
+
+    &__inner {
+        background: var(--bg-color, transparent);
+    }
+
+}
+
+.has-ledger-blue-background-color {
+    --text-color: var(--color-white, inherit);
+    color: var(--text-color);
+}

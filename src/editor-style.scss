@@ -1,15 +1,31 @@
 @import "mixins";
 @import "vars";
 @import "color-utilities";
+@import "theming";
 @import "base";
 
 @import 'components/cards';
 @import 'pattern-styles/hero';
 @import 'pattern-styles/global-header';
+@import 'pattern-styles/metrics-bar';
 
 .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
     max-width: none !important;
-    color: #000;
+    //--text-color: #000;
+}
+
+.components-panel__body:not(:has(.components-panel__body-title)) .components-input-control__label {
+    text-transform: none !important;
+    font-size: 13px !important;
+    letter-spacing: normal !important;
+}
+
+.editor-styles-wrapper {
+    h1,h2,h3,h4,h5,h6 {
+        margin-top: 0;
+        font-weight: 400;
+        line-height: 1.1;
+    }
 }
 
 html :where(.wp-block) {
@@ -43,5 +59,13 @@ html :where(.wp-block) {
     .wp-block-cover__background {
         //left: 15px;
         //right: 15px;
+    }
+}
+
+.metrics-bar-items {
+    >.block-editor-inner-blocks {
+        >.block-editor-block-list__layout {
+            display: contents;
+        }
     }
 }

@@ -1,3 +1,5 @@
+import { initCarousels } from './modules/carousel';
+
 let lastScrollY = window.scrollY;
 let headerOffsetTop = 0;
 let menuVisibleAt = 0; // Track where the menu became visible

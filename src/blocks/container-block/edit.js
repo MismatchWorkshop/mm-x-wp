@@ -8,9 +8,7 @@ import {
     PanelBody,
     SelectControl
 } from '@wordpress/components';
-import CustomColorSelect from '../../components/CustomColorSelect';
-import { COLOR_SYSTEM } from '../../color-system';
-import { ContainerProvider } from '../../components/ContainerContext'; // ADD THIS
+import { ContainerProvider } from '../../components/ContainerContext'; 
 
 const OUTER_BG_OPTIONS = [
     { label: 'Light', value: 'light' },
@@ -71,7 +69,6 @@ export default function Edit({ attributes, setAttributes }) {
     const innerClassName = [
         'container__inner',
         `width-${width}`,
-        `bg-${containerBackground}`,
         `padding-${padding}`
     ].filter(Boolean).join(' ');
 
@@ -81,21 +78,11 @@ export default function Edit({ attributes, setAttributes }) {
         `align-${textAlignment}`
     ].filter(Boolean).join(' ');
 
-    console.log('=== Container Block ===');
-console.log('Container Background:', containerBackground);
-console.log('======================');
-
     return (
         <>
             <InspectorControls>
                 <PanelBody title={__('Section Settings', 'wagepoint')} initialOpen={true}>
-                    <SelectControl
-                        label={__('Section Background', 'wagepoint')}
-                        value={outerBackground}
-                        onChange={(value) => setAttributes({ outerBackground: value })}
-                        options={OUTER_BG_OPTIONS}
-                        help={__('Full-width background color (Light or Dark)', 'wagepoint')}
-                    />
+                    
                     
                     <SelectControl
                         label={__('Section Spacing', 'wagepoint')}
@@ -112,13 +99,6 @@ console.log('======================');
                         value={width}
                         onChange={(value) => setAttributes({ width: value })}
                         options={WIDTH_OPTIONS}
-                    />
-
-                    <CustomColorSelect
-                        label={__('Container Background', 'wagepoint')}
-                        value={containerBackground}
-                        onChange={(value) => setAttributes({ containerBackground: value })}
-                        colors={COLOR_SYSTEM.backgrounds}
                     />
 
                     <SelectControl
@@ -148,10 +128,21 @@ console.log('======================');
                 </PanelBody>
             </InspectorControls>
 
+            <InspectorControls group="styles">
+                <PanelBody>
+                    <SelectControl
+                        label={__('Section Background', 'wagepoint')}
+                        value={outerBackground}
+                        onChange={(value) => setAttributes({ outerBackground: value })}
+                        options={OUTER_BG_OPTIONS}
+                        help={__('Full-width background color (Light or Dark)', 'wagepoint')}
+                    />
+                </PanelBody>
+            </InspectorControls>
+
             <div {...blockProps}>
                 <div className={innerClassName} data-bg={containerBackground}>
                     <div className={contentClassName}>
-                        {/* WRAP InnerBlocks with ContainerProvider */}
                         <ContainerProvider value={containerBackground}>
                             <InnerBlocks />
                         </ContainerProvider>
